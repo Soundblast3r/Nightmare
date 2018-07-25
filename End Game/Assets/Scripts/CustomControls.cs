@@ -9,7 +9,7 @@ public class CustomControls : MonoBehaviour
 
     public bool torchSwitchLimit;
     public float FlashlightCooldownTime = 0.4f;
-
+    public bool DevMode = false;
     public float ChargeDropTime = 1.0f;
     public int TorchCharge = 1000;
     bool Torchflat = false;
@@ -107,16 +107,32 @@ public class CustomControls : MonoBehaviour
     public IEnumerator ChargeDecrement()
     {
         Delay = true;
+        if (DevMode == true)
+        {
+
+        }
+
+        else if (DevMode == false)
+        {
         TorchCharge = TorchCharge - ChargeDecrementAmount;
         yield return new WaitForSeconds(ChargeDropTime);
+        }
         Delay = false;
     }
 
     public IEnumerator ChargeIncrement()
     {
         ChargeDelay = true;
-        TorchCharge = TorchCharge + ChargeIncrementAmount;
-        yield return new WaitForSeconds(ChargeDropTime/5);
+        if (DevMode == true)
+        {
+
+        }
+
+        else if (DevMode == false)
+        {
+            TorchCharge = TorchCharge + ChargeIncrementAmount;
+            yield return new WaitForSeconds(ChargeDropTime / 5);
+        }
         ChargeDelay = false;
     }
 }
