@@ -8,31 +8,58 @@ public class ItemInteractions : MonoBehaviour
     public float rayDistance;
     public float Distance;
 
-    public GameObject target;
+    private float Vertical = 0.0f;
+    private float Horizontal = 0.0f;
+    public float lookSpeedH;
+    public float lookSpeedV;
 
-    CursorLockMode cursorLock;
+    private Vector3 OrigionalCameraPos;
+    private Vector3 currentCameraPos;
+
+    public GameObject target;
+    public Camera mainCamera;
+    public Camera HideCamera;
+    
+
+    //CursorLockMode cursorLock;
 
     bool SprayBottleActive = false;
     bool WalkyTalkyActive = false;
+    bool isHiding;
 
 	// Use this for initialization
 	void Start ()
     {
-        cursorLock = CursorLockMode.Locked;
+        //cursorLock = CursorLockMode.Locked;
+        mainCamera = this.GetComponent<Camera>();
+        HideCamera = GameObject.Find("HideCamera").GetComponent<Camera>();
+        mainCamera.enabled = true;
+        HideCamera.enabled = false;
+
+        OrigionalCameraPos = camera.transform.localPosition;
+
+        isHiding = false;
 	}
 
     // Update is called once per frame
     void Update()
     {
+        if(isHiding)
+        {
+            HiddenMove();
+        }
+
+        currentCameraPos = camera.transform.position;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             Interact();
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            cursorLock = CursorLockMode.None;
-        }
+        //if(Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    cursorLock = CursorLockMode.None;
+        //}
 	}
 
     void Interact()
@@ -42,7 +69,7 @@ public class ItemInteractions : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, rayDistance))
         {
-            if(hit.collider.tag == "Pickup")
+            if (hit.collider.tag == "Pickup")
             {
                 Debug.Log("Object hit");
                 target = hit.collider.gameObject;
@@ -59,14 +86,50 @@ public class ItemInteractions : MonoBehaviour
                 }
             }
 
-            if(hit.collider.tag == "Hideable")
+            if (hit.collider.tag == "Hideable" && isHiding == false)
             {
                 Debug.Log("Can Hide Here");
                 target = hit.collider.gameObject;
 
-                camera.transform.position = target.transform.position;
+                GameObject.Find("FPSController").GetComponent<CustomControls>().enabled = false;
+                GameObject.Find("Character").GetComponent<CapsuleCollider>().enabled = false;
+
+
+                mainCamera.enabled = false;
+                HideCamera.enabled = true;
+                //camera.transform.position = target.transform.position;
+                //this.camera.transform.position = target.transform.position;
+                //this.GetComponent<Camera>()
+                isHiding = true;
+            }
+            else if (isHiding == true)
+            {
+                GameObject.Find("FPSController").GetComponent<CustomControls>().enabled = true;
+                GameObject.Find("Character").GetComponent<CapsuleCollider>().enabled = false;
+
+                mainCamera.enabled = true;
+                HideCamera.enabled = false;
+
+                isHiding = false;
             }
         }
+    }
+
+    void HiddenMove()
+    {
+        //Input.GetAxis("Mouse X");
+        //Input.GetAxis("Mouse Y");
+
+
+        Horizontal += lookSpeedH * Input.GetAxis("Horizontal");
+        Vertical -= lookSpeedV * Input.GetAxis("Vertical");
+
+        //camera.transform.localPosition = currentCameraPos;
+
+        transform.eulerAngles = new Vector3(Horizontal, Vertical, 0.0f);
+
+
+
     }
 
 }
