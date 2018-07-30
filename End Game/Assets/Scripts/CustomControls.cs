@@ -1,12 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomControls : MonoBehaviour
 {
-
+    //flashlight
     public GameObject Flashlight;
-
     public bool torchSwitchLimit;
     public float FlashlightCooldownTime = 0.4f;
     public bool DevMode = false;
@@ -19,82 +17,119 @@ public class CustomControls : MonoBehaviour
     bool Delay;
     bool ChargeDelay;
 
+    //contextual lean
+    public GameObject CameraLeft;
+    public GameObject CameraMiddle;
+    public GameObject CameraRight;
     // Use this for initialization
 
     void Start()
     {
-        Flashlight.SetActive(false);
         torchSwitchLimit = false;
         Torchflat = false;
         Delay = false;
         ChargeDelay = false;
+
+        Flashlight.SetActive(false);
+        CameraLeft.SetActive(false);
+        CameraRight.SetActive(false);
+        CameraMiddle.GetComponent<Camera>().enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Flashlight.activeSelf == true && Delay == false)
+        //flashlight
         {
-            StartCoroutine(ChargeDecrement());
-        }
-
-        if (Input.GetKey(KeyCode.R) && Flashlight.activeSelf == false && ChargeDelay == false)
-        {
-            StartCoroutine(ChargeIncrement());
-        }
-
-        if (TorchCharge <= dimlight)
-        {
-            Flashlight.GetComponentInChildren<Light>().intensity = 0.2f;
-        }
-
-        if (TorchCharge < 0)
-        {
-            Torchflat = true;
-            TorchCharge = 0;
-            Debug.Log("flashlight is flat");
-        }
-
-        if (TorchCharge > 1000)
-        {
-            Torchflat = false;
-            TorchCharge = 1000;
-            Flashlight.GetComponentInChildren<Light>().intensity = 0.5f;
-            Debug.Log("torch is Fully charged");
-        }
-
-
-
-
-
-        if (Torchflat == false)
-        {
-            if (torchSwitchLimit == false)
+            if (Flashlight.activeSelf == true && Delay == false)
             {
-                if (Input.GetKey(KeyCode.F) && Flashlight.activeSelf == false)
-                {
-                    torchSwitchLimit = true;
-                    Flashlight.SetActive(true);
-                    StartCoroutine(FlashlightCooldown());
-                    if (Flashlight.activeInHierarchy && Torchflat == false)
-                    Debug.Log("Flashlight on");
-                }
-
-                else if (Input.GetKey(KeyCode.F) && Flashlight.activeSelf == true)
-                {
-                    torchSwitchLimit = true;
-                    Flashlight.SetActive(false);
-                    StartCoroutine(FlashlightCooldown());
-                    Debug.Log("Flashlight off");
-                }
-
+                StartCoroutine(ChargeDecrement());
             }
+
+            if (Input.GetKey(KeyCode.R) && Flashlight.activeSelf == false && ChargeDelay == false)
+            {
+                StartCoroutine(ChargeIncrement());
+            }
+
+            if (TorchCharge <= dimlight)
+            {
+                Flashlight.GetComponentInChildren<Light>().intensity = 0.2f;
+            }
+
+            if (TorchCharge < 0)
+            {
+                Torchflat = true;
+                TorchCharge = 0;
+                Debug.Log("flashlight is flat");
+            }
+
+            if (TorchCharge > 1000)
+            {
+                Torchflat = false;
+                TorchCharge = 1000;
+                Flashlight.GetComponentInChildren<Light>().intensity = 0.5f;
+                Debug.Log("torch is Fully charged");
+            }
+
+
+
+
+
+            if (Torchflat == false)
+            {
+                if (torchSwitchLimit == false)
+                {
+                    if (Input.GetKey(KeyCode.F) && Flashlight.activeSelf == false)
+                    {
+                        torchSwitchLimit = true;
+                        Flashlight.SetActive(true);
+                        StartCoroutine(FlashlightCooldown());
+                        if (Flashlight.activeInHierarchy && Torchflat == false)
+                            Debug.Log("Flashlight on");
+                    }
+
+                    else if (Input.GetKey(KeyCode.F) && Flashlight.activeSelf == true)
+                    {
+                        torchSwitchLimit = true;
+                        Flashlight.SetActive(false);
+                        StartCoroutine(FlashlightCooldown());
+                        Debug.Log("Flashlight off");
+                    }
+
+                }
+            }
+
+            if (Torchflat == true)
+            {
+                Flashlight.SetActive(false);
+            }
+
         }
-        
-        if (Torchflat == true)
+
+        //camera lean
         {
-            Flashlight.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                CameraMiddle.GetComponent<Camera>().enabled = false;
+                CameraLeft.SetActive(true);
+                Flashlight.transform.position = CameraLeft.transform.position;
+            }
+
+            else if (Input.GetKeyDown(KeyCode.B))
+            {
+                CameraMiddle.GetComponent<Camera>().enabled = false;
+                CameraRight.SetActive(true);
+                Flashlight.transform.position = CameraRight.transform.position;
+            }
+
+            else if (Input.GetKeyUp(KeyCode.V) || Input.GetKeyUp(KeyCode.B))
+            {
+                CameraLeft.SetActive(false);
+                CameraRight.SetActive(false);
+                CameraMiddle.GetComponent<Camera>().enabled = true;
+                Flashlight.transform.eulerAngles = CameraMiddle.transform.eulerAngles;
+                Flashlight.transform.position = CameraMiddle.transform.position;
+            }
         }
     }
 
@@ -114,8 +149,8 @@ public class CustomControls : MonoBehaviour
 
         else if (DevMode == false)
         {
-        TorchCharge = TorchCharge - ChargeDecrementAmount;
-        yield return new WaitForSeconds(ChargeDropTime);
+            TorchCharge = TorchCharge - ChargeDecrementAmount;
+            yield return new WaitForSeconds(ChargeDropTime);
         }
         Delay = false;
     }
