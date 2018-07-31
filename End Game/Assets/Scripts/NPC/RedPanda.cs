@@ -15,8 +15,12 @@ public class RedPanda : NPC {
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
 
-        timeToTransform = TransformedTimer;
-        timeToRevert = revertTimer;
+        timeToTransformMax = 30;
+        timeToRevertMax = 30;
+
+        timeToTransform = timeToTransformMax;
+        timeToRevert = timeToRevertMax;
+
         isSearching = false;
         inToyForm = true;
     }
@@ -66,14 +70,14 @@ public class RedPanda : NPC {
         isSearching = true;
         RB.AddForce(0, 10, 0);
         this.gameObject.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f); //scale size
-        timeToRevert = revertTimer;
+        timeToRevert = timeToRevertMax;
     }
 
     public void ToyForm() {
         StopSearching();
         inToyForm = true;
         this.gameObject.transform.localScale = new Vector3(1, 1, 1); // scale size
-        timeToTransform = TransformedTimer;
+        timeToTransform = timeToTransformMax;
     }
 
     public void FollowPlayer() {
