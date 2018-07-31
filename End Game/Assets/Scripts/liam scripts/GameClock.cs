@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameClock : MonoBehaviour
 {
-    float GameTimer;
+    public float GameTimer;
     bool isGameOver;
 
 	// Use this for initialization
@@ -14,8 +14,17 @@ public class GameClock : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
-        GameTimer -= Time.deltaTime;
+        if(GameTimer >= 0)
+        {
+            Debug.Log(GameTimer);
+            GameTimer -= Time.fixedDeltaTime;
+        }
+
+        if (GameTimer <= 0)
+        {
+            Debug.Log("WIN");
+        }
 	}
 }
