@@ -16,11 +16,17 @@ public class CustomControls : MonoBehaviour
     public int ChargeIncrementAmount = 50;
     bool Delay;
     bool ChargeDelay;
+    bool isPaused;
 
     //contextual lean
     public GameObject CameraLeft;
     public GameObject CameraMiddle;
     public GameObject CameraRight;
+
+
+    //PauseMenu
+    public GameObject PauseMenu;
+
     // Use this for initialization
 
     void Start()
@@ -29,15 +35,38 @@ public class CustomControls : MonoBehaviour
         Torchflat = false;
         Delay = false;
         ChargeDelay = false;
-
+        isPaused = false;
         Flashlight.SetActive(false);
         CameraLeft.SetActive(false);
         CameraRight.SetActive(false);
         CameraMiddle.GetComponent<Camera>().enabled = true;
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused == false)
+            {
+                isPaused = true;
+                Time.timeScale = 0;
+                PauseMenu.SetActive(true);
+            }
+
+            else if (isPaused == true)
+            {
+                isPaused = false;
+                Time.timeScale = 1;
+                PauseMenu.SetActive(false);
+            }
+        }
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //flashlight
         {
@@ -133,6 +162,7 @@ public class CustomControls : MonoBehaviour
         }
     }
 
+
     private IEnumerator FlashlightCooldown()
     {
         yield return new WaitForSeconds(FlashlightCooldownTime);
@@ -171,6 +201,9 @@ public class CustomControls : MonoBehaviour
         ChargeDelay = false;
     }
 }
+
+
+
 
 //public void DeathCam(GameObject go)
 //{
