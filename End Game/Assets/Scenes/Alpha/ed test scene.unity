@@ -7520,7 +7520,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &565218109
 Transform:
@@ -12280,7 +12280,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &863079834
 Transform:
@@ -14532,7 +14532,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1071863823
 Transform:
@@ -16605,7 +16605,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1215461696
 Transform:
@@ -17273,7 +17273,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1255355611
 Transform:
@@ -20099,6 +20099,7 @@ MonoBehaviour:
   CameraLeft: {fileID: 1574081567}
   CameraMiddle: {fileID: 1899678583}
   CameraRight: {fileID: 828526311}
+  PauseMenu: {fileID: 0}
 --- !u!82 &1499199101
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21743,7 +21744,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1584065146
 Transform:
@@ -22982,7 +22983,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1674976284
 Transform:
@@ -23441,7 +23442,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1692967229
 Transform:
@@ -26513,9 +26514,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 1899678584}
   rayDistance: 5
-  Distance: 0
-  lookSpeedH: 0
-  lookSpeedV: 0
+  lookSpeed: 0
+  MaxRotation: 0
+  MinRotation: 0
   target: {fileID: 0}
   mainCamera: {fileID: 0}
   HideCamera: {fileID: 0}
