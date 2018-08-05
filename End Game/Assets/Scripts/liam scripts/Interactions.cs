@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class ItemInteractions : MonoBehaviour
+public class Interactions : MonoBehaviour
 {
     //Raycast Pickups
     public Camera camera;
@@ -13,8 +13,8 @@ public class ItemInteractions : MonoBehaviour
     //Camera Rotations
     private float RotatY;
     private float RotatX;
-    private float Vertical = 0.0f;
-    private float Horizontal = 0.0f;
+    //private float Vertical = 0.0f;
+    //private float Horizontal = 0.0f;
     public float lookSpeed;
     public float MaxRotation;
     public float MinRotation;
@@ -26,8 +26,6 @@ public class ItemInteractions : MonoBehaviour
     public GameObject target;
     public Camera mainCamera;
     public Camera HideCamera;
-    
-
     //CursorLockMode cursorLock;
     
     //if cheack Bools 
@@ -103,6 +101,14 @@ public class ItemInteractions : MonoBehaviour
                 }
             }
 
+            if(hit.collider.tag == "Climbable" && isHiding == false)
+            {
+                Debug.Log("can climb this");
+                target = hit.collider.gameObject;
+
+                GameObject.Find("FPSController").transform.position = GameObject.Find("ClimbingPoint").transform.position;
+            }
+
             //cheacks if you are able to hide in the target and
             //only if you're not alrady hiding
             if (hit.collider.tag == "Hideable" && isHiding == false)
@@ -160,7 +166,7 @@ public class ItemInteractions : MonoBehaviour
         HideCamera.transform.localEulerAngles = new Vector3(Angles.x, RotatY, Angles.z);
         //HideCamera.transform.Rotate(RotatY, RotatX, 0.0f);
 
-        Debug.Log("Horizontil");
+        Debug.Log("Horizontal");
         Debug.Log("Vertical");
     }
 }
