@@ -14,6 +14,7 @@ public class JackInTheBox : MonoBehaviour
         //jackinthebox = GameObject.FindGameObjectsWithTag("JacknBox");
         //boxs.Add(GameObject.FindGameObjectsWithTag("JacknBox");
         Debug.Log(Jackboxs.Count);
+        RandomSpawn();
 	}
 	
 	// Update is called once per frame
@@ -39,9 +40,17 @@ public class JackInTheBox : MonoBehaviour
         //checks to see if it's not null
         if(Jackboxs.Count > 0)
         {
+            //Jackboxs[JackCount].SetActive(GameObject.FindGameObjectWithTag("JacknBox"));
+            
             //spawns the jack in the box 
             //wherever the number compeared to
-            Jackboxs[JackCount].SetActive(GameObject.FindGameObjectWithTag("JacknBox"));
+
+            if(Jackboxs[JackCount].activeInHierarchy == false)
+            {
+                //Jackboxs[JackCount].GetComponentInChildren<GameObject>().SetActive(true)
+
+                Jackboxs[JackCount].SetActive(true);
+            }
         }
     }
 }
