@@ -41,7 +41,7 @@ public class JackInTheBox : MonoBehaviour
         {
             //spawns the jack in the box 
             //wherever the number compeared to
-            Jackboxs[JackCount].SetActive(true);
+            Jackboxs[JackCount].SetActive(GameObject.FindGameObjectWithTag("JacknBox"));
         }
     }
 }
