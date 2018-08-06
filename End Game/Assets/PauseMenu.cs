@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class PauseMenu : MonoBehaviour {
+public class PauseMenu : MonoBehaviour
+{
 
     public GameObject pausePanel;
     public GameObject optionsPanel;
@@ -14,12 +15,12 @@ public class PauseMenu : MonoBehaviour {
     public GameObject restartPanel;
 
     // Use this for initialization
-    void Awake ()
+    void Awake()
     {
-        pause(); 
-	}
+        Pause();
+    }
 
-    public void pause()
+    public void Pause()
     {
         //set active pause panel
         pausePanel.SetActive(true);
@@ -32,11 +33,16 @@ public class PauseMenu : MonoBehaviour {
         restartPanel.SetActive(false);
     }
 
-    public void options()
+    public void Options()
     {
         //set active options panel
         optionsPanel.SetActive(true);
         // nothing else active
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
         pausePanel.SetActive(false);
 
         //sound
@@ -50,7 +56,7 @@ public class PauseMenu : MonoBehaviour {
         ///aspect ratio
     }
 
-    public void mainMenu()
+    public void MainMenu()
     {
         pausePanel.SetActive(false);
         optionsPanel.SetActive(false);
@@ -63,12 +69,12 @@ public class PauseMenu : MonoBehaviour {
         //confirm();
     }
 
-    public void restart()
+    public void Restart()
     {
         //?
     }
 
-    public void resume()
+    public void Resume()
     {
         pausePanel.SetActive(false);
         optionsPanel.SetActive(false);
@@ -79,8 +85,47 @@ public class PauseMenu : MonoBehaviour {
         restartPanel.SetActive(false);
     }
 
-    public void confirm()
+    public void Confirm()
     {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+    }
 
+    public void SoundPanel()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(true);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+    }
+
+    public void Controls()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(true);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+    }
+
+    public void Graphicaloptions()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(true);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
     }
 }
