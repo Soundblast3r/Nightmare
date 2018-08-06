@@ -373,3 +373,5 @@ ASALocalRun/
 
 
 # End of https://www.gitignore.io/api/unity,notepadpp,visualstudio,visualstudiocode
+End Game/Assets/Scripts/liam scripts/JackInTheBox.cs.meta
+End Game/Assets/PauseMenu.cs.meta
