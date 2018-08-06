@@ -22037,6 +22037,7 @@ GameObject:
   - component: {fileID: 1390035158}
   - component: {fileID: 1390035160}
   - component: {fileID: 1390035159}
+  - component: {fileID: 1390035161}
   m_Layer: 0
   m_Name: Back
   m_TagString: Untagged
@@ -22101,6 +22102,36 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1390035157}
+--- !u!114 &1390035161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390035157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1768639181}
+          m_MethodName: Pause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1390624631
 GameObject:
   m_ObjectHideFlags: 0
@@ -28568,7 +28599,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1768639179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bfeaba63cfb9914fb0cf73d7f4c67ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 31ab981a4eb3a7940a3fe3d655e66fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 342020591}
