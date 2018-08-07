@@ -1,30 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameClock : MonoBehaviour
 {
-    public float GameTimer;
+    float GameTimer;
+    //public int WorldClock;
+    // TimeLimit
     bool isGameOver;
 
 	// Use this for initialization
 	void Start ()
     {
+        GameTimer = 5;
         isGameOver = false;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-        if(GameTimer >= 0)
+        if(GameTimer <= 0)
         {
-            Debug.Log(GameTimer);
-            GameTimer -= Time.fixedDeltaTime;
+            WorldClock += 1;
+            GameTimer = 10;
+            //Debug.Log(WorldClock);
         }
 
-        if (GameTimer <= 0)
+        if (WorldClock == 10)
         {
             Debug.Log("WIN");
+            SceneManager.LoadScene(0);
         }
+
+        GameTimer -= Time.fixedDeltaTime;
+
+        Debug.Log(GameTimer);
 	}
 }

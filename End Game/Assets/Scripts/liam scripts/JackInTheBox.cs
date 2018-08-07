@@ -17,7 +17,7 @@ public class JackInTheBox : MonoBehaviour
         //jackinthebox = GameObject.FindGameObjectsWithTag("JacknBox");
         //boxs.Add(GameObject.FindGameObjectsWithTag("JacknBox");
 
-        Debug.Log(Jackboxs.Count);
+        //Debug.Log(Jackboxs.Count);
         //RandomSpawn();
 	}
 	
@@ -33,8 +33,7 @@ public class JackInTheBox : MonoBehaviour
             Timers();
             timer = Time.time + timerIncrament;
         }
-
-        Debug.Log("Jacks count down"); Debug.Log(timer);
+        //Debug.Log("Jacks count down"); Debug.Log(timer);
         timer--;
     }
 
@@ -65,7 +64,7 @@ public class JackInTheBox : MonoBehaviour
                     }
                 }
                 Jackboxs[JackCount].SetActive(true);
-                Debug.Log(Jackboxs[JackCount]);
+                //Debug.Log(Jackboxs[JackCount]);
             }
         }
     }
@@ -78,7 +77,7 @@ public class JackInTheBox : MonoBehaviour
 
             CalmTimer = Time.time + CalmIncrament;
         }
-        Debug.Log(CalmTimer);
+        //Debug.Log(CalmTimer);
         CalmTimer -= CalmIncrament;
     }
 }
