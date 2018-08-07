@@ -29,8 +29,8 @@ public class Interactions : MonoBehaviour
     //CursorLockMode cursorLock;
     
     //if cheack Bools 
-    bool SprayBottleActive = false;
-    bool WalkyTalkyActive = false;
+    [HideInInspector] public bool SprayBottleActive;
+    [HideInInspector] public bool WalkyTalkyActive;
     bool isHiding;
 
 	// Use this for initialization
@@ -41,6 +41,9 @@ public class Interactions : MonoBehaviour
         HideCamera = GameObject.Find("HideCamera").GetComponent<Camera>();
         mainCamera.enabled = true;
         HideCamera.enabled = false;
+
+        SprayBottleActive = false;
+        WalkyTalkyActive = false;
 
         OrigionalCameraPos = camera.transform.localPosition;
 
@@ -56,18 +59,11 @@ public class Interactions : MonoBehaviour
             HiddenMove();
         }
 
-        //currentCameraPos = camera.transform.position;
-
         //Interactions
         if (Input.GetKeyDown(KeyCode.E))
         {
             Interact();
         }
-
-        //if(Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    cursorLock = CursorLockMode.None;
-        //}
 	}
 
     void Interact()
