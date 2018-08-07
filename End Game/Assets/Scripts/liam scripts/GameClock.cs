@@ -5,36 +5,245 @@ using UnityEngine.SceneManagement;
 
 public class GameClock : MonoBehaviour
 {
-    float GameTimer;
+    /// <summary>
+    // Created by Liam Gates
+    // Updates:
+    // by Callum Bradshaw
+    /// </summary>
+    public GameObject EndgameScreen;
+    public GameObject WinScreen;
+    public GameObject YouDied;
+    public GameObject pausePanel;
+    public GameObject optionsPanel;
+    public GameObject soundPanelOptions;
+    public GameObject controlsPanelOptions;
+    public GameObject graphicalPanelOptions;
+    public GameObject mainMenuPanel;
+    public GameObject restartPanel;
+    public GameObject PauseMenu;
+    public float GameTimer = 10;
+    bool isPaused;
+
     //public int WorldClock;
     // TimeLimit
     bool isGameOver;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Awake()
     {
-        GameTimer = 5;
+        Pause();
+    }
+
+    void Start()
+    {
+        isPaused = false;
         isGameOver = false;
-	}
+        EndgameScreen.SetActive(false);
+        WinScreen.SetActive(false);
+        YouDied.SetActive(false);
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+    }
+
+    
+	// Use this for initialization
 	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+    private void Update()
     {
-        if(GameTimer <= 0)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            WorldClock += 1;
-            GameTimer = 10;
-            //Debug.Log(WorldClock);
+            if (isPaused == false)
+            {
+                isPaused = true;
+                //Time.timeScale = 0;
+                PauseMenu.SetActive(true);
+                pausePanel.SetActive(true);
+            }
+
+            else if (isPaused == true)
+            {
+                isPaused = false;
+                //Time.timeScale = 1;
+                PauseMenu.SetActive(false);
+                pausePanel.SetActive(false);
+                optionsPanel.SetActive(false);
+                soundPanelOptions.SetActive(false);
+                controlsPanelOptions.SetActive(false);
+                graphicalPanelOptions.SetActive(false);
+                mainMenuPanel.SetActive(false);
+                restartPanel.SetActive(false);
+            }
         }
+        //if (GameTimer <= 0)
+        //{
+        //    Time.timeScale = 0;
+        //    GameTimer = 0;
+        //    Debug.Log("WIN");
+        //    EndgameScreen.SetActive(true);
+        //    WinScreen.SetActive(true);
+        //}
 
-        if (WorldClock == 10)
-        {
-            Debug.Log("WIN");
-            SceneManager.LoadScene(0);
-        }
+        if (GameTimer <= 0)
+            //else if (isDead == true)
+            {
 
-        GameTimer -= Time.fixedDeltaTime;
+                //GameTimer = 0;
+                Time.timeScale = 0;
+                Debug.Log("You Died");
+                EndgameScreen.SetActive(true);
+                YouDied.SetActive(true);
+            }
+        
+    }
+    // Update is called once per frame
+    void FixedUpdate ()
+    {
+            //if(GameTimer <= 0)
+            //{
+            //    WorldClock += 1;
+            //    GameTimer = 10;
+            //    //Debug.Log(WorldClock);
+            //}
 
-        Debug.Log(GameTimer);
+
+
+            GameTimer -= Time.fixedDeltaTime;
+
+            Debug.Log(GameTimer);
+
 	}
+
+    public void ReturnToMenu()
+    {
+        EndgameScreen.SetActive(false);
+        YouDied.SetActive(false);
+        WinScreen.SetActive(false);
+        Debug.Log("Back To Main Menu");
+        SceneManager.LoadScene(0);
+    }
+
+    public void RestartGame()
+    {
+        EndgameScreen.SetActive(false);
+        YouDied.SetActive(false);
+        WinScreen.SetActive(false);
+        Debug.Log("Restart Game");
+        SceneManager.LoadScene(1);
+    }
+
+    public void Pause()
+    {
+        //set active pause panel
+        pausePanel.SetActive(true);
+        // nothing else active
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+    }
+
+    public void Options()
+    {
+        //set active options panel
+        optionsPanel.SetActive(true);
+        // nothing else active
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+        pausePanel.SetActive(false);
+
+        //sound
+        ///player
+        ///enviromnet
+        ///npc
+        ///music
+        //controls
+        ///image of controls
+        //graphical
+        ///aspect ratio
+    }
+
+    public void MainMenu()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+
+        //confirm();
+    }
+
+    public void Restart()
+    {
+        //?
+    }
+
+    public void Resume()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+    }
+
+    public void Confirm()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+    }
+
+    public void SoundPanel()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(true);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+    }
+
+    public void Controls()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(true);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+    }
+
+    public void Graphicaloptions()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(true);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(false);
+    }
+
 }

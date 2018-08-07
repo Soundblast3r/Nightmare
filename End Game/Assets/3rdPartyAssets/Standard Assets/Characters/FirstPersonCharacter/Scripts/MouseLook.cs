@@ -78,19 +78,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (Input.GetKeyUp(KeyCode.Escape) && m_cursorIsLocked == true)
             {
                 m_cursorIsLocked = false;
+                Time.timeScale = 0;
             }
 
             else if (Input.GetKeyUp(KeyCode.Escape) && m_cursorIsLocked == false)
             {
                 m_cursorIsLocked = true;
+                Time.timeScale = 1;
             }
 
-            if (m_cursorIsLocked)
+            if (Time.timeScale == 1)
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
-            else if (!m_cursorIsLocked)
+            else if (Time.timeScale == 0)
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
