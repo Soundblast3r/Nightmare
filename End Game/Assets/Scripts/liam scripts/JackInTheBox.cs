@@ -22,7 +22,7 @@ public class JackInTheBox : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         if (Time.time > timer)
         {
@@ -31,7 +31,7 @@ public class JackInTheBox : MonoBehaviour
             //of time you want to wait in seconds 
 
             Timers();
-            timer = Time.time + timerIncrament;
+            timer = Time.fixedDeltaTime + timerIncrament;
         }
         //Debug.Log("Jacks count down"); Debug.Log(timer);
         timer--;
@@ -75,7 +75,7 @@ public class JackInTheBox : MonoBehaviour
         {
             RandomSpawn();
 
-            CalmTimer = Time.time + CalmIncrament;
+            CalmTimer = Time.fixedDeltaTime + CalmIncrament;
         }
         //Debug.Log(CalmTimer);
         CalmTimer -= CalmIncrament;
