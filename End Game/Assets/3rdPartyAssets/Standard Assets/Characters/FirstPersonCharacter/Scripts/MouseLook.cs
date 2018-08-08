@@ -15,13 +15,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool smooth;
         public float smoothTime = 5f;
         public bool lockCursor = true;
-        //public bool menuButtonPressed = false;
+        public GameObject pauseActive;
 
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
         private bool m_cursorIsLocked = true;
-
-
         public void Init(Transform character, Transform camera)
         {
             m_CharacterTargetRot = character.localRotation;
@@ -56,15 +54,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //UpdateCursorLock();
         }
 
-        public void SetCursorLock(bool value)
-        {
-            lockCursor = value;
-            if (!lockCursor)
-            {//we force unlock the cursor if the user disable the cursor locking helper
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
-        }
+        //public void SetCursorLock(bool value)
+        //{
+        //    lockCursor = value;
+        //    if (!lockCursor)
+        //    {//we force unlock the cursor if the user disable the cursor locking helper
+        //        Cursor.lockState = CursorLockMode.None;
+        //        Cursor.visible = true;
+        //    }
+        //}
 
         public void UpdateCursorLock()
         {
@@ -75,15 +73,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void InternalLockUpdate()
         {
-            if (Input.GetKeyUp(KeyCode.Escape) && m_cursorIsLocked == true)
+            if (Input.GetKeyUp(KeyCode.Escape) && Time.timeScale == 1)
             {
-                m_cursorIsLocked = false;
+                //m_cursorIsLocked = false;
                 Time.timeScale = 0;
             }
 
-            else if (Input.GetKeyUp(KeyCode.Escape) && m_cursorIsLocked == false)
+            else if (Input.GetKeyUp(KeyCode.Escape) && Time.timeScale == 0)
             {
-                m_cursorIsLocked = true;
+                //m_cursorIsLocked = true;
+                Time.timeScale = 1;
+            }
+
+            else if (pauseActive.activeInHierarchy == false)
+            {
+                //m_cursorIsLocked = true;
                 Time.timeScale = 1;
             }
 

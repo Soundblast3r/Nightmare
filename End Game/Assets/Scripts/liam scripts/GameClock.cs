@@ -58,27 +58,35 @@ public class GameClock : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused == false)
+            if (GameTimer > 0)
             {
-                isPaused = true;
-                //Time.timeScale = 0;
-                PauseMenu.SetActive(true);
-                pausePanel.SetActive(true);
-            }
+                if (isPaused == false)
+                {
+                    isPaused = true;
+                    //Time.timeScale = 0;
+                    PauseMenu.SetActive(true);
+                    pausePanel.SetActive(true);
+                }
 
-            else if (isPaused == true)
-            {
-                isPaused = false;
-                //Time.timeScale = 1;
-                PauseMenu.SetActive(false);
-                pausePanel.SetActive(false);
-                optionsPanel.SetActive(false);
-                soundPanelOptions.SetActive(false);
-                controlsPanelOptions.SetActive(false);
-                graphicalPanelOptions.SetActive(false);
-                mainMenuPanel.SetActive(false);
-                restartPanel.SetActive(false);
+                else if (isPaused == true)
+                {
+                    isPaused = false;
+                    //Time.timeScale = 1;
+                    PauseMenu.SetActive(false);
+                    pausePanel.SetActive(false);
+                    optionsPanel.SetActive(false);
+                    soundPanelOptions.SetActive(false);
+                    controlsPanelOptions.SetActive(false);
+                    graphicalPanelOptions.SetActive(false);
+                    mainMenuPanel.SetActive(false);
+                    restartPanel.SetActive(false);
+                }
             }
+        }
+
+        else
+        {
+            //nothing
         }
         //if (GameTimer <= 0)
         //{
@@ -92,7 +100,7 @@ public class GameClock : MonoBehaviour
         if (GameTimer <= 0)
             //else if (isDead == true)
             {
-
+                
                 //GameTimer = 0;
                 Time.timeScale = 0;
                 Debug.Log("You Died");
@@ -125,6 +133,7 @@ public class GameClock : MonoBehaviour
         YouDied.SetActive(false);
         WinScreen.SetActive(false);
         Debug.Log("Back To Main Menu");
+        SceneManager.UnloadSceneAsync(1);
         SceneManager.LoadScene(0);
     }
 
@@ -134,6 +143,7 @@ public class GameClock : MonoBehaviour
         YouDied.SetActive(false);
         WinScreen.SetActive(false);
         Debug.Log("Restart Game");
+        SceneManager.UnloadSceneAsync(1);
         SceneManager.LoadScene(1);
     }
 
@@ -180,15 +190,19 @@ public class GameClock : MonoBehaviour
         soundPanelOptions.SetActive(false);
         controlsPanelOptions.SetActive(false);
         graphicalPanelOptions.SetActive(false);
-        mainMenuPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
         restartPanel.SetActive(false);
-
-        //confirm();
     }
 
     public void Restart()
     {
-        //?
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        soundPanelOptions.SetActive(false);
+        controlsPanelOptions.SetActive(false);
+        graphicalPanelOptions.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        restartPanel.SetActive(true);
     }
 
     public void Resume()
@@ -200,6 +214,7 @@ public class GameClock : MonoBehaviour
         graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void Confirm()
