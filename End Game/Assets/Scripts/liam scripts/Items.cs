@@ -7,6 +7,9 @@ public class Items : MonoBehaviour
     //  Created By Liam Gates
     //  Updates:
     //
+    //[HideInInspector] public bool SprayBottleActive;
+    //[HideInInspector] public bool WalkyTalkyActive;
+
     Interactions interactions;
     Camera camera;
     GameObject Spraybottle;
@@ -15,26 +18,33 @@ public class Items : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        camera = this.GetComponent<Camera>();
+
+        interactions = GetComponent<Interactions>();
         Spraybottle = GameObject.Find("SprayBottle");
-        //interactions.SprayBottleActive;
+
 	}
-	
+
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1))
         {
-            Debug.Log("Torch");
+            //Debug.Log("Torch");
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             //set everything else to false
-            Debug.Log("Spray Bottle");
-            SprayBottle();
+            Debug.Log(interactions.SprayBottleActive);
+            if (interactions.SprayBottleActive == true)
+            {
+                //SprayBottle();
+                Spraybottle.SetActive(true);
+            }
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Debug.Log("Walky Talky");
+            //Debug.Log("Walky Talky");
         }
     }
 
@@ -49,7 +59,7 @@ public class Items : MonoBehaviour
             if(hit.collider.tag == "plushi" && interactions.SprayBottleActive == true)
             {
                 //do something
-                Spraybottle.SetActive(true);
+                
             }
         }
     }
