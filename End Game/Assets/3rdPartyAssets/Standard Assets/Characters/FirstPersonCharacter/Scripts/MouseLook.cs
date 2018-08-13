@@ -16,6 +16,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float smoothTime = 5f;
         public bool lockCursor = true;
         public GameObject pauseActive;
+        public GameObject EndGameActive;
 
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
@@ -89,6 +90,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 //m_cursorIsLocked = true;
                 Time.timeScale = 1;
+            }
+
+            if (EndGameActive.activeInHierarchy == true)
+            {
+                //m_cursorIsLocked = true;
+                Time.timeScale = 0;
             }
 
             if (Time.timeScale == 1)

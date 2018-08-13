@@ -24682,6 +24682,7 @@ MonoBehaviour:
     smoothTime: 5
     lockCursor: 1
     pauseActive: {fileID: 1768639179}
+    EndGameActive: {fileID: 1549710963}
   m_UseFovKick: 1
   m_FovKick:
     Camera: {fileID: 0}
@@ -34813,7 +34814,7 @@ MonoBehaviour:
   mainMenuPanel: {fileID: 1802725025}
   restartPanel: {fileID: 2093451522}
   PauseMenu: {fileID: 1768639179}
-  GameTimer: 0
+  GameTimer: 10
 --- !u!4 &2028151112
 Transform:
   m_ObjectHideFlags: 0
