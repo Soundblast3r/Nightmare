@@ -21,7 +21,13 @@ public class GameManager : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject restartPanel;
     public GameObject PauseMenu;
-    public float GameTimer = 10;
+
+    //public SceneChanger SceneChanger;
+
+    public float GameTimer;
+    public int CurrentScene = 1;
+
+
     bool isPaused;
 
     //public int WorldClock;
@@ -31,6 +37,7 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
+        
         Pause();
     }
 
@@ -48,6 +55,7 @@ public class GameManager : MonoBehaviour
         graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
+        GameTimer = 10;
     }
 
     
@@ -56,6 +64,50 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        //from here
+        //if (GameTimer <= 0)
+        //{
+        //    if (CurrentScene == 1)
+        //    {
+        //        Debug.Log("Scene 2 loaded");
+        //        CurrentScene = 2;
+        //        SceneManager.LoadScene(2);
+        //        GameTimer = 10;
+        //    }
+
+        //    else if (CurrentScene == 2)
+        //    {
+        //        Debug.Log("Scene 3 loaded");
+        //        CurrentScene = 3;
+        //        SceneManager.LoadScene(3);
+        //        GameTimer = 5;
+        //    }
+
+        //    else if (CurrentScene == 3)
+        //    {
+        //        Debug.Log("Scene 4 loaded");
+        //        CurrentScene = 4;
+        //        SceneManager.LoadScene(4);
+        //        GameTimer = 10;
+        //    }
+
+        //    else if (CurrentScene == 4)
+        //    {
+        //        Debug.Log("Scene 5 loaded");
+        //        CurrentScene = 5;
+        //        SceneManager.LoadScene(5);
+        //        GameTimer = 15;
+        //    }
+
+        //    else if (CurrentScene == 5)
+        //    {
+        //        Debug.Log("end of game loaded");
+        //        CurrentScene = 6;
+        //        SceneManager.LoadScene(6);
+        //    }
+        //}
+        //to here
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameTimer > 0)
@@ -81,6 +133,8 @@ public class GameManager : MonoBehaviour
                     mainMenuPanel.SetActive(false);
                     restartPanel.SetActive(false);
                 }
+
+                
             }
         }
 
@@ -97,16 +151,16 @@ public class GameManager : MonoBehaviour
         //    WinScreen.SetActive(true);
         //}
 
-        if (GameTimer <= 0)
-            //else if (isDead == true)
-            {
+        //if (GameTimer <= 0)
+        //    //else if (isDead == true)
+        //    {
                 
-                //GameTimer = 0;
-                Time.timeScale = 0;
-                Debug.Log("You Died");
-                EndgameScreen.SetActive(true);
-                YouDied.SetActive(true);
-            }
+        //        //GameTimer = 0;
+        //        Time.timeScale = 0;
+        //        Debug.Log("You Died");
+        //        EndgameScreen.SetActive(true);
+        //        YouDied.SetActive(true);
+        //    }
         
     }
     // Update is called once per frame
@@ -133,7 +187,6 @@ public class GameManager : MonoBehaviour
         YouDied.SetActive(false);
         WinScreen.SetActive(false);
         Debug.Log("Back To Main Menu");
-        SceneManager.UnloadSceneAsync(1);
         SceneManager.LoadScene(0);
     }
 
@@ -143,8 +196,7 @@ public class GameManager : MonoBehaviour
         YouDied.SetActive(false);
         WinScreen.SetActive(false);
         Debug.Log("Restart Game");
-        SceneManager.UnloadSceneAsync(1);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(CurrentScene);
     }
 
     public void Pause()
