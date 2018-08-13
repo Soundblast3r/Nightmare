@@ -11,40 +11,48 @@ public class Items : MonoBehaviour
     //[HideInInspector] public bool WalkyTalkyActive;
 
     Interactions interactions;
-    Camera camera;
+    Camera cam;
     GameObject Spraybottle;
     float rayDistance = 5;
     
 	// Use this for initialization
 	void Start ()
     {
-        camera = this.GetComponent<Camera>();
-
+        cam = this.GetComponent<Camera>();
         interactions = GetComponent<Interactions>();
-        Spraybottle = GameObject.Find("SprayBottle");
-
+        //Spraybottle = GameObject.Find("CrocBottle");
+        Spraybottle = GameObject.FindGameObjectWithTag("Spray");
+        Spraybottle.SetActive(false);
 	}
 
 	// Update is called once per frame
-	void FixedUpdate ()
+	void Update ()
     {
+        if(Input.GetMouseButton(0))
+        {
+            SprayBottle();
+        }
+
         if (Input.GetKey(KeyCode.Alpha1))
         {
             //Debug.Log("Torch");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKey(KeyCode.Alpha2))
         {
             //set everything else to false
-            Debug.Log(interactions.SprayBottleActive);
             if (interactions.SprayBottleActive == true)
             {
                 //SprayBottle();
-                Spraybottle.SetActive(true);
+                Debug.Log(interactions.SprayBottleActive);
+                if (Spraybottle != null)
+                {
+                    Spraybottle.SetActive(true);
+                }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKey(KeyCode.Alpha3))
         {
-            //Debug.Log("Walky Talky");
+            Debug.Log("malk");
         }
     }
 
@@ -52,14 +60,14 @@ public class Items : MonoBehaviour
     void SprayBottle()
     {
         RaycastHit hit;
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
         if(Physics.Raycast(ray, out hit, rayDistance))
         {
-            if(hit.collider.tag == "plushi" && interactions.SprayBottleActive == true)
+            if(hit.collider.tag == "Plushie" && interactions.SprayBottleActive == true)
             {
                 //do something
-                
+                Debug.Log("Squek");
             }
         }
     }

@@ -10,9 +10,10 @@ public class Interactions : MonoBehaviour
     public float rayDistance;
     //public float Distance;
 
+    //Items items;
+
     //Camera Rotations
     private float RotatY;
-    private float RotatX;
     //private float Vertical = 0.0f;
     //private float Horizontal = 0.0f;
     public float lookSpeed;
@@ -21,7 +22,6 @@ public class Interactions : MonoBehaviour
 
     // Camera
     private Vector3 OrigionalCameraPos;
-    private Vector3 currentCameraPos;
 
     public GameObject target;
     public Camera mainCamera;
@@ -39,6 +39,7 @@ public class Interactions : MonoBehaviour
         //cursorLock = CursorLockMode.Locked;
         mainCamera = this.GetComponent<Camera>();
         HideCamera = GameObject.Find("HideCamera").GetComponent<Camera>();
+        //items = GetComponent<Items>();
         mainCamera.enabled = true;
         HideCamera.enabled = false;
 
@@ -84,7 +85,7 @@ public class Interactions : MonoBehaviour
                 target = hit.collider.gameObject;
                 //makes the world obejct invisable
                 target.SetActive(false);
-                if (hit.collider.name == "Spray Bottle")
+                if (hit.collider.name == "SprayBottle")
                 {
                     //adds the obejcts to your inventory
                     SprayBottleActive = true;
