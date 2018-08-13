@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameClock : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     /// <summary>
     // Created by Liam Gates
