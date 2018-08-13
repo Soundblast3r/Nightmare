@@ -85,7 +85,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Time.timeScale = 1;
             }
 
-            else if (pauseActive.activeInHierarchy == false)
+            if (pauseActive.activeInHierarchy == false)
             {
                 //m_cursorIsLocked = true;
                 Time.timeScale = 1;

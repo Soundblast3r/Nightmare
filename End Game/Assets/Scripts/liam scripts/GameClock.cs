@@ -214,7 +214,8 @@ public class GameClock : MonoBehaviour
         graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
-        Time.timeScale = 1;
+        PauseMenu.SetActive(false);
+        isPaused = false;
     }
 
     public void Confirm()
