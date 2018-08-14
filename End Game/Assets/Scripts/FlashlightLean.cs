@@ -1,8 +1,9 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomControls : MonoBehaviour
-{
+public class FlashlightLean : MonoBehaviour {
+
     //flashlight
     public GameObject Flashlight;
     public bool torchSwitchLimit;
@@ -27,7 +28,7 @@ public class CustomControls : MonoBehaviour
     Items items;
 
     //PauseMenu
-    
+
 
     // Use this for initialization
 
@@ -48,7 +49,7 @@ public class CustomControls : MonoBehaviour
 
     void Update()
     {
-        
+
 
     }
 
@@ -191,9 +192,6 @@ public class CustomControls : MonoBehaviour
         ChargeDelay = false;
     }
 }
-
-
-
 
 //public void DeathCam(GameObject go)
 //{
