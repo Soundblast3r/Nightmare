@@ -52,12 +52,13 @@ public class Items : MonoBehaviour
 
             TorchActive = true;
         }
-        if (Input.GetKey(KeyCode.Alpha2))
 
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
             //set everything else to false
             if (interactions.SprayBottleActive == true)
             {
-        {       TorchActive = false;
+                TorchActive = false;
 
                 if (Spraybottle != null)
                 {
@@ -65,9 +66,15 @@ public class Items : MonoBehaviour
                 }
             }
         }
+
         if (Input.GetKey(KeyCode.Alpha3))
         {
-            //Debug.Log("malk");
+            if (interactions.WalkyTalkyActive == true)
+            {
+                TorchActive = false;
+                Spraybottle.SetActive(false);
+                Debug.Log("malk");
+            }
         }
     }
 

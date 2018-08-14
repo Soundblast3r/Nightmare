@@ -31,8 +31,8 @@ public class Interactions : MonoBehaviour
     //if cheack Bools 
     [HideInInspector]public bool SprayBottleActive;
     [HideInInspector] public bool WalkyTalkyActive;
-    bool isHiding;
 
+    bool isHiding;
 	// Use this for initialization
 	void Start ()
     {
