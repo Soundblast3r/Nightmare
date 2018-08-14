@@ -7,14 +7,17 @@ public class Items : MonoBehaviour
     //  Created By Liam Gates
     //  Updates:
     //
-    //[HideInInspector] public bool SprayBottleActive;
-    //[HideInInspector] public bool WalkyTalkyActive;
 
     Interactions interactions;
     Camera cam;
     GameObject Spraybottle;
     float rayDistance = 5;
-    
+    public ParticleSystem Spray;
+
+
+    [HideInInspector]public bool TorchActive;
+    [HideInInspector] public bool WalkyTalkyActive;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -23,6 +26,11 @@ public class Items : MonoBehaviour
         //Spraybottle = GameObject.Find("CrocBottle");
         Spraybottle = GameObject.FindGameObjectWithTag("Spray");
         Spraybottle.SetActive(false);
+
+        //if (Spray == null)
+        //{
+        //    Spray = GameObject.Find("CrocBottle").GetComponent<ParticleSystem>();
+        //}
 	}
 
 	// Update is called once per frame
@@ -30,20 +38,27 @@ public class Items : MonoBehaviour
     {
         if(Input.GetMouseButton(0))
         {
-            SprayBottle();
+            if(interactions.SprayBottleActive == true)
+            {
+                SprayBottle();
+            }
+
         }
 
         if (Input.GetKey(KeyCode.Alpha1))
         {
             //Debug.Log("Torch");
+            Spraybottle.SetActive(false);
+
+            TorchActive = true;
         }
         if (Input.GetKey(KeyCode.Alpha2))
-        {
+
             //set everything else to false
             if (interactions.SprayBottleActive == true)
             {
-                //SprayBottle();
-                Debug.Log(interactions.SprayBottleActive);
+        {       TorchActive = false;
+
                 if (Spraybottle != null)
                 {
                     Spraybottle.SetActive(true);
@@ -52,7 +67,7 @@ public class Items : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Alpha3))
         {
-            Debug.Log("malk");
+            //Debug.Log("malk");
         }
     }
 
@@ -67,7 +82,14 @@ public class Items : MonoBehaviour
             if(hit.collider.tag == "Plushie" && interactions.SprayBottleActive == true)
             {
                 //do something
-                Debug.Log("Squek");
+                //Debug.Log("Squek");
+                if (!Spray.isPlaying)
+                {
+                    if (Spray != null)
+                    {
+                        Spray.Play();
+                    }
+                }
             }
         }
     }

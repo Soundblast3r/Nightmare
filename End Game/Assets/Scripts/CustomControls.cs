@@ -23,6 +23,9 @@ public class CustomControls : MonoBehaviour
     public GameObject CameraRight;
 
 
+    //ActiveItems
+    Items items;
+
     //PauseMenu
     
 
@@ -39,6 +42,8 @@ public class CustomControls : MonoBehaviour
         CameraRight.SetActive(false);
         CameraMiddle.GetComponent<Camera>().enabled = true;
         Time.timeScale = 1;
+
+        items = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Items>();
     }
 
     void Update()
@@ -52,67 +57,70 @@ public class CustomControls : MonoBehaviour
     {
         //flashlight
         {
-            if (Flashlight.activeSelf == true && Delay == false)
+            if (items.TorchActive == true)
             {
-                StartCoroutine(ChargeDecrement());
-            }
-
-            if (Input.GetKey(KeyCode.R) && Flashlight.activeSelf == false && ChargeDelay == false)
-            {
-                StartCoroutine(ChargeIncrement());
-            }
-
-            if (TorchCharge <= dimlight)
-            {
-                Flashlight.GetComponentInChildren<Light>().intensity = 0.2f;
-            }
-
-            if (TorchCharge < 0)
-            {
-                Torchflat = true;
-                TorchCharge = 0;
-                Debug.Log("flashlight is flat");
-            }
-
-            if (TorchCharge > 1000)
-            {
-                Torchflat = false;
-                TorchCharge = 1000;
-                Flashlight.GetComponentInChildren<Light>().intensity = 0.5f;
-                Debug.Log("torch is Fully charged");
-            }
-
-
-
-
-
-            if (Torchflat == false)
-            {
-                if (torchSwitchLimit == false)
+                Debug.Log(items.TorchActive);
+                if (Flashlight.activeSelf == true && Delay == false)
                 {
-                    if (Input.GetKey(KeyCode.F) && Flashlight.activeSelf == false)
-                    {
-                        torchSwitchLimit = true;
-                        Flashlight.SetActive(true);
-                        StartCoroutine(FlashlightCooldown());
-                        if (Flashlight.activeInHierarchy && Torchflat == false)
-                            Debug.Log("Flashlight on");
-                    }
-
-                    else if (Input.GetKey(KeyCode.F) && Flashlight.activeSelf == true)
-                    {
-                        torchSwitchLimit = true;
-                        Flashlight.SetActive(false);
-                        StartCoroutine(FlashlightCooldown());
-                        Debug.Log("Flashlight off");
-                    }
-
+                    StartCoroutine(ChargeDecrement());
                 }
-            }
 
-            if (Torchflat == true)
-            {
-                Flashlight.SetActive(false);
+                if (Input.GetKey(KeyCode.R) && Flashlight.activeSelf == false && ChargeDelay == false)
+                {
+                    StartCoroutine(ChargeIncrement());
+                }
+
+                if (TorchCharge <= dimlight)
+                {
+                    Flashlight.GetComponentInChildren<Light>().intensity = 0.2f;
+                }
+
+                if (TorchCharge < 0)
+                {
+                    Torchflat = true;
+                    TorchCharge = 0;
+                    Debug.Log("flashlight is flat");
+                }
+
+                if (TorchCharge > 1000)
+                {
+                    Torchflat = false;
+                    TorchCharge = 1000;
+                    Flashlight.GetComponentInChildren<Light>().intensity = 0.5f;
+                    Debug.Log("torch is Fully charged");
+                }
+
+
+
+
+                if (Torchflat == false)
+                {
+                    if (torchSwitchLimit == false)
+                    {
+                        if (Input.GetKey(KeyCode.F) && Flashlight.activeSelf == false)
+                        {
+                            torchSwitchLimit = true;
+                            Flashlight.SetActive(true);
+                            StartCoroutine(FlashlightCooldown());
+                            if (Flashlight.activeInHierarchy && Torchflat == false)
+                                Debug.Log("Flashlight on");
+                        }
+
+                        else if (Input.GetKey(KeyCode.F) && Flashlight.activeSelf == true)
+                        {
+                            torchSwitchLimit = true;
+                            Flashlight.SetActive(false);
+                            StartCoroutine(FlashlightCooldown());
+                            Debug.Log("Flashlight off");
+                        }
+
+                    }
+                }
+
+                if (Torchflat == true)
+                {
+                    Flashlight.SetActive(false);
+                }
             }
 
         }

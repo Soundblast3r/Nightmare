@@ -29,7 +29,7 @@ public class Interactions : MonoBehaviour
     //CursorLockMode cursorLock;
     
     //if cheack Bools 
-    [HideInInspector] public bool SprayBottleActive;
+    [HideInInspector]public bool SprayBottleActive;
     [HideInInspector] public bool WalkyTalkyActive;
     bool isHiding;
 
@@ -81,7 +81,7 @@ public class Interactions : MonoBehaviour
             if (hit.collider.tag == "Pickup")
             {
                 //sets whatever you hit as the current target
-                Debug.Log("Object hit");
+                //Debug.Log("Object hit");
                 target = hit.collider.gameObject;
                 //makes the world obejct invisable
                 target.SetActive(false);
@@ -89,18 +89,18 @@ public class Interactions : MonoBehaviour
                 {
                     //adds the obejcts to your inventory
                     SprayBottleActive = true;
-                    Debug.Log("picked up spray bottle");
+                    //Debug.Log("picked up spray bottle");
                 }
                 if (hit.collider.name == "Walky Talky")
                 {
                     WalkyTalkyActive = true;
-                    Debug.Log("picked up Walky Talky");
+                    //Debug.Log("picked up Walky Talky");
                 }
             }
 
             if(hit.collider.tag == "Climbable" && isHiding == false)
             {
-                Debug.Log("can climb this");
+                //Debug.Log("can climb this");
                 target = hit.collider.gameObject;
 
                 GameObject.Find("FPSController").transform.position = GameObject.Find("ClimbingPoint").transform.position;
@@ -111,7 +111,7 @@ public class Interactions : MonoBehaviour
             if (hit.collider.tag == "Hideable" && isHiding == false)
             {
                 //sets the hideable object to the current target
-                Debug.Log("Can Hide Here");
+                //Debug.Log("Can Hide Here");
                 target = hit.collider.gameObject;
 
                 //finds scripts and colliders attached to the player and turns them off
@@ -163,7 +163,7 @@ public class Interactions : MonoBehaviour
         HideCamera.transform.localEulerAngles = new Vector3(Angles.x, RotatY, Angles.z);
         //HideCamera.transform.Rotate(RotatY, RotatX, 0.0f);
 
-        Debug.Log("Horizontal");
-        Debug.Log("Vertical");
+        //Debug.Log("Horizontal");
+        //Debug.Log("Vertical");
     }
 }
