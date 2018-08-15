@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
         EndgameScreen.SetActive(false);
         YouDied.SetActive(false);
         WinScreen.SetActive(false);
-        Debug.Log("Back To Main Menu");
+        //Debug.Log("Back To Main Menu");
         SceneManager.LoadScene(0);
     }
 
@@ -195,7 +195,7 @@ public class GameManager : MonoBehaviour
         EndgameScreen.SetActive(false);
         YouDied.SetActive(false);
         WinScreen.SetActive(false);
-        Debug.Log("Restart Game");
+        //Debug.Log("Restart Game");
         SceneManager.LoadScene(CurrentScene);
     }
 

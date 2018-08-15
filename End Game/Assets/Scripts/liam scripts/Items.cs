@@ -73,7 +73,7 @@ public class Items : MonoBehaviour
             {
                 TorchActive = false;
                 Spraybottle.SetActive(false);
-                Debug.Log("malk");
+                //Debug.Log("malk");
             }
         }
     }

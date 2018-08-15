@@ -34,7 +34,7 @@ public class Menu : MonoBehaviour
 
     public void StartNew()
     {
-        Debug.Log("New Game Initiated");
+        //Debug.Log("New Game Initiated");
         SceneManager.LoadScene(1);
     }
 
@@ -42,15 +42,15 @@ public class Menu : MonoBehaviour
     public void StartLoad()
     {
         //Output this to console when the Button is clicked
-        Debug.Log("Loading Game");
-        Debug.Log("Load Game Unavailable");
+        //Debug.Log("Loading Game");
+        //Debug.Log("Load Game Unavailable");
     }
 
     ///Quit
     public void Terminate()
     {
         //Output this to console when the Button is clicked
-        Debug.Log("Game Terminated");
+        //Debug.Log("Game Terminated");
         //EditorApplication.isPlaying = false;
         Application.Quit();
     }
@@ -59,7 +59,7 @@ public class Menu : MonoBehaviour
     public void ChangeOptions()
     {
         //Output this to console when the Button is clicked
-        Debug.Log("Options Opened");
+        //Debug.Log("Options Opened");
 
         MainMenuPanel.SetActive(false);
         OptionsPanel.SetActive(true);
@@ -72,7 +72,7 @@ public class Menu : MonoBehaviour
         //Output this to console when the Button is clicked
         if (UnlockablesButton.activeSelf == true)
         {
-            Debug.Log("Unlockables opened");
+            //Debug.Log("Unlockables opened");
 
             MainMenuPanel.SetActive(false);
             OptionsPanel.SetActive(false);
@@ -83,7 +83,7 @@ public class Menu : MonoBehaviour
     public void CloseOptions()
     {
         //Output this to console when the Button is clicked
-        Debug.Log("Options Closed");
+        //Debug.Log("Options Closed");
 
         OptionsPanel.SetActive(false);
         UnlockablesPanel.SetActive(false);
@@ -96,7 +96,7 @@ public class Menu : MonoBehaviour
         //Output this to console when the Button is clicked
         if (UnlockablesPanel.activeSelf == true)
         {
-            Debug.Log("Unlockables Closed");
+            //Debug.Log("Unlockables Closed");
 
             OptionsPanel.SetActive(false);
             UnlockablesPanel.SetActive(false);
