@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEditor;
+//using UnityEditor;
 
 public class Menu : MonoBehaviour
 {
@@ -51,7 +51,7 @@ public class Menu : MonoBehaviour
     {
         //Output this to console when the Button is clicked
         Debug.Log("Game Terminated");
-        EditorApplication.isPlaying = false;
+        //EditorApplication.isPlaying = false;
         Application.Quit();
     }
 

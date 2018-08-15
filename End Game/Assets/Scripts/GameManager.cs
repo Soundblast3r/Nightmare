@@ -177,7 +177,7 @@ public class GameManager : MonoBehaviour
 
             GameTimer -= Time.fixedDeltaTime;
 
-            Debug.Log(GameTimer);
+           // Debug.Log(GameTimer);
 
 	}
 
