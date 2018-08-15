@@ -115,7 +115,7 @@ public class Interactions : MonoBehaviour
                 target = hit.collider.gameObject;
 
                 //finds scripts and colliders attached to the player and turns them off
-                GameObject.Find("FPSController").GetComponent<CustomControls>().enabled = false;
+                GameObject.Find("FPSController").GetComponent<FlashlightLean>().enabled = false;
                 GameObject.Find("Character").GetComponent<CapsuleCollider>().enabled = false;
                 GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = false;
 
@@ -133,7 +133,7 @@ public class Interactions : MonoBehaviour
             else if (isHiding == true)
             {
                 //turns the scripts attached to the play back on
-                GameObject.Find("FPSController").GetComponent<CustomControls>().enabled = true;
+                GameObject.Find("FPSController").GetComponent<FlashlightLean>().enabled = true;
                 GameObject.Find("Character").GetComponent<CapsuleCollider>().enabled = false;
                 GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
 
