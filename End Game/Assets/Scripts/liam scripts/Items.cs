@@ -15,7 +15,7 @@ public class Items : MonoBehaviour
     public ParticleSystem Spray;
 
 
-    [HideInInspector]public bool TorchActive;
+    [HideInInspector] public bool TorchActive;
     [HideInInspector] public bool WalkyTalkyActive;
 
 	// Use this for initialization
@@ -26,6 +26,8 @@ public class Items : MonoBehaviour
         //Spraybottle = GameObject.Find("CrocBottle");
         Spraybottle = GameObject.FindGameObjectWithTag("Spray");
         Spraybottle.SetActive(false);
+
+        TorchActive = true;
 
         //if (Spray == null)
         //{
