@@ -61,25 +61,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
-            {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            }
+            //// the jump state needs to read here to make sure it is not missed
+            //if (!m_Jump)
+            //{
+            //    m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+            //}
 
-            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
-            {
-                StartCoroutine(m_JumpBob.DoBobCycle());
-                PlayLandingSound();
-                m_MoveDir.y = 0f;
-                m_Jumping = false;
-            }
-            if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
-            {
-                m_MoveDir.y = 0f;
-            }
+            //if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
+            //{
+            //    StartCoroutine(m_JumpBob.DoBobCycle());
+            //    PlayLandingSound();
+            //    m_MoveDir.y = 0f;
+            //    m_Jumping = false;
+            //}
+            //if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
+            //{
+            //    m_MoveDir.y = 0f;
+            //}
 
-            m_PreviouslyGrounded = m_CharacterController.isGrounded;
+            //m_PreviouslyGrounded = m_CharacterController.isGrounded;
             m_MouseLook.UpdateCursorLock();
         }
 
@@ -112,15 +112,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (m_CharacterController.isGrounded)
             {
-                m_MoveDir.y = -m_StickToGroundForce;
+                //m_MoveDir.y = -m_StickToGroundForce;
 
-                if (m_Jump)
-                {
-                    m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
-                    m_Jump = false;
-                    m_Jumping = true;
-                }
+                //if (m_Jump)
+                //{
+                //    m_MoveDir.y = m_JumpSpeed;
+                //    PlayJumpSound();
+                //    m_Jump = false;
+                //    m_Jumping = true;
+                //}
             }
             else
             {
@@ -135,8 +135,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayJumpSound()
         {
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
+            //m_AudioSource.clip = m_JumpSound;
+            //m_AudioSource.Play();
         }
 
 
