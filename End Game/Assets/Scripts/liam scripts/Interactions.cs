@@ -64,6 +64,7 @@ public class Interactions : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Interact();
+            AnimalInteract();
         }
 	}
 
@@ -143,6 +144,33 @@ public class Interactions : MonoBehaviour
 
                 //you are no longer hidding
                 isHiding = false;
+            }
+        }
+    }
+
+    void AnimalInteract()
+    {
+        RaycastHit hit;
+        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+
+        if(Physics.Raycast(ray, out hit, rayDistance))
+        {
+            if (hit.collider.tag == "Plushie")
+            {
+                if(hit.collider.name == "Ted Bear")
+                {
+                    Debug.Log("Play: Giving Bear, tea animation");
+                }
+
+                if(hit.collider.name == "Owl")
+                {
+                    Debug.Log("Play: Winding Owl animation");
+                }
+
+                if(hit.collider.name == "RedPanda")
+                {
+                    Debug.Log("Play: Peting Red Panda animation");
+                }
             }
         }
     }

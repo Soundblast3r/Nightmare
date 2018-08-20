@@ -11,6 +11,7 @@ public class Items : MonoBehaviour
     Interactions interactions;
     Camera cam;
     GameObject Spraybottle;
+    GameObject WalkyTalky;
     float rayDistance = 5;
     public ParticleSystem Spray;
 
@@ -25,7 +26,9 @@ public class Items : MonoBehaviour
         interactions = GetComponent<Interactions>();
         //Spraybottle = GameObject.Find("CrocBottle");
         Spraybottle = GameObject.FindGameObjectWithTag("Spray");
+        WalkyTalky = GameObject.FindGameObjectWithTag("Walky");
         Spraybottle.SetActive(false);
+        WalkyTalky.SetActive(false);
 
         TorchActive = true;
 
