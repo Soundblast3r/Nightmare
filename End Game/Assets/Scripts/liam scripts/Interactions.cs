@@ -29,7 +29,7 @@ public class Interactions : MonoBehaviour
     //CursorLockMode cursorLock;
     
     //if cheack Bools 
-    [HideInInspector]public bool SprayBottleActive;
+    [HideInInspector] public bool SprayBottleActive;
     [HideInInspector] public bool WalkyTalkyActive;
 
     bool isHiding;
@@ -92,7 +92,7 @@ public class Interactions : MonoBehaviour
                     SprayBottleActive = true;
                     //Debug.Log("picked up spray bottle");
                 }
-                if (hit.collider.name == "Walky Talky")
+                if (hit.collider.name == "WalkyTalky")
                 {
                     WalkyTalkyActive = true;
                     //Debug.Log("picked up Walky Talky");

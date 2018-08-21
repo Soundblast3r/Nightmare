@@ -15,9 +15,8 @@ public class Items : MonoBehaviour
     float rayDistance = 5;
     public ParticleSystem Spray;
 
-
     [HideInInspector] public bool TorchActive;
-    [HideInInspector] public bool WalkyTalkyActive;
+    //[HideInInspector] public bool WalkyTalkyActive;
 
 	// Use this for initialization
 	void Start ()
@@ -54,7 +53,7 @@ public class Items : MonoBehaviour
         {
             //Debug.Log("Torch");
             Spraybottle.SetActive(false);
-
+            WalkyTalky.SetActive(false);
             TorchActive = true;
         }
 
@@ -64,7 +63,7 @@ public class Items : MonoBehaviour
             if (interactions.SprayBottleActive == true)
             {
                 TorchActive = false;
-
+                WalkyTalky.SetActive(false);
                 if (Spraybottle != null)
                 {
                     Spraybottle.SetActive(true);
@@ -78,7 +77,10 @@ public class Items : MonoBehaviour
             {
                 TorchActive = false;
                 Spraybottle.SetActive(false);
-                //Debug.Log("malk");
+                if (WalkyTalky != null)
+                {
+                    WalkyTalky.SetActive(true);
+                }
             }
         }
     }
@@ -104,5 +106,11 @@ public class Items : MonoBehaviour
                 }
             }
         }
+    }
+
+    void TalkyWalky()
+    {
+        //Play sound From the audio sorce
+        //I'll figure out a way to change the channls later
     }
 }
