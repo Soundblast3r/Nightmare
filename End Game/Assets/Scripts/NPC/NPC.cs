@@ -15,7 +15,8 @@ public class NPC : MonoBehaviour {
 
     public bool isSearching;
 
-    public Transform[] patrolPoints;        // list of points npc will patrol to
+    public Transform[] patrolPoints;           // list of points npc will patrol to
+    //public List<Transform> patrolPoints;
     public Transform playerKillPos;         // set player pos here on death
 
     public float timeToTransform;           // countdown until transform

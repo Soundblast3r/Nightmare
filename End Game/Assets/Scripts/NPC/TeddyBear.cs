@@ -10,21 +10,26 @@ public class TeddyBear : NPC {
     private Rigidbody RB;
     private NavMeshAgent NMA;
 
+    private bool ReachedTarget = false;
+    private Vector3 SeekPosition = Vector3.zero;
+    private int PatrolIterator = 0;
+
     void Start () {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
 
-        timeToTransformMax = 30;
+        timeToTransformMax = 0;
         timeToRevertMax = 30;
 
         timeToTransform = timeToTransformMax;
-        timeToRevert = timeToRevertMax;
+        //timeToRevert = timeToRevertMax;
 
         isSearching = false;
         inToyForm = true;
 
-
+        SeekPosition = transform.position;
+        NMA.SetDestination(SeekPosition);
     }
 
     void Update() {
@@ -37,10 +42,10 @@ public class TeddyBear : NPC {
             timeToTransform -= Time.deltaTime;
         }
 
-        // In demon form, countdown to toy form
-        if (timeToRevert >= 0 && !inToyForm) {
-            timeToRevert -= Time.deltaTime;
-        }
+        //// In demon form, countdown to toy form
+        //if (timeToRevert >= 0 && !inToyForm) {
+        //    timeToRevert -= Time.deltaTime;
+        //}
 
         //=================================================================================
         // Timers  while in toy/demon form
@@ -52,27 +57,29 @@ public class TeddyBear : NPC {
         }
 
         // when in DEMON form, and conditions met, turns back to toy form
-        if (timeToRevert <= 0 && !inToyForm) {
-            ToyForm();
-        }
-    }
+        //if (timeToRevert <= 0 && !inToyForm) {
+        //    ToyForm();
+        //}
 
-    public void FixedUpdate() {
-        if (isSearching && !inToyForm) {
-            FollowPlayer();
+
+        ReachedTarget = NMA.remainingDistance < 0.2f;
+        if (isSearching)
+        {
+            Patrol();
         }
-        else if (!isSearching && inToyForm) {
+        else if (!isSearching && inToyForm)
+        {
             StopSearching();
         }
     }
-
+    
     public void DemonForm() {
         NMA.isStopped = false;
         inToyForm = false;
         isSearching = true;
         RB.AddForce(0, 10, 0);
         this.gameObject.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f); //scale size
-        timeToRevert = timeToRevertMax;
+        //timeToRevert = timeToRevertMax;
     }
 
     public void ToyForm() {
@@ -107,6 +114,22 @@ public class TeddyBear : NPC {
 
     public void Patrol() {
         // DO PATROL STUFF
+
+        if (ReachedTarget)
+        {
+
+            if (PatrolIterator >= patrolPoints.Length)
+            {
+                // Wrap index in case of overflow.
+                PatrolIterator = 0;
+            }
+
+            Debug.Log(patrolPoints[PatrolIterator]);
+            NMA.SetDestination(patrolPoints[PatrolIterator].position);
+            PatrolIterator++;
+            PatrolIterator %= patrolPoints.Length;
+            //ReachedTarget = false;
+        }
     }
 
 
