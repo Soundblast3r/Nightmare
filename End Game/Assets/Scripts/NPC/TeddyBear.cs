@@ -4,7 +4,12 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class TeddyBear : NPC {
+public class TeddyBear : NPC
+{
+    //private GameObject VisRange;
+    private float VisDist = 10;
+    private float SphereRadius;
+    private Vector3 origen;
 
     private GameObject player;
     private Rigidbody RB;
@@ -18,15 +23,19 @@ public class TeddyBear : NPC {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
+        //VisRange = GameObject.FindGameObjectWithTag("VisualRange");
 
-        timeToTransformMax = 0;
+        //VisRange.SetActive(false);
+
+        timeToTransformMax = 5;
         timeToRevertMax = 30;
+        SphereRadius = 2.0f;
 
         timeToTransform = timeToTransformMax;
         //timeToRevert = timeToRevertMax;
 
         isSearching = false;
-        inToyForm = true;
+        //inToyForm = true;
 
         SeekPosition = transform.position;
         NMA.SetDestination(SeekPosition);
@@ -38,7 +47,8 @@ public class TeddyBear : NPC {
         //=================================================================================
 
         // Countdown to demon form
-        if (timeToTransform >= 0 && inToyForm) {
+        if (timeToTransform >= 0)
+        {
             timeToTransform -= Time.deltaTime;
         }
 
@@ -52,8 +62,10 @@ public class TeddyBear : NPC {
         //=================================================================================
 
         // when in TOY form, and not 'taken care of' and countdown reaches 0, transform to demon
-        if (timeToTransform <= 0 && inToyForm) {
+        if (timeToTransform <= 0 && !isSearching)
+        {
             DemonForm();
+            //VisRange.SetActive(true);
         }
 
         // when in DEMON form, and conditions met, turns back to toy form
@@ -61,21 +73,25 @@ public class TeddyBear : NPC {
         //    ToyForm();
         //}
 
-
         ReachedTarget = NMA.remainingDistance < 0.2f;
+        VisualRange();
+        if (isHunting)
+        {
+            FollowPlayer();
+        }
         if (isSearching)
         {
             Patrol();
         }
-        else if (!isSearching && inToyForm)
-        {
-            StopSearching();
-        }
+        //else if (!isSearching)
+        //{
+        //    StopSearching();
+        //}
     }
     
     public void DemonForm() {
         NMA.isStopped = false;
-        inToyForm = false;
+        //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, 10, 0);
         this.gameObject.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f); //scale size
@@ -84,7 +100,7 @@ public class TeddyBear : NPC {
 
     public void ToyForm() {
         StopSearching();
-        inToyForm = true;
+        //inToyForm = true;
         this.gameObject.transform.localScale = new Vector3(1, 1, 1); // scale size
         timeToTransform = timeToTransformMax;
     }
@@ -132,14 +148,36 @@ public class TeddyBear : NPC {
         }
     }
 
+    public void VisualRange()
+    {
+        RaycastHit hit;
+        origen = transform.position;
+        //Debug.DrawRay(transform.position, transform.forward * VisDist, Color.green);
+        //Debug.DrawRay(transform.position, (transform.forward + transform.right).normalized * VisDist, Color.green);
+        //Debug.DrawRay(transform.position, (transform.forward - transform.right).normalized * VisDist, Color.green);
+
+        if (Physics.SphereCast(origen, SphereRadius, transform.forward, out hit))
+        {
+           if (hit.collider.tag == "Player")
+            {
+                isSearching = false;
+                isHunting = true;
+            }
+        }
+    }
 
     private void OnTriggerEnter(Collider other) {
 
-        if (other.gameObject == player && !inToyForm) {
+        if (other.gameObject == player) {
             StopSearching();
             KillPlayer();
         }
     }
 
-
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Debug.DrawLine(origen, origen + transform.forward * VisDist);
+        Gizmos.DrawWireSphere(origen + transform.forward * VisDist, SphereRadius);
+    }
 }

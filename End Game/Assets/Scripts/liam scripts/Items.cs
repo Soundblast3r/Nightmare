@@ -13,6 +13,7 @@ public class Items : MonoBehaviour
     GameObject Spraybottle;
     GameObject WalkyTalky;
     float rayDistance = 5;
+    private float SphereRadius;
     public ParticleSystem Spray;
 
     [HideInInspector] public bool TorchActive;
@@ -91,7 +92,8 @@ public class Items : MonoBehaviour
         RaycastHit hit;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-        if(Physics.Raycast(ray, out hit, rayDistance))
+        //if(Physics.Raycast(ray, out hit, rayDistance))
+        if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance))
         {
             if(hit.collider.tag == "Plushie" && interactions.SprayBottleActive == true)
             {

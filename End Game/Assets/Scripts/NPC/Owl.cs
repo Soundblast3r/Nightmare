@@ -22,7 +22,7 @@ public class Owl : NPC {
         timeToRevert = timeToRevertMax;
 
         isSearching = false;
-        inToyForm = true;
+        //inToyForm = true;
     }
 
     void Update() {
@@ -31,42 +31,42 @@ public class Owl : NPC {
         //=================================================================================
 
         // Countdown to demon form
-        if (timeToTransform >= 0 && inToyForm) {
-            timeToTransform -= Time.deltaTime;
-        }
+        //if (timeToTransform >= 0 && inToyForm) {
+        //    timeToTransform -= Time.deltaTime;
+        //}
 
-        // In demon form, countdown to toy form
-        if (timeToRevert >= 0 && !inToyForm) {
-            timeToRevert -= Time.deltaTime;
-        }
+        //// In demon form, countdown to toy form
+        //if (timeToRevert >= 0 && !inToyForm) {
+        //    timeToRevert -= Time.deltaTime;
+        //}
 
         //=================================================================================
         // Timers  while in toy/demon form
         //=================================================================================
 
         // when in TOY form, and not 'taken care of' and countdown reaches 0, transform to demon
-        if (timeToTransform <= 0 && inToyForm) {
-            DemonForm();
-        }
+        //if (timeToTransform <= 0 && inToyForm) {
+        //    DemonForm();
+        //}
 
-        // when in DEMON form, and conditions met, turns back to toy form
-        if (timeToRevert <= 0 && !inToyForm) {
-            ToyForm();
-        }
+        //// when in DEMON form, and conditions met, turns back to toy form
+        //if (timeToRevert <= 0 && !inToyForm) {
+        //    ToyForm();
+        //}
     }
 
     public void FixedUpdate() {
-        if (isSearching && !inToyForm) {
-            FollowPlayer();
-        }
-        else if (!isSearching && inToyForm) {
-            StopSearching();
-        }
+        //if (isSearching && !inToyForm) {
+        //    FollowPlayer();
+        //}
+        //else if (!isSearching && inToyForm) {
+        //    StopSearching();
+        //}
     }
 
     public void DemonForm() {
         NMA.isStopped = false;
-        inToyForm = false;
+        //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, 10, 0);
         this.gameObject.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f); //scale size
@@ -75,7 +75,7 @@ public class Owl : NPC {
 
     public void ToyForm() {
         StopSearching();
-        inToyForm = true;
+        //inToyForm = true;
         this.gameObject.transform.localScale = new Vector3(1, 1, 1); // scale size
         timeToTransform = timeToTransformMax;
     }
@@ -110,7 +110,7 @@ public class Owl : NPC {
 
     private void OnTriggerEnter(Collider other) {
 
-        if (other.gameObject == player && !inToyForm) {
+        if (other.gameObject == player) {
             StopSearching();
             KillPlayer();
         }

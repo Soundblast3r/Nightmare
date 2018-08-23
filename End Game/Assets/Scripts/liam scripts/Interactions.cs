@@ -8,6 +8,7 @@ public class Interactions : MonoBehaviour
     //Raycast Pickups
     public Camera camera;
     public float rayDistance;
+    private float SphereRadius;
     //public float Distance;
 
     //Items items;
@@ -48,6 +49,7 @@ public class Interactions : MonoBehaviour
 
         OrigionalCameraPos = camera.transform.localPosition;
 
+        SphereRadius = 0.10f;
         isHiding = false;
 	}
 
@@ -76,7 +78,8 @@ public class Interactions : MonoBehaviour
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         
         //cheacks if the ray actualy hit something within a set distance
-        if (Physics.Raycast(ray, out hit, rayDistance))
+        //if (Physics.Raycast(ray, out hit, rayDistance))
+        if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance))
         {
             //cheacks if you are able to pick up the object
             if (hit.collider.tag == "Pickup")

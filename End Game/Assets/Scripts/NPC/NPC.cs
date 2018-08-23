@@ -14,6 +14,7 @@ using UnityEngine.UI;
 public class NPC : MonoBehaviour {
 
     public bool isSearching;
+    public bool isHunting;
 
     public Transform[] patrolPoints;           // list of points npc will patrol to
     //public List<Transform> patrolPoints;
@@ -25,11 +26,12 @@ public class NPC : MonoBehaviour {
     public float timeToRevert;              // while in demon form, countdown to revert to toy
     public float timeToRevertMax;               // Set this as max time to revert
 
-    public bool inToyForm;                 
+    //public bool inToyForm;                 
     
     void Start () {
         isSearching = false;
-        inToyForm = true;
+        isHunting = false;
+        //inToyForm = true;
     }
 
 
