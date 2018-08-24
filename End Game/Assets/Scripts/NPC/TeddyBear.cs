@@ -27,7 +27,7 @@ public class TeddyBear : NPC
 
         //VisRange.SetActive(false);
 
-        timeToTransformMax = 5;
+        timeToTransformMax = 30;
         timeToRevertMax = 30;
         SphereRadius = 2.0f;
 
@@ -46,6 +46,7 @@ public class TeddyBear : NPC
         // Countdowns and timers
         //=================================================================================
 
+        //Debug.Log(timeToTransform);
         // Countdown to demon form
         if (timeToTransform >= 0)
         {
@@ -62,7 +63,7 @@ public class TeddyBear : NPC
         //=================================================================================
 
         // when in TOY form, and not 'taken care of' and countdown reaches 0, transform to demon
-        if (timeToTransform <= 0 && !isSearching)
+        if (timeToTransform <= 0)
         {
             DemonForm();
             //VisRange.SetActive(true);
@@ -128,7 +129,8 @@ public class TeddyBear : NPC
         // SET GAMEOVER THINGS
     }
 
-    public void Patrol() {
+    public void Patrol()
+    {
         // DO PATROL STUFF
 
         if (ReachedTarget)
@@ -158,10 +160,15 @@ public class TeddyBear : NPC
 
         if (Physics.SphereCast(origen, SphereRadius, transform.forward, out hit))
         {
-           if (hit.collider.tag == "Player")
+           if (hit.collider.tag == "Player" && isSearching)
             {
                 isSearching = false;
                 isHunting = true;
+            }
+           else if (isHunting)
+            {
+                isHunting = false;
+                isSearching = true;
             }
         }
     }

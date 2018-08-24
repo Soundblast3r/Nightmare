@@ -10,6 +10,8 @@ public class Items : MonoBehaviour
 
     Interactions interactions;
     Camera cam;
+    Crocodile Croc;
+    //TeddyBear Tedd; 
     GameObject Spraybottle;
     GameObject WalkyTalky;
     float rayDistance = 5;
@@ -24,6 +26,7 @@ public class Items : MonoBehaviour
     {
         cam = this.GetComponent<Camera>();
         interactions = GetComponent<Interactions>();
+        Croc = GameObject.FindGameObjectWithTag("Plushie").GetComponent<Crocodile>();
         //Spraybottle = GameObject.Find("CrocBottle");
         Spraybottle = GameObject.FindGameObjectWithTag("Spray");
         WalkyTalky = GameObject.FindGameObjectWithTag("Walky");
@@ -104,6 +107,7 @@ public class Items : MonoBehaviour
                     if (Spray != null)
                     {
                         Spray.Play();
+                        Croc.timeToTransform = Croc.timeToTransformMax;
                     }
                 }
             }
