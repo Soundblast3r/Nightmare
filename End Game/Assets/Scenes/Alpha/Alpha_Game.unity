@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 2
   m_FogDensity: 0.08
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 13306786}
   - component: {fileID: 13306785}
   - component: {fileID: 13306789}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 28743695}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Workshop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 37251309}
   - component: {fileID: 37251308}
   - component: {fileID: 37251307}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 38408550}
   - component: {fileID: 38408549}
   - component: {fileID: 38408548}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 56980715}
   - component: {fileID: 56980714}
   - component: {fileID: 56980713}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Painting - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 62467919}
   - component: {fileID: 62467918}
   - component: {fileID: 62467922}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,7 +737,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 71665909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Structure - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,6 +837,73 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 75614470}
+--- !u!1001 &77431508
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4290351103271342, guid: b0329e69478e287459c81bce9e66acd6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 93.157005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290351103271342, guid: b0329e69478e287459c81bce9e66acd6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -23.128256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290351103271342, guid: b0329e69478e287459c81bce9e66acd6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 34.95336
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290351103271342, guid: b0329e69478e287459c81bce9e66acd6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290351103271342, guid: b0329e69478e287459c81bce9e66acd6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290351103271342, guid: b0329e69478e287459c81bce9e66acd6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290351103271342, guid: b0329e69478e287459c81bce9e66acd6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290351103271342, guid: b0329e69478e287459c81bce9e66acd6, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 198216149923394642, guid: b0329e69478e287459c81bce9e66acd6,
+        type: 2}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198726925120913848, guid: b0329e69478e287459c81bce9e66acd6,
+        type: 2}
+      propertyPath: randomSeed
+      value: 779467608
+      objectReference: {fileID: 0}
+    - target: {fileID: 198726925120913848, guid: b0329e69478e287459c81bce9e66acd6,
+        type: 2}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198216149923394642, guid: b0329e69478e287459c81bce9e66acd6,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198726925120913848, guid: b0329e69478e287459c81bce9e66acd6,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b0329e69478e287459c81bce9e66acd6, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &79991143
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +943,7 @@ GameObject:
   - component: {fileID: 85882101}
   - component: {fileID: 85882100}
   - component: {fileID: 85882099}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door - MasterBedroom (EnSuite)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -962,7 +1029,7 @@ GameObject:
   - component: {fileID: 90741744}
   - component: {fileID: 90741743}
   - component: {fileID: 90741747}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1076,7 +1143,7 @@ GameObject:
   - component: {fileID: 97578149}
   - component: {fileID: 97578148}
   - component: {fileID: 97578147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayKitchen - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1160,7 +1227,7 @@ GameObject:
   - component: {fileID: 99006672}
   - component: {fileID: 99006671}
   - component: {fileID: 99006670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cupboard - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1241,7 +1308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 103110347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Structure - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1279,7 +1346,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 106044867}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShelfContainer - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1431,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1436,7 +1503,7 @@ GameObject:
   - component: {fileID: 109785626}
   - component: {fileID: 109785625}
   - component: {fileID: 109785624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1548,6 +1615,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1725821477585470, guid: 03570169811cb374b80c346e4a18fba3, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03570169811cb374b80c346e4a18fba3, type: 2}
   m_IsPrefabParent: 0
@@ -1563,7 +1634,7 @@ GameObject:
   - component: {fileID: 117096744}
   - component: {fileID: 117096743}
   - component: {fileID: 117096742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1611,7 +1682,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1683,7 +1754,7 @@ GameObject:
   - component: {fileID: 122149374}
   - component: {fileID: 122149373}
   - component: {fileID: 122149372}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1768,7 +1839,7 @@ GameObject:
   - component: {fileID: 122251507}
   - component: {fileID: 122251506}
   - component: {fileID: 122251505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1816,7 +1887,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -1888,7 +1959,7 @@ GameObject:
   - component: {fileID: 143856628}
   - component: {fileID: 143856627}
   - component: {fileID: 143856626}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Basin - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1973,7 +2044,7 @@ GameObject:
   - component: {fileID: 145214713}
   - component: {fileID: 145214712}
   - component: {fileID: 145214711}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AdultScale - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2146,7 @@ GameObject:
   - component: {fileID: 146363637}
   - component: {fileID: 146363636}
   - component: {fileID: 146363639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2174,7 +2245,7 @@ GameObject:
   - component: {fileID: 147359436}
   - component: {fileID: 147359435}
   - component: {fileID: 147359434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2258,7 +2329,7 @@ GameObject:
   - component: {fileID: 155322209}
   - component: {fileID: 155322208}
   - component: {fileID: 155322207}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2391,7 +2462,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -2463,7 +2534,7 @@ GameObject:
   - component: {fileID: 163515291}
   - component: {fileID: 163515290}
   - component: {fileID: 163515289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cupboard - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2547,7 +2618,7 @@ GameObject:
   - component: {fileID: 166987089}
   - component: {fileID: 166987088}
   - component: {fileID: 166987087}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2631,7 +2702,7 @@ GameObject:
   - component: {fileID: 169084114}
   - component: {fileID: 169084113}
   - component: {fileID: 169084112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2715,7 +2786,7 @@ GameObject:
   - component: {fileID: 170538089}
   - component: {fileID: 170538088}
   - component: {fileID: 170538087}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2800,7 +2871,7 @@ GameObject:
   - component: {fileID: 180122689}
   - component: {fileID: 180122688}
   - component: {fileID: 180122687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLights - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2848,7 +2919,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -2917,7 +2988,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 182449680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2954,7 +3025,7 @@ GameObject:
   - component: {fileID: 188166905}
   - component: {fileID: 188166904}
   - component: {fileID: 188166903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLights - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3002,7 +3073,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3145,7 +3216,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 199919624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3267,7 +3338,7 @@ GameObject:
   - component: {fileID: 215425823}
   - component: {fileID: 215425822}
   - component: {fileID: 215425826}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3382,7 +3453,7 @@ GameObject:
   - component: {fileID: 217294057}
   - component: {fileID: 217294056}
   - component: {fileID: 217294055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AdultScale - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3499,7 +3570,7 @@ GameObject:
   - component: {fileID: 235944614}
   - component: {fileID: 235944613}
   - component: {fileID: 235944612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Toilet - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3580,7 +3651,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 244409737}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decor - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3793,7 +3864,7 @@ GameObject:
   - component: {fileID: 257400419}
   - component: {fileID: 257400418}
   - component: {fileID: 257400417}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door - Office (Sliding)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3877,7 +3948,7 @@ GameObject:
   - component: {fileID: 265670321}
   - component: {fileID: 265670320}
   - component: {fileID: 265670319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flowers - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3961,7 +4032,7 @@ GameObject:
   - component: {fileID: 269902286}
   - component: {fileID: 269902285}
   - component: {fileID: 269902284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flowers - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4050,7 +4121,7 @@ GameObject:
   - component: {fileID: 271300928}
   - component: {fileID: 271300927}
   - component: {fileID: 271300926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4134,7 +4205,7 @@ GameObject:
   - component: {fileID: 281463755}
   - component: {fileID: 281463754}
   - component: {fileID: 281463753}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mirror - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4218,7 +4289,7 @@ GameObject:
   - component: {fileID: 291631189}
   - component: {fileID: 291631188}
   - component: {fileID: 291631187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4302,7 +4373,7 @@ GameObject:
   - component: {fileID: 299454172}
   - component: {fileID: 299454171}
   - component: {fileID: 299454170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ComputerScreen - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4387,7 +4458,7 @@ GameObject:
   - component: {fileID: 302919554}
   - component: {fileID: 302919553}
   - component: {fileID: 302919552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flowers - LivingRoom (OnBench)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4472,7 +4543,7 @@ GameObject:
   - component: {fileID: 316822210}
   - component: {fileID: 316822209}
   - component: {fileID: 316822208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4520,7 +4591,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -4678,7 +4749,7 @@ GameObject:
   - component: {fileID: 322918260}
   - component: {fileID: 322918259}
   - component: {fileID: 322918258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLight - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4726,7 +4797,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4800,7 +4871,7 @@ GameObject:
   - component: {fileID: 324388667}
   - component: {fileID: 324388666}
   - component: {fileID: 324388670}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4919,7 +4990,7 @@ GameObject:
   - component: {fileID: 342989284}
   - component: {fileID: 342989283}
   - component: {fileID: 342989282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bench - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5051,6 +5122,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 66fd90f39215362488479e1528b82d33, type: 2}
+    - target: {fileID: 100000, guid: 68ae5b23616732d48846320984bf0451, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68ae5b23616732d48846320984bf0451, type: 3}
   m_IsPrefabParent: 0
@@ -5070,7 +5145,7 @@ GameObject:
   - component: {fileID: 349528607}
   - component: {fileID: 349528606}
   - component: {fileID: 349528605}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5118,7 +5193,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5190,7 +5265,7 @@ GameObject:
   - component: {fileID: 353366043}
   - component: {fileID: 353366042}
   - component: {fileID: 353366041}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CouchSegment - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5276,7 +5351,7 @@ GameObject:
   - component: {fileID: 354285552}
   - component: {fileID: 354285551}
   - component: {fileID: 354285555}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5387,7 +5462,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 355542588}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Structure - Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5427,7 +5502,7 @@ GameObject:
   - component: {fileID: 356245759}
   - component: {fileID: 356245758}
   - component: {fileID: 356245757}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bench - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5511,7 +5586,7 @@ GameObject:
   - component: {fileID: 363074371}
   - component: {fileID: 363074370}
   - component: {fileID: 363074369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5664,7 +5739,7 @@ GameObject:
   - component: {fileID: 377112883}
   - component: {fileID: 377112882}
   - component: {fileID: 377112881}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5833,7 +5908,7 @@ GameObject:
   - component: {fileID: 413872929}
   - component: {fileID: 413872928}
   - component: {fileID: 413872927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cupboard - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5917,7 +5992,7 @@ GameObject:
   - component: {fileID: 451115674}
   - component: {fileID: 451115673}
   - component: {fileID: 451115672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CubeStorage - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6001,7 +6076,7 @@ GameObject:
   - component: {fileID: 457943719}
   - component: {fileID: 457943718}
   - component: {fileID: 457943717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cupboard - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6083,7 +6158,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 461960295}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cameras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6204,7 +6279,7 @@ GameObject:
   - component: {fileID: 471113428}
   - component: {fileID: 471113427}
   - component: {fileID: 471113426}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6303,7 +6378,7 @@ GameObject:
   - component: {fileID: 473571904}
   - component: {fileID: 473571903}
   - component: {fileID: 473571902}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - Office (OnBench)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6388,7 +6463,7 @@ GameObject:
   - component: {fileID: 476152690}
   - component: {fileID: 476152689}
   - component: {fileID: 476152688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6436,7 +6511,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6509,7 +6584,7 @@ GameObject:
   - component: {fileID: 479213600}
   - component: {fileID: 479213599}
   - component: {fileID: 479213598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLights - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6557,7 +6632,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -6678,7 +6753,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6747,7 +6822,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 486023652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6793,7 +6868,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 492155409}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Couch - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6910,7 +6985,7 @@ GameObject:
   - component: {fileID: 495427478}
   - component: {fileID: 495427477}
   - component: {fileID: 495427476}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6994,7 +7069,7 @@ GameObject:
   - component: {fileID: 504450823}
   - component: {fileID: 504450822}
   - component: {fileID: 504450821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door - Office (Sliding)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7244,7 +7319,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 514452658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShelfContainer - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7280,7 +7355,7 @@ GameObject:
   - component: {fileID: 516720055}
   - component: {fileID: 516720054}
   - component: {fileID: 516720057}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7381,7 +7456,7 @@ GameObject:
   - component: {fileID: 528295731}
   - component: {fileID: 528295730}
   - component: {fileID: 528295734}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7497,7 +7572,7 @@ GameObject:
   - component: {fileID: 545741697}
   - component: {fileID: 545741696}
   - component: {fileID: 545741700}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7611,7 +7686,7 @@ GameObject:
   - component: {fileID: 546933764}
   - component: {fileID: 546933763}
   - component: {fileID: 546933762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Painting - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7695,7 +7770,7 @@ GameObject:
   - component: {fileID: 552698416}
   - component: {fileID: 552698415}
   - component: {fileID: 552698414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7776,7 +7851,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 560402189}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decor - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7809,7 +7884,7 @@ GameObject:
   - component: {fileID: 560436921}
   - component: {fileID: 560436920}
   - component: {fileID: 560436919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TowelRack - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7895,7 +7970,7 @@ GameObject:
   - component: {fileID: 561829521}
   - component: {fileID: 561829520}
   - component: {fileID: 561829524}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8011,7 +8086,7 @@ GameObject:
   - component: {fileID: 565218111}
   - component: {fileID: 565218110}
   - component: {fileID: 565218114}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Bathroom (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8125,7 +8200,7 @@ GameObject:
   - component: {fileID: 565539753}
   - component: {fileID: 565539752}
   - component: {fileID: 565539751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bench (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8206,7 +8281,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 565939251}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8239,7 +8314,7 @@ GameObject:
   - component: {fileID: 575020793}
   - component: {fileID: 575020792}
   - component: {fileID: 575020795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8445,7 +8520,7 @@ GameObject:
   - component: {fileID: 589772797}
   - component: {fileID: 589772796}
   - component: {fileID: 589772795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8529,7 +8604,7 @@ GameObject:
   - component: {fileID: 596572173}
   - component: {fileID: 596572172}
   - component: {fileID: 596572171}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8613,7 +8688,7 @@ GameObject:
   - component: {fileID: 597721979}
   - component: {fileID: 597721978}
   - component: {fileID: 597721977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TowelRack - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8694,7 +8769,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 602644017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8728,7 +8803,7 @@ GameObject:
   - component: {fileID: 620280810}
   - component: {fileID: 620280809}
   - component: {fileID: 620280808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo (OnDesk)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8813,7 +8888,7 @@ GameObject:
   - component: {fileID: 620320591}
   - component: {fileID: 620320590}
   - component: {fileID: 620320589}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8912,7 +8987,7 @@ GameObject:
   - component: {fileID: 629918976}
   - component: {fileID: 629918975}
   - component: {fileID: 629918974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CouchSegment - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8993,7 +9068,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 631991576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Structure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9040,7 +9115,7 @@ GameObject:
   - component: {fileID: 634514974}
   - component: {fileID: 634514973}
   - component: {fileID: 634514977}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9240,7 +9315,7 @@ GameObject:
   - component: {fileID: 639708976}
   - component: {fileID: 639708975}
   - component: {fileID: 639708974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9288,7 +9363,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -9409,7 +9484,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -9478,7 +9553,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 648120711}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Couch - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9511,7 +9586,7 @@ GameObject:
   - component: {fileID: 650732483}
   - component: {fileID: 650732482}
   - component: {fileID: 650732481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9595,7 +9670,7 @@ GameObject:
   - component: {fileID: 661611637}
   - component: {fileID: 661611636}
   - component: {fileID: 661611635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9680,7 +9755,7 @@ GameObject:
   - component: {fileID: 670176639}
   - component: {fileID: 670176638}
   - component: {fileID: 670176641}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9781,7 +9856,7 @@ GameObject:
   - component: {fileID: 670990870}
   - component: {fileID: 670990869}
   - component: {fileID: 670990873}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9895,7 +9970,7 @@ GameObject:
   - component: {fileID: 673809462}
   - component: {fileID: 673809461}
   - component: {fileID: 673809460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10028,7 +10103,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -10265,7 +10340,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 691205563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10294,7 +10369,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 692093504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10328,7 +10403,7 @@ GameObject:
   - component: {fileID: 694501524}
   - component: {fileID: 694501523}
   - component: {fileID: 694501522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10412,7 +10487,7 @@ GameObject:
   - component: {fileID: 709737414}
   - component: {fileID: 709737413}
   - component: {fileID: 709737412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoubleBed - MasterBedroom (Left)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10497,7 +10572,7 @@ GameObject:
   - component: {fileID: 711416829}
   - component: {fileID: 711416828}
   - component: {fileID: 711416827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10545,7 +10620,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -10617,7 +10692,7 @@ GameObject:
   - component: {fileID: 713142092}
   - component: {fileID: 713142091}
   - component: {fileID: 713142090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bench - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10701,7 +10776,7 @@ GameObject:
   - component: {fileID: 725788211}
   - component: {fileID: 725788210}
   - component: {fileID: 725788209}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof - Hallway (Upper) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10941,7 +11016,7 @@ GameObject:
   - component: {fileID: 735070402}
   - component: {fileID: 735070401}
   - component: {fileID: 735070405}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11052,7 +11127,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 747486923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decor - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11167,7 +11242,7 @@ GameObject:
   - component: {fileID: 753063270}
   - component: {fileID: 753063269}
   - component: {fileID: 753063268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11248,7 +11323,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 759211601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decor - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11295,7 +11370,7 @@ GameObject:
   - component: {fileID: 773767675}
   - component: {fileID: 773767674}
   - component: {fileID: 773767677}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - Hallway (Lower)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11399,7 +11474,7 @@ GameObject:
   - component: {fileID: 775288675}
   - component: {fileID: 775288674}
   - component: {fileID: 775288673}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11484,7 +11559,7 @@ GameObject:
   - component: {fileID: 776002947}
   - component: {fileID: 776002946}
   - component: {fileID: 776002945}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLights - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11532,7 +11607,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -11601,7 +11676,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 778508973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11657,7 +11732,7 @@ GameObject:
   - component: {fileID: 779876670}
   - component: {fileID: 779876669}
   - component: {fileID: 779876668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - Hallway (Upper) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11756,7 +11831,7 @@ GameObject:
   - component: {fileID: 783117589}
   - component: {fileID: 783117588}
   - component: {fileID: 783117587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Basin - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11841,7 +11916,7 @@ GameObject:
   - component: {fileID: 788093605}
   - component: {fileID: 788093604}
   - component: {fileID: 788093603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11889,7 +11964,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -11958,7 +12033,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 797938351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decor - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11999,7 +12074,7 @@ GameObject:
   - component: {fileID: 808923070}
   - component: {fileID: 808923069}
   - component: {fileID: 808923072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rug - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12100,7 +12175,7 @@ GameObject:
   - component: {fileID: 812012662}
   - component: {fileID: 812012661}
   - component: {fileID: 812012660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bath - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12185,7 +12260,7 @@ GameObject:
   - component: {fileID: 818486474}
   - component: {fileID: 818486473}
   - component: {fileID: 818486472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AdultScale - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12348,7 +12423,7 @@ GameObject:
   - component: {fileID: 828526315}
   - component: {fileID: 828526314}
   - component: {fileID: 828526313}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CameraRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12430,7 +12505,7 @@ GameObject:
   - component: {fileID: 838292160}
   - component: {fileID: 838292159}
   - component: {fileID: 838292158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLights - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12478,7 +12553,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -12547,7 +12622,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 844558223}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decor - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12585,7 +12660,7 @@ GameObject:
   - component: {fileID: 847219915}
   - component: {fileID: 847219914}
   - component: {fileID: 847219913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12670,7 +12745,7 @@ GameObject:
   - component: {fileID: 851471320}
   - component: {fileID: 851471319}
   - component: {fileID: 851471318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLight - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12718,7 +12793,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -12811,7 +12886,7 @@ GameObject:
   - component: {fileID: 858685374}
   - component: {fileID: 858685378}
   - component: {fileID: 858685379}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12927,7 +13002,7 @@ GameObject:
   - component: {fileID: 858813879}
   - component: {fileID: 858813878}
   - component: {fileID: 858813882}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13042,7 +13117,7 @@ GameObject:
   - component: {fileID: 863079837}
   - component: {fileID: 863079836}
   - component: {fileID: 863079835}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Hallway (Full)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13227,7 +13302,7 @@ GameObject:
   - component: {fileID: 868354235}
   - component: {fileID: 868354234}
   - component: {fileID: 868354238}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13342,7 +13417,7 @@ GameObject:
   - component: {fileID: 870791431}
   - component: {fileID: 870791430}
   - component: {fileID: 870791429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLights - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13390,7 +13465,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -13464,7 +13539,7 @@ GameObject:
   - component: {fileID: 877069332}
   - component: {fileID: 877069331}
   - component: {fileID: 877069335}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13625,7 +13700,7 @@ GameObject:
   - component: {fileID: 885967939}
   - component: {fileID: 885967938}
   - component: {fileID: 885967937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13711,7 +13786,7 @@ GameObject:
   - component: {fileID: 892017090}
   - component: {fileID: 892017089}
   - component: {fileID: 892017094}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13823,7 +13898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 897010236}
   - component: {fileID: 897010237}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ScreenLight - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13871,7 +13946,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -13887,7 +13962,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 905031921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13923,7 +13998,7 @@ GameObject:
   - component: {fileID: 909651524}
   - component: {fileID: 909651523}
   - component: {fileID: 909651522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14107,7 +14182,7 @@ GameObject:
   - component: {fileID: 967832762}
   - component: {fileID: 967832761}
   - component: {fileID: 967832760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cupboard - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14193,7 +14268,7 @@ GameObject:
   - component: {fileID: 975583154}
   - component: {fileID: 975583153}
   - component: {fileID: 975583157}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14308,7 +14383,7 @@ GameObject:
   - component: {fileID: 988984523}
   - component: {fileID: 988984522}
   - component: {fileID: 988984521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14356,7 +14431,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -14428,7 +14503,7 @@ GameObject:
   - component: {fileID: 991569617}
   - component: {fileID: 991569616}
   - component: {fileID: 991569615}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14513,7 +14588,7 @@ GameObject:
   - component: {fileID: 994722357}
   - component: {fileID: 994722356}
   - component: {fileID: 994722355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLights - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14561,7 +14636,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -14664,7 +14739,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1003494949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lounge Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14720,7 +14795,7 @@ GameObject:
   - component: {fileID: 1020489475}
   - component: {fileID: 1020489474}
   - component: {fileID: 1020489473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLight - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14768,7 +14843,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -14872,7 +14947,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 1
   m_VoxelSize: 0.125
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 95211f5cdd956034e86d7adb7d054052, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e360ef52afbe80045a980fb7835a3a99, type: 2}
 --- !u!4 &1029722045
 Transform:
   m_ObjectHideFlags: 0
@@ -14897,7 +14972,7 @@ GameObject:
   - component: {fileID: 1035674500}
   - component: {fileID: 1035674499}
   - component: {fileID: 1035674498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flowers - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14981,7 +15056,7 @@ GameObject:
   - component: {fileID: 1037138414}
   - component: {fileID: 1037138413}
   - component: {fileID: 1037138412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Bench - Hallway '
   m_TagString: Hideable
   m_Icon: {fileID: 0}
@@ -15067,7 +15142,7 @@ GameObject:
   - component: {fileID: 1045834055}
   - component: {fileID: 1045834054}
   - component: {fileID: 1045834053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15115,7 +15190,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -15188,7 +15263,7 @@ GameObject:
   - component: {fileID: 1053088637}
   - component: {fileID: 1053088636}
   - component: {fileID: 1053088635}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Hallway (Lower)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15287,7 +15362,7 @@ GameObject:
   - component: {fileID: 1054908438}
   - component: {fileID: 1054908437}
   - component: {fileID: 1054908436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15413,7 +15488,7 @@ GameObject:
   - component: {fileID: 1071073181}
   - component: {fileID: 1071073180}
   - component: {fileID: 1071073179}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15518,7 +15593,7 @@ GameObject:
   - component: {fileID: 1071863825}
   - component: {fileID: 1071863824}
   - component: {fileID: 1071863828}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15634,7 +15709,7 @@ GameObject:
   - component: {fileID: 1076241232}
   - component: {fileID: 1076241231}
   - component: {fileID: 1076241235}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15750,7 +15825,7 @@ GameObject:
   - component: {fileID: 1081727590}
   - component: {fileID: 1081727589}
   - component: {fileID: 1081727593}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Hallway (Upper)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15864,7 +15939,7 @@ GameObject:
   - component: {fileID: 1092305313}
   - component: {fileID: 1092305312}
   - component: {fileID: 1092305311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16060,7 +16135,7 @@ GameObject:
   - component: {fileID: 1103033781}
   - component: {fileID: 1103033780}
   - component: {fileID: 1103033779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16144,7 +16219,7 @@ GameObject:
   - component: {fileID: 1103645938}
   - component: {fileID: 1103645937}
   - component: {fileID: 1103645936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fireplace - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16229,7 +16304,7 @@ GameObject:
   - component: {fileID: 1105147010}
   - component: {fileID: 1105147009}
   - component: {fileID: 1105147008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chair - Office (ComputerChair)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16313,7 +16388,7 @@ GameObject:
   - component: {fileID: 1106021542}
   - component: {fileID: 1106021541}
   - component: {fileID: 1106021540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16398,7 +16473,7 @@ GameObject:
   - component: {fileID: 1114200470}
   - component: {fileID: 1114200469}
   - component: {fileID: 1114200468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16446,7 +16521,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -16518,7 +16593,7 @@ GameObject:
   - component: {fileID: 1124462375}
   - component: {fileID: 1124462374}
   - component: {fileID: 1124462373}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BedSideTable - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16603,7 +16678,7 @@ GameObject:
   - component: {fileID: 1127933412}
   - component: {fileID: 1127933411}
   - component: {fileID: 1127933410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AdultScale - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16705,7 +16780,7 @@ GameObject:
   - component: {fileID: 1132655017}
   - component: {fileID: 1132655016}
   - component: {fileID: 1132655019}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - Hallway (Upper)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16804,7 +16879,7 @@ GameObject:
   - component: {fileID: 1133108542}
   - component: {fileID: 1133108541}
   - component: {fileID: 1133108540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wardrobe - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16972,7 +17047,7 @@ GameObject:
   - component: {fileID: 1137346262}
   - component: {fileID: 1137346261}
   - component: {fileID: 1137346260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - Office (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17105,7 +17180,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -17174,7 +17249,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1150208130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decor - Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17209,7 +17284,7 @@ GameObject:
   - component: {fileID: 1156410313}
   - component: {fileID: 1156410312}
   - component: {fileID: 1156410315}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Hallway (Full) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17308,7 +17383,7 @@ GameObject:
   - component: {fileID: 1157175009}
   - component: {fileID: 1157175008}
   - component: {fileID: 1157175007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bench - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17393,7 +17468,7 @@ GameObject:
   - component: {fileID: 1162495045}
   - component: {fileID: 1162495044}
   - component: {fileID: 1162495043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLights - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17441,7 +17516,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -17514,7 +17589,7 @@ GameObject:
   - component: {fileID: 1203946966}
   - component: {fileID: 1203946965}
   - component: {fileID: 1203946964}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17613,7 +17688,7 @@ GameObject:
   - component: {fileID: 1211543130}
   - component: {fileID: 1211543129}
   - component: {fileID: 1211543128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17699,7 +17774,7 @@ GameObject:
   - component: {fileID: 1215461698}
   - component: {fileID: 1215461697}
   - component: {fileID: 1215461701}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17813,7 +17888,7 @@ GameObject:
   - component: {fileID: 1221488678}
   - component: {fileID: 1221488677}
   - component: {fileID: 1221488676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Painting - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17898,7 +17973,7 @@ GameObject:
   - component: {fileID: 1224769728}
   - component: {fileID: 1224769727}
   - component: {fileID: 1224769726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17946,7 +18021,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -18015,7 +18090,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1225202221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Structure - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18055,7 +18130,7 @@ GameObject:
   - component: {fileID: 1225567813}
   - component: {fileID: 1225567812}
   - component: {fileID: 1225567815}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18154,7 +18229,7 @@ GameObject:
   - component: {fileID: 1232955692}
   - component: {fileID: 1232955691}
   - component: {fileID: 1232955690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18239,7 +18314,7 @@ GameObject:
   - component: {fileID: 1239627649}
   - component: {fileID: 1239627648}
   - component: {fileID: 1239627647}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18287,7 +18362,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -18356,7 +18431,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1248170812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Level Lighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18399,7 +18474,7 @@ GameObject:
   - component: {fileID: 1255355613}
   - component: {fileID: 1255355612}
   - component: {fileID: 1255355616}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Hallway (Upper)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18510,7 +18585,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1261009562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Structure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18551,7 +18626,7 @@ GameObject:
   - component: {fileID: 1263851939}
   - component: {fileID: 1263851938}
   - component: {fileID: 1263851937}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18642,7 +18717,7 @@ GameObject:
   - component: {fileID: 1265741219}
   - component: {fileID: 1265741218}
   - component: {fileID: 1265741222}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Livingroom/kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18753,7 +18828,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1273810416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PC - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18815,6 +18890,34 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1996061161111820, guid: 15dd6d8a812cea04fabe4fc701594747, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041602121494728, guid: 15dd6d8a812cea04fabe4fc701594747, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000633282165752, guid: 15dd6d8a812cea04fabe4fc701594747, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555071931359886, guid: 15dd6d8a812cea04fabe4fc701594747, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891347844229314, guid: 15dd6d8a812cea04fabe4fc701594747, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790956886568364, guid: 15dd6d8a812cea04fabe4fc701594747, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673764560094618, guid: 15dd6d8a812cea04fabe4fc701594747, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15dd6d8a812cea04fabe4fc701594747, type: 2}
   m_IsPrefabParent: 0
@@ -18835,7 +18938,7 @@ GameObject:
   - component: {fileID: 1288727735}
   - component: {fileID: 1288727734}
   - component: {fileID: 1288727733}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLights - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18883,7 +18986,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -18955,7 +19058,7 @@ GameObject:
   - component: {fileID: 1308505096}
   - component: {fileID: 1308505095}
   - component: {fileID: 1308505094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dishwasher - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19041,7 +19144,7 @@ GameObject:
   - component: {fileID: 1308832410}
   - component: {fileID: 1308832409}
   - component: {fileID: 1308832413}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - ChildsBedroom (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19152,7 +19255,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1317075298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BedContainer - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19183,7 +19286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1317505982}
   - component: {fileID: 1317505983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19231,7 +19334,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -19250,7 +19353,7 @@ GameObject:
   - component: {fileID: 1317561666}
   - component: {fileID: 1317561665}
   - component: {fileID: 1317561664}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flowers - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19334,7 +19437,7 @@ GameObject:
   - component: {fileID: 1332192949}
   - component: {fileID: 1332192948}
   - component: {fileID: 1332192947}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door - Kitchen (BackDoor)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19419,7 +19522,7 @@ GameObject:
   - component: {fileID: 1335038006}
   - component: {fileID: 1335038005}
   - component: {fileID: 1335038004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19467,7 +19570,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -19539,7 +19642,7 @@ GameObject:
   - component: {fileID: 1339220392}
   - component: {fileID: 1339220391}
   - component: {fileID: 1339220390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19625,7 +19728,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1354224486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Structure - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19749,7 +19852,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1357982145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Structure - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19790,7 +19893,7 @@ GameObject:
   - component: {fileID: 1398494090}
   - component: {fileID: 1398494089}
   - component: {fileID: 1398494088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof - Hallway (Stairway)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19958,7 +20061,7 @@ GameObject:
   - component: {fileID: 1401403497}
   - component: {fileID: 1401403496}
   - component: {fileID: 1401403495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CouchSegment - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20043,7 +20146,7 @@ GameObject:
   - component: {fileID: 1406823839}
   - component: {fileID: 1406823838}
   - component: {fileID: 1406823837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20091,7 +20194,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -20160,7 +20263,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1411475256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20196,7 +20299,7 @@ GameObject:
   - component: {fileID: 1420021471}
   - component: {fileID: 1420021470}
   - component: {fileID: 1420021473}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20295,7 +20398,7 @@ GameObject:
   - component: {fileID: 1421164012}
   - component: {fileID: 1421164011}
   - component: {fileID: 1421164010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20376,7 +20479,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1427338263}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Structure - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20417,7 +20520,7 @@ GameObject:
   - component: {fileID: 1431837146}
   - component: {fileID: 1431837145}
   - component: {fileID: 1431837144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fridge - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20839,7 +20942,7 @@ GameObject:
   - component: {fileID: 1471460423}
   - component: {fileID: 1471460422}
   - component: {fileID: 1471460421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Painting - Hallway '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20920,7 +21023,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1475688847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Living Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20955,7 +21058,7 @@ GameObject:
   - component: {fileID: 1480189255}
   - component: {fileID: 1480189254}
   - component: {fileID: 1480189253}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Painting - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21155,7 +21258,7 @@ GameObject:
   - component: {fileID: 1491391004}
   - component: {fileID: 1491391003}
   - component: {fileID: 1491391002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Painting - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21241,7 +21344,7 @@ GameObject:
   - component: {fileID: 1499199102}
   - component: {fileID: 1499199101}
   - component: {fileID: 1499199099}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FPSController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21502,7 +21605,7 @@ GameObject:
   - component: {fileID: 1503376330}
   - component: {fileID: 1503376329}
   - component: {fileID: 1503376328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bench - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21588,7 +21691,7 @@ GameObject:
   - component: {fileID: 1513422482}
   - component: {fileID: 1513422481}
   - component: {fileID: 1513422485}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Livingroom/kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21699,7 +21802,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1540210339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShelfContainer - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21785,7 +21888,7 @@ GameObject:
   - component: {fileID: 1550348080}
   - component: {fileID: 1550348079}
   - component: {fileID: 1550348078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLights - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21833,7 +21936,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -21902,7 +22005,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1551438700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Models
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21941,7 +22044,7 @@ GameObject:
   - component: {fileID: 1552477025}
   - component: {fileID: 1552477024}
   - component: {fileID: 1552477023}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Painting - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22027,7 +22130,7 @@ GameObject:
   - component: {fileID: 1552900195}
   - component: {fileID: 1552900194}
   - component: {fileID: 1552900198}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Office (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22274,7 +22377,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -22346,7 +22449,7 @@ GameObject:
   - component: {fileID: 1561984921}
   - component: {fileID: 1561984920}
   - component: {fileID: 1561984919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22656,7 +22759,7 @@ GameObject:
   - component: {fileID: 1574081570}
   - component: {fileID: 1574081569}
   - component: {fileID: 1574081568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cameraleft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22738,7 +22841,7 @@ GameObject:
   - component: {fileID: 1575751431}
   - component: {fileID: 1575751430}
   - component: {fileID: 1575751429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BedSideLight - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22786,7 +22889,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -22864,7 +22967,7 @@ GameObject:
   - component: {fileID: 1578895952}
   - component: {fileID: 1578895951}
   - component: {fileID: 1578895950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22912,7 +23015,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -22984,7 +23087,7 @@ GameObject:
   - component: {fileID: 1581349437}
   - component: {fileID: 1581349436}
   - component: {fileID: 1581349435}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flowers - Office (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23070,7 +23173,7 @@ GameObject:
   - component: {fileID: 1584065148}
   - component: {fileID: 1584065147}
   - component: {fileID: 1584065151}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23184,7 +23287,7 @@ GameObject:
   - component: {fileID: 1584162108}
   - component: {fileID: 1584162107}
   - component: {fileID: 1584162106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CouchSegment - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23268,7 +23371,7 @@ GameObject:
   - component: {fileID: 1592052277}
   - component: {fileID: 1592052276}
   - component: {fileID: 1592052275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flowers - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23353,7 +23456,7 @@ GameObject:
   - component: {fileID: 1597903157}
   - component: {fileID: 1597903156}
   - component: {fileID: 1597903155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AdultScale - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23618,7 +23721,7 @@ GameObject:
   - component: {fileID: 1609191840}
   - component: {fileID: 1609191839}
   - component: {fileID: 1609191838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SideTable - LoungeRoom (NextToCouch)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23699,7 +23802,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1610410179}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Master Bedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23734,7 +23837,7 @@ GameObject:
   - component: {fileID: 1615184455}
   - component: {fileID: 1615184454}
   - component: {fileID: 1615184457}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Stairs - Hallway '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23882,7 +23985,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -23956,7 +24059,7 @@ GameObject:
   - component: {fileID: 1628567074}
   - component: {fileID: 1628567073}
   - component: {fileID: 1628567077}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Office (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24070,7 +24173,7 @@ GameObject:
   - component: {fileID: 1635038044}
   - component: {fileID: 1635038043}
   - component: {fileID: 1635038042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CutOut - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24152,7 +24255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647943789}
   - component: {fileID: 1647943790}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flashlight (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24182,7 +24285,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.3
   m_Range: 150
   m_SpotAngle: 27.5
   m_CookieSize: 10
@@ -24216,7 +24319,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1654351795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PCDeskContainer - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24251,7 +24354,7 @@ GameObject:
   - component: {fileID: 1655719861}
   - component: {fileID: 1655719860}
   - component: {fileID: 1655719859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TV - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24533,7 +24636,7 @@ GameObject:
   - component: {fileID: 1674976286}
   - component: {fileID: 1674976285}
   - component: {fileID: 1674976289}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Bathroom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24647,7 +24750,7 @@ GameObject:
   - component: {fileID: 1676791912}
   - component: {fileID: 1676791911}
   - component: {fileID: 1676791910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24731,7 +24834,7 @@ GameObject:
   - component: {fileID: 1678546279}
   - component: {fileID: 1678546278}
   - component: {fileID: 1678546277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HideCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24897,7 +25000,7 @@ GameObject:
   - component: {fileID: 1690355286}
   - component: {fileID: 1690355285}
   - component: {fileID: 1690355284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24982,7 +25085,7 @@ GameObject:
   - component: {fileID: 1691041920}
   - component: {fileID: 1691041919}
   - component: {fileID: 1691041918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AdultScale - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25083,7 +25186,7 @@ GameObject:
   - component: {fileID: 1692931277}
   - component: {fileID: 1692931276}
   - component: {fileID: 1692931275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25169,7 +25272,7 @@ GameObject:
   - component: {fileID: 1692967231}
   - component: {fileID: 1692967230}
   - component: {fileID: 1692967234}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25283,7 +25386,7 @@ GameObject:
   - component: {fileID: 1695031369}
   - component: {fileID: 1695031368}
   - component: {fileID: 1695031367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flowers - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25367,7 +25470,7 @@ GameObject:
   - component: {fileID: 1698480457}
   - component: {fileID: 1698480456}
   - component: {fileID: 1698480455}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bench - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25452,7 +25555,7 @@ GameObject:
   - component: {fileID: 1720040450}
   - component: {fileID: 1720040449}
   - component: {fileID: 1720040452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25551,7 +25654,7 @@ GameObject:
   - component: {fileID: 1738015252}
   - component: {fileID: 1738015251}
   - component: {fileID: 1738015250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -25633,7 +25736,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1738514264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25667,7 +25770,7 @@ GameObject:
   - component: {fileID: 1738530778}
   - component: {fileID: 1738530777}
   - component: {fileID: 1738530776}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25751,7 +25854,7 @@ GameObject:
   - component: {fileID: 1738917332}
   - component: {fileID: 1738917331}
   - component: {fileID: 1738917330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ComputerKeyBoard - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25837,7 +25940,7 @@ GameObject:
   - component: {fileID: 1739214606}
   - component: {fileID: 1739214605}
   - component: {fileID: 1739214609}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Hallway (Full)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25953,7 +26056,7 @@ GameObject:
   - component: {fileID: 1753005544}
   - component: {fileID: 1753005543}
   - component: {fileID: 1753005547}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26074,7 +26177,7 @@ GameObject:
   - component: {fileID: 1775153296}
   - component: {fileID: 1775153295}
   - component: {fileID: 1775153299}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - ChildsBedroom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26189,7 +26292,7 @@ GameObject:
   - component: {fileID: 1775752894}
   - component: {fileID: 1775752893}
   - component: {fileID: 1775752892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26237,7 +26340,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -26309,7 +26412,7 @@ GameObject:
   - component: {fileID: 1780623648}
   - component: {fileID: 1780623647}
   - component: {fileID: 1780623646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Oven - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26474,7 +26577,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1785905483}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26518,7 +26621,7 @@ GameObject:
   - component: {fileID: 1804105983}
   - component: {fileID: 1804105982}
   - component: {fileID: 1804105981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26602,7 +26705,7 @@ GameObject:
   - component: {fileID: 1821703627}
   - component: {fileID: 1821703626}
   - component: {fileID: 1821703625}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door(Linin) - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26686,7 +26789,7 @@ GameObject:
   - component: {fileID: 1824765930}
   - component: {fileID: 1824765929}
   - component: {fileID: 1824765928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26767,7 +26870,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1827617899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26805,7 +26908,7 @@ GameObject:
   - component: {fileID: 1835443705}
   - component: {fileID: 1835443704}
   - component: {fileID: 1835443708}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26919,7 +27022,7 @@ GameObject:
   - component: {fileID: 1837492525}
   - component: {fileID: 1837492524}
   - component: {fileID: 1837492523}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof - Hallway (Upper)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27003,7 +27106,7 @@ GameObject:
   - component: {fileID: 1843293182}
   - component: {fileID: 1843293181}
   - component: {fileID: 1843293180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27084,7 +27187,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1846057209}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShelfContainer - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27123,7 +27226,7 @@ GameObject:
   - component: {fileID: 1847302744}
   - component: {fileID: 1847302743}
   - component: {fileID: 1847302746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27222,7 +27325,7 @@ GameObject:
   - component: {fileID: 1847829025}
   - component: {fileID: 1847829024}
   - component: {fileID: 1847829023}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sink - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27355,7 +27458,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -27510,7 +27613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860618486}
   - component: {fileID: 1860618487}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27540,7 +27643,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.7
   m_Range: 150
   m_SpotAngle: 63.6
   m_CookieSize: 10
@@ -27579,7 +27682,7 @@ GameObject:
   - component: {fileID: 1861652566}
   - component: {fileID: 1861652565}
   - component: {fileID: 1861652570}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - ChildsBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27693,7 +27796,7 @@ GameObject:
   - component: {fileID: 1863009274}
   - component: {fileID: 1863009273}
   - component: {fileID: 1863009272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bench - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27779,7 +27882,7 @@ GameObject:
   - component: {fileID: 1863537338}
   - component: {fileID: 1863537337}
   - component: {fileID: 1863537341}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Foyer (island)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27893,7 +27996,7 @@ GameObject:
   - component: {fileID: 1866086882}
   - component: {fileID: 1866086881}
   - component: {fileID: 1866086880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28074,7 +28177,7 @@ GameObject:
   - component: {fileID: 1874813124}
   - component: {fileID: 1874813123}
   - component: {fileID: 1874813122}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28173,7 +28276,7 @@ GameObject:
   - component: {fileID: 1877999883}
   - component: {fileID: 1877999882}
   - component: {fileID: 1877999881}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Painting - Hallway '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28338,7 +28441,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1886289897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28382,7 +28485,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1897110602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28417,7 +28520,7 @@ GameObject:
   - component: {fileID: 1899678586}
   - component: {fileID: 1899678585}
   - component: {fileID: 1899678588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -28522,7 +28625,7 @@ GameObject:
   - component: {fileID: 1902946792}
   - component: {fileID: 1902946791}
   - component: {fileID: 1902946790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door - Foyer (FrontDoor)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28603,7 +28706,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1905905937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Workshop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28646,7 +28749,7 @@ GameObject:
   - component: {fileID: 1907237590}
   - component: {fileID: 1907237589}
   - component: {fileID: 1907237588}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoubleBed - MasterBedroom (Right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28730,7 +28833,7 @@ GameObject:
   - component: {fileID: 1908940209}
   - component: {fileID: 1908940208}
   - component: {fileID: 1908940207}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28814,7 +28917,7 @@ GameObject:
   - component: {fileID: 1909846885}
   - component: {fileID: 1909846884}
   - component: {fileID: 1909846883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flowers - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28895,7 +28998,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1912043791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28978,7 +29081,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -29052,7 +29155,7 @@ GameObject:
   - component: {fileID: 1920506855}
   - component: {fileID: 1920506854}
   - component: {fileID: 1920506858}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29250,7 +29353,7 @@ GameObject:
   - component: {fileID: 1925364297}
   - component: {fileID: 1925364296}
   - component: {fileID: 1925364295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29334,7 +29437,7 @@ GameObject:
   - component: {fileID: 1927821227}
   - component: {fileID: 1927821226}
   - component: {fileID: 1927821225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shower - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29446,6 +29549,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1018751375026430, guid: 9c549a8b268ab9d4ea51ce1233c9e397, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113579749037148, guid: 9c549a8b268ab9d4ea51ce1233c9e397, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c549a8b268ab9d4ea51ce1233c9e397, type: 2}
   m_IsPrefabParent: 0
@@ -29460,7 +29571,7 @@ GameObject:
   - component: {fileID: 1937728851}
   - component: {fileID: 1937728850}
   - component: {fileID: 1937728849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CoffeeTable - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29544,7 +29655,7 @@ GameObject:
   - component: {fileID: 1956033297}
   - component: {fileID: 1956033296}
   - component: {fileID: 1956033295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29628,7 +29739,7 @@ GameObject:
   - component: {fileID: 1959004174}
   - component: {fileID: 1959004173}
   - component: {fileID: 1959004172}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Desk - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29761,7 +29872,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -29834,7 +29945,7 @@ GameObject:
   - component: {fileID: 1967670399}
   - component: {fileID: 1967670398}
   - component: {fileID: 1967670397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29882,7 +29993,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -29954,7 +30065,7 @@ GameObject:
   - component: {fileID: 1970663079}
   - component: {fileID: 1970663078}
   - component: {fileID: 1970663077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LoungeRoom (OnShelf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30251,7 +30362,8 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65672280381262946, guid: c86751cd51b41a744bb7184b90c3ce4f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c86751cd51b41a744bb7184b90c3ce4f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1991717316
@@ -30262,7 +30374,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1991717317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30295,7 +30407,7 @@ GameObject:
   - component: {fileID: 2021034075}
   - component: {fileID: 2021034074}
   - component: {fileID: 2021034073}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30412,7 +30524,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 4
   m_Range: 20
-  m_SpotAngle: 113.891075
+  m_SpotAngle: 154.89604
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -30428,7 +30540,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -30500,7 +30612,7 @@ GameObject:
   - component: {fileID: 2024270708}
   - component: {fileID: 2024270707}
   - component: {fileID: 2024270706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Table - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30581,7 +30693,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2027016457}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Structure - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30618,7 +30730,7 @@ GameObject:
   - component: {fileID: 2027754351}
   - component: {fileID: 2027754350}
   - component: {fileID: 2027754349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cupboard - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30752,7 +30864,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2030094631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30797,7 +30909,7 @@ GameObject:
   - component: {fileID: 2032262525}
   - component: {fileID: 2032262524}
   - component: {fileID: 2032262523}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof - MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30878,7 +30990,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2046809351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShelfContainer - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30913,7 +31025,7 @@ GameObject:
   - component: {fileID: 2049717094}
   - component: {fileID: 2049717093}
   - component: {fileID: 2049717092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photo - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30997,7 +31109,7 @@ GameObject:
   - component: {fileID: 2064559112}
   - component: {fileID: 2064559111}
   - component: {fileID: 2064559110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31081,7 +31193,7 @@ GameObject:
   - component: {fileID: 2065731754}
   - component: {fileID: 2065731753}
   - component: {fileID: 2065731752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sink - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31166,7 +31278,7 @@ GameObject:
   - component: {fileID: 2066015547}
   - component: {fileID: 2066015546}
   - component: {fileID: 2066015549}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor - Foyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31265,7 +31377,7 @@ GameObject:
   - component: {fileID: 2070786623}
   - component: {fileID: 2070786622}
   - component: {fileID: 2070786621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cabinet - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31346,7 +31458,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2074104446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31381,7 +31493,7 @@ GameObject:
   - component: {fileID: 2075963894}
   - component: {fileID: 2075963893}
   - component: {fileID: 2075963892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLights - LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31429,7 +31541,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -31586,7 +31698,7 @@ GameObject:
   - component: {fileID: 2080046167}
   - component: {fileID: 2080046166}
   - component: {fileID: 2080046165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FocusLight - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31634,7 +31746,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -31706,7 +31818,7 @@ GameObject:
   - component: {fileID: 2085376147}
   - component: {fileID: 2085376146}
   - component: {fileID: 2085376145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ToiletPaperHolder - Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31874,7 +31986,7 @@ GameObject:
   - component: {fileID: 2092272444}
   - component: {fileID: 2092272443}
   - component: {fileID: 2092272442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ComputerMouse - Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31964,7 +32076,7 @@ GameObject:
   - component: {fileID: 2118290185}
   - component: {fileID: 2118290184}
   - component: {fileID: 2118290183}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AdultScale - LoungeRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32090,7 +32202,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2123018053}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
