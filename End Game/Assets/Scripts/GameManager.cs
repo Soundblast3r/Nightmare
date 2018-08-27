@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     //public int WorldClock;
     // TimeLimit
-    bool isGameOver;
+    [HideInInspector] public bool isGameOver;
 
     // Use this for initialization
     void Awake()
@@ -161,7 +161,16 @@ public class GameManager : MonoBehaviour
         //        EndgameScreen.SetActive(true);
         //        YouDied.SetActive(true);
         //    }
-        
+
+        if(isGameOver)
+        {
+            Time.timeScale = 0;
+            GameTimer = 0;
+            //Debug.Log("WIN");
+            EndgameScreen.SetActive(true);
+            YouDied.SetActive(true);
+        }
+
     }
     // Update is called once per frame
     void FixedUpdate ()

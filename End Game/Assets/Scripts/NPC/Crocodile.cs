@@ -9,7 +9,10 @@ public class Crocodile : NPC
     private float VisDist = 10;
     private float SphereRadius;
     private Vector3 origen;
+    private float MoveSpeed;
+    private float increas;
 
+    GameManager game;
 
     private GameObject player;
     private Rigidbody RB;
@@ -19,14 +22,17 @@ public class Crocodile : NPC
     private Vector3 SeekPosition = Vector3.zero;
     private int PatrolIterator = 0;
 
-    void Start() {
+    void Start()
+    {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-        timeToTransformMax = 5;
+        timeToTransformMax = 30;
         timeToRevertMax = 30;
         SphereRadius = 2.0f;
+        MoveSpeed = 10f;
 
         timeToTransform = timeToTransformMax;
         timeToRevert = timeToRevertMax;
@@ -38,7 +44,8 @@ public class Crocodile : NPC
         NMA.SetDestination(SeekPosition);
     }
 
-    void Update() {
+    void Update()
+    {
         //=================================================================================
         // Countdowns and timers
         //=================================================================================
@@ -81,42 +88,50 @@ public class Crocodile : NPC
         }
     }
     
-    public void DemonForm() {
+    public void DemonForm()
+    {
         NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;
-        RB.AddForce(0, 10, 0);
+        RB.AddForce(0, MoveSpeed, 0);
         this.gameObject.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f); //scale size
         timeToRevert = timeToRevertMax;
     }
     
-    public void ToyForm() {
+    public void ToyForm()
+    {
         StopSearching();
         //inToyForm = true;
         this.gameObject.transform.localScale = new Vector3(1, 1, 1); // scale size
         timeToTransform = timeToTransformMax;
     }
     
-    public void FollowPlayer() {
+    public void FollowPlayer()
+    {
+        //RB.AddForce(player.transform.position, ForceMode.Acceleration);
+        NMA.speed = 100;
         NMA.destination = player.transform.position;
+        //MoveSpeed = 100;
     }
     
-    public void StopSearching() {
+    public void StopSearching()
+    {
         RB.velocity = new Vector3(0, 0, 0);
         NMA.isStopped = true;
         isSearching = false;
     }
     
-    public void KillPlayer() {
+    public void KillPlayer()
+    {
         // CALL CAMERA FUNTION FROM PLAYER SCRIPT
         // PUT PLAYER INFRONT OF MONSTER
         //playerCam.transform.position = playerKillPos.position;
-    
+
         // GET PLAYER TO FACE MONSTER
         //I AM HERE
-    
+
         // PLAY KILL ANIMATION
-    
+        game.isGameOver = true;
         // SET GAMEOVER THINGS
     }
     
@@ -156,13 +171,15 @@ public class Crocodile : NPC
             {
                 isHunting = false;
                 isSearching = true;
+                NMA.speed = 5f;
             }
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
-    
-        if (other.gameObject == player) {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
             StopSearching();
             KillPlayer();
         }

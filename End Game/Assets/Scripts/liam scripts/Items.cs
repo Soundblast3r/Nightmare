@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Items : MonoBehaviour
-{
+{   
     //  Created By Liam Gates
-    //  Updates:
+    //  Updates: Edward ngo
     //
 
     Interactions interactions;
@@ -21,6 +21,8 @@ public class Items : MonoBehaviour
     [HideInInspector] public bool TorchActive;
     //[HideInInspector] public bool WalkyTalkyActive;
 
+    public int sprayTimerIncrease;      //each spray increases croc transform timer by x
+
 	// Use this for initialization
 	void Start ()
     {
@@ -34,6 +36,8 @@ public class Items : MonoBehaviour
         WalkyTalky.SetActive(false);
 
         TorchActive = true;
+
+        sprayTimerIncrease = 1;
 
         //if (Spray == null)
         //{
@@ -50,7 +54,6 @@ public class Items : MonoBehaviour
             {
                 SprayBottle();
             }
-
         }
 
         if (Input.GetKey(KeyCode.Alpha1))
@@ -92,24 +95,39 @@ public class Items : MonoBehaviour
 
     void SprayBottle()
     {
+
         RaycastHit hit;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+        if (!Spray.isPlaying) {
+            Spray.Play();
+        }
 
         //if(Physics.Raycast(ray, out hit, rayDistance))
         if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance))
         {
-            if(hit.collider.tag == "Plushie" && interactions.SprayBottleActive == true)
+
+            if(interactions.SprayBottleActive == true)
             {
-                //do something
-                //Debug.Log("Squek");
-                if (!Spray.isPlaying)
-                {
-                    if (Spray != null)
-                    {
-                        Spray.Play();
-                        Croc.timeToTransform = Croc.timeToTransformMax;
+
+                if (hit.collider.tag == "Plushie" && Spray.isPlaying) {
+
+                    if (Croc.timeToTransform < Croc.timeToTransformMax) {
+                        Croc.timeToTransform += (sprayTimerIncrease * 0.25f);
                     }
                 }
+
+                //do something
+                //Debug.Log("Squek");
+
+                //if (!Spray.isPlaying)
+                //{
+                //    if (Spray != null)
+                //    {
+                //        Spray.Play();
+                //        Croc.timeToTransform += sprayTimerIncrease;
+                //    }
+                //}
             }
         }
     }
