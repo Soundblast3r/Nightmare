@@ -29,7 +29,7 @@ public class Crocodile : NPC
         player = GameObject.Find("FPSController");
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-        timeToTransformMax = 30;
+        timeToTransformMax = 5;
         timeToRevertMax = 30;
         SphereRadius = 2.0f;
         MoveSpeed = 10f;

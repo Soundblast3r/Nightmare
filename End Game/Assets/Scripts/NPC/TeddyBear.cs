@@ -10,6 +10,10 @@ public class TeddyBear : NPC
     private float VisDist = 10;
     private float SphereRadius;
     private Vector3 origen;
+    private float MoveSpeed;
+    private float increas;
+
+    GameManager game;
 
     private GameObject player;
     private Rigidbody RB;
@@ -23,6 +27,7 @@ public class TeddyBear : NPC
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
         //VisRange = GameObject.FindGameObjectWithTag("VisualRange");
 
         //VisRange.SetActive(false);
@@ -30,6 +35,7 @@ public class TeddyBear : NPC
         timeToTransformMax = 30;
         timeToRevertMax = 30;
         SphereRadius = 2.0f;
+        MoveSpeed = 10f;
 
         timeToTransform = timeToTransformMax;
         //timeToRevert = timeToRevertMax;
@@ -94,7 +100,7 @@ public class TeddyBear : NPC
         NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;
-        RB.AddForce(0, 10, 0);
+        RB.AddForce(0, MoveSpeed, 0);
         this.gameObject.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f); //scale size
         //timeToRevert = timeToRevertMax;
     }
@@ -106,7 +112,9 @@ public class TeddyBear : NPC
         timeToTransform = timeToTransformMax;
     }
 
-    public void FollowPlayer() {
+    public void FollowPlayer()
+    {
+        NMA.speed = 100;
         NMA.destination = player.transform.position;
     }
 
@@ -142,11 +150,10 @@ public class TeddyBear : NPC
                 PatrolIterator = 0;
             }
 
-            Debug.Log(patrolPoints[PatrolIterator]);
+            //Debug.Log(patrolPoints[PatrolIterator]);
             NMA.SetDestination(patrolPoints[PatrolIterator].position);
             PatrolIterator++;
             PatrolIterator %= patrolPoints.Length;
-            //ReachedTarget = false;
         }
     }
 
@@ -175,7 +182,8 @@ public class TeddyBear : NPC
 
     private void OnTriggerEnter(Collider other) {
 
-        if (other.gameObject == player) {
+        if (other.gameObject.tag == "Player")
+        {
             StopSearching();
             KillPlayer();
         }
