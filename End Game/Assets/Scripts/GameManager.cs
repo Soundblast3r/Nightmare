@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
                 if (isPaused == false)
                 {
                     isPaused = true;
-                    //Time.timeScale = 0;
+                    Time.timeScale = 0;
                     PauseMenu.SetActive(true);
                     pausePanel.SetActive(true);
                 }
@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
                 else if (isPaused == true)
                 {
                     isPaused = false;
-                    //Time.timeScale = 1;
+                    Time.timeScale = 1;
                     PauseMenu.SetActive(false);
                     pausePanel.SetActive(false);
                     optionsPanel.SetActive(false);
