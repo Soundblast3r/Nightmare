@@ -3175,11 +3175,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114567038405035704, guid: 995905534f034034d9ade377b36a1c7e,
-        type: 2}
-      propertyPath: patrolPoints.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4052616493632546, guid: 995905534f034034d9ade377b36a1c7e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6.3072267
@@ -3214,11 +3209,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114567038405035704, guid: 995905534f034034d9ade377b36a1c7e,
         type: 2}
-      propertyPath: isSearching
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114567038405035704, guid: 995905534f034034d9ade377b36a1c7e,
-        type: 2}
       propertyPath: patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1659240392}
@@ -3242,15 +3232,6 @@ Prefab:
       propertyPath: patrolPoints.Array.data[4]
       value: 
       objectReference: {fileID: 1092809378}
-    - target: {fileID: 1884106004689216, guid: 995905534f034034d9ade377b36a1c7e, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114567038405035704, guid: 995905534f034034d9ade377b36a1c7e,
-        type: 2}
-      propertyPath: isHunting
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 995905534f034034d9ade377b36a1c7e, type: 2}
   m_IsPrefabParent: 0
@@ -30176,11 +30157,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114511213822115046, guid: c86751cd51b41a744bb7184b90c3ce4f,
-        type: 2}
-      propertyPath: patrolPoints.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4697953282290584, guid: c86751cd51b41a744bb7184b90c3ce4f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 29.18354
@@ -30213,14 +30189,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1787857419285648, guid: c86751cd51b41a744bb7184b90c3ce4f, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1787857419285648, guid: c86751cd51b41a744bb7184b90c3ce4f, type: 2}
-      propertyPath: m_TagString
-      value: Plushie
-      objectReference: {fileID: 0}
     - target: {fileID: 114511213822115046, guid: c86751cd51b41a744bb7184b90c3ce4f,
         type: 2}
       propertyPath: patrolPoints.Array.data[0]
@@ -30246,11 +30214,6 @@ Prefab:
       propertyPath: patrolPoints.Array.data[4]
       value: 
       objectReference: {fileID: 1092809378}
-    - target: {fileID: 136141363621141436, guid: c86751cd51b41a744bb7184b90c3ce4f,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c86751cd51b41a744bb7184b90c3ce4f, type: 2}
   m_IsPrefabParent: 0
