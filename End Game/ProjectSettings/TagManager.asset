@@ -8,6 +8,10 @@ TagManager:
   - Hideable
   - Climbable
   - JacknBox
+  - PauseMenu
+  - Plushie
+  - Spray
+  - Walky
   layers:
   - Default
   - TransparentFX
@@ -17,10 +21,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Floor
+  - Obsticle
+  - Hiding Places
   - 
   - 
   - 

@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
-        GameTimer = 10;
+        GameTimer = 1000;
     }
 
     
@@ -166,16 +166,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate ()
     {
-            //if(GameTimer <= 0)
-            //{
-            //    WorldClock += 1;
-            //    GameTimer = 10;
-            //    //Debug.Log(WorldClock);
-            //}
-
-
-
-            GameTimer -= Time.fixedDeltaTime;
+           GameTimer -= Time.fixedDeltaTime;
 
            // Debug.Log(GameTimer);
 
