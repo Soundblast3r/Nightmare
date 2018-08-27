@@ -24,8 +24,9 @@ public class Crocodile : NPC
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
 
-        timeToTransformMax = 30;
+        timeToTransformMax = 5;
         timeToRevertMax = 30;
+        SphereRadius = 2.0f;
 
         timeToTransform = timeToTransformMax;
         timeToRevert = timeToRevertMax;
@@ -58,7 +59,7 @@ public class Crocodile : NPC
         //=================================================================================
 
         // when in TOY form, and not 'taken care of' and countdown reaches 0, transform to demon
-        if (timeToTransform <= 0)
+        if (timeToTransform <= 0 && !isSearching )
         {
             DemonForm();
         }
@@ -74,19 +75,10 @@ public class Crocodile : NPC
         {
             FollowPlayer();
         }
-        if(isSearching)
+        if(isSearching && !isHunting)
         {
             Patrol();
         }
-    }
-    
-    public void FixedUpdate() {
-        //if (isSearching && !inToyForm) {
-        //    FollowPlayer();
-        //}
-        //else if (!isSearching && inToyForm) {
-        //    StopSearching();
-        //}
     }
     
     public void DemonForm() {
@@ -141,7 +133,7 @@ public class Crocodile : NPC
                 PatrolIterator = 0;
             }
 
-            Debug.Log(patrolPoints[PatrolIterator]);
+            //Debug.Log(patrolPoints[PatrolIterator]);
             NMA.SetDestination(patrolPoints[PatrolIterator].position);
             PatrolIterator++;
             PatrolIterator %= patrolPoints.Length;
@@ -160,7 +152,7 @@ public class Crocodile : NPC
                 isSearching = false;
                 isHunting = true;
             }
-            else if (isHunting)
+            else if (hit.collider.tag != "Player" && isHunting)
             {
                 isHunting = false;
                 isSearching = true;
