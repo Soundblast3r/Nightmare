@@ -14544,7 +14544,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 909651520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.258, y: 0.12, z: -12.145}
+  m_LocalPosition: {x: 7.258, y: -0.02, z: -12.145}
   m_LocalScale: {x: 41.415363, y: 0.015281831, z: 61.80142}
   m_Children: []
   m_Father: {fileID: 1354224486}
@@ -15596,7 +15596,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 1
   m_VoxelSize: 0.05
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: f28c1aafb7decfc43bfa6aa40dd531aa, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1b9861728cce73f46b5de09336698a5e, type: 2}
 --- !u!4 &1029722045
 Transform:
   m_ObjectHideFlags: 0
@@ -15619,8 +15619,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1033312760}
   - component: {fileID: 1033312761}
-  m_Layer: 11
-  m_Name: GameObject
+  m_Layer: 10
+  m_Name: Ai Obsticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17489,7 +17489,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132655014}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.8388, y: 0.03, z: 3.576}
+  m_LocalPosition: {x: 14.8388, y: -0.01, z: 3.576}
   m_LocalScale: {x: 7.602583, y: 0.21545076, z: 29.513948}
   m_Children: []
   m_Father: {fileID: 355542588}
@@ -28197,8 +28197,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1847302741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.24, y: 0.17, z: -12.42}
-  m_LocalScale: {x: 39.45115, y: 0.015281831, z: 39.894173}
+  m_LocalPosition: {x: 8.329, y: 0.17, z: -12.42}
+  m_LocalScale: {x: 39.62937, y: 0.015281831, z: 39.894173}
   m_Children: []
   m_Father: {fileID: 103110347}
   m_RootOrder: 6
@@ -29601,6 +29601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spray: {fileID: 1896375568}
   TorchActive: 0
+  sprayTimerIncrease: 0
 --- !u!1 &1902946788
 GameObject:
   m_ObjectHideFlags: 0
@@ -31922,6 +31923,7 @@ MonoBehaviour:
   PauseMenu: {fileID: 1768639179}
   GameTimer: 10
   CurrentScene: 1
+  isGameOver: 0
 --- !u!4 &2028151112
 Transform:
   m_ObjectHideFlags: 0

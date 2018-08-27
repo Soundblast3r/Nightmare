@@ -74,16 +74,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void InternalLockUpdate()
         {
-            if (Input.GetKeyUp(KeyCode.Escape) && Time.timeScale == 1)
+            if (Input.GetKey(KeyCode.Escape))
             {
-                //m_cursorIsLocked = false;
-                Time.timeScale = 0;
-            }
+                if (Time.timeScale == 1)
+                {
+                    //m_cursorIsLocked = false;
+                    Time.timeScale = 0;
+                }
 
-            else if (Input.GetKeyUp(KeyCode.Escape) && Time.timeScale == 0)
-            {
-                //m_cursorIsLocked = true;
-                Time.timeScale = 1;
+                else if (Time.timeScale == 0)
+                {
+                    //m_cursorIsLocked = true;
+                    Time.timeScale = 1;
+                }
             }
 
             if (pauseActive.activeInHierarchy == false)
