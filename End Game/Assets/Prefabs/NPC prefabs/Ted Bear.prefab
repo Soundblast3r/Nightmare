@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 23061648073471176}
   - component: {fileID: 114567038405035704}
   - component: {fileID: 195637749806891458}
+  - component: {fileID: 65494882311208796}
   m_Layer: 0
   m_Name: Ted Bear
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884106004689216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.29, y: 2.86, z: -0.1}
+  m_LocalPosition: {x: -6.3072267, y: -18.580158, z: 5.152204}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,6 +102,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65494882311208796
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884106004689216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114567038405035704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,13 +126,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSearching: 0
-  patrolPoints: []
+  isHunting: 0
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   playerKillPos: {fileID: 0}
   timeToTransform: 0
-  TransformedTimer: 10
+  timeToTransformMax: 0
   timeToRevert: 0
-  revertTimer: 30
-  inToyForm: 0
+  timeToRevertMax: 0
 --- !u!136 &136002529124123956
 CapsuleCollider:
   m_ObjectHideFlags: 1
