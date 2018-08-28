@@ -12,6 +12,8 @@ TagManager:
   - Plushie
   - Spray
   - Walky
+  - Crocodile
+  - Nightmare
   layers:
   - Default
   - TransparentFX
@@ -25,7 +27,7 @@ TagManager:
   - Floor
   - Obsticle
   - Hiding Places
-  - 
+  - Fuck The Lights
   - 
   - 
   - 
