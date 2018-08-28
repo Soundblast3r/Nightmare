@@ -28,7 +28,7 @@ public class Items : MonoBehaviour
     {
         cam = this.GetComponent<Camera>();
         interactions = GetComponent<Interactions>();
-        Croc = GameObject.FindGameObjectWithTag("Plushie").GetComponent<Crocodile>();
+        Croc = GameObject.Find("PlushieCroc").GetComponentInParent<Crocodile>();
         //Spraybottle = GameObject.Find("CrocBottle");
         Spraybottle = GameObject.FindGameObjectWithTag("Spray");
         WalkyTalky = GameObject.FindGameObjectWithTag("Walky");
@@ -38,12 +38,13 @@ public class Items : MonoBehaviour
         TorchActive = true;
 
         sprayTimerIncrease = 1;
+        SphereRadius = 0.10f;
 
         //if (Spray == null)
         //{
         //    Spray = GameObject.Find("CrocBottle").GetComponent<ParticleSystem>();
         //}
-	}
+    }
 
 	// Update is called once per frame
 	void Update ()

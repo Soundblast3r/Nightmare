@@ -142,7 +142,7 @@ public class TeddyBear : NPC
                 PatrolIterator = 0;
             }
 
-            Debug.Log(patrolPoints[PatrolIterator]);
+            //Debug.Log(patrolPoints[PatrolIterator]);
             NMA.SetDestination(patrolPoints[PatrolIterator].position);
             PatrolIterator++;
             PatrolIterator %= patrolPoints.Length;

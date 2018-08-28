@@ -10,9 +10,12 @@ public class Crocodile : NPC
     private float SphereRadius;
     private Vector3 origen;
     private float MoveSpeed;
-    private float increas;
 
     GameManager game;
+
+    //private GameObject Toy;
+    private Collider collider;
+    //private MeshRenderer render;
 
     private GameObject player;
     private Rigidbody RB;
@@ -27,7 +30,15 @@ public class Crocodile : NPC
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
+        //Toy = GameObject.FindGameObjectWithTag("Plushie");
+        //Nightmare = GameObject.FindGameObjectWithTag("Nightmare");
+        //render = this.GetComponentInChildren<MeshRenderer>();
+
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        transform.GetChild(0).gameObject.SetActive(false);
+        collider = GetComponent<Collider>();
+        collider.enabled = !collider.enabled;
 
         timeToTransformMax = 30;
         timeToRevertMax = 30;
@@ -39,6 +50,8 @@ public class Crocodile : NPC
 
         isSearching = false;
         //inToyForm = true;
+
+        //Nightmare.SetActive(false);
 
         SeekPosition = transform.position;
         NMA.SetDestination(SeekPosition);
@@ -90,11 +103,14 @@ public class Crocodile : NPC
     
     public void DemonForm()
     {
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(1).gameObject.SetActive(false);
+        collider.enabled = !collider.enabled;
         NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, MoveSpeed, 0);
-        this.gameObject.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f); //scale size
+        this.gameObject.transform.localScale = new Vector3(3f, 3f, 3f); //scale size
         timeToRevert = timeToRevertMax;
     }
     
@@ -109,7 +125,7 @@ public class Crocodile : NPC
     public void FollowPlayer()
     {
         //RB.AddForce(player.transform.position, ForceMode.Acceleration);
-        NMA.speed = 100;
+        NMA.speed = 1000;
         NMA.destination = player.transform.position;
         //MoveSpeed = 100;
     }
