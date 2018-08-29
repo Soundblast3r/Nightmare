@@ -18,7 +18,7 @@ public class Crocodile : NPC
     //private MeshRenderer render;
 
 
-    public GameObject plushieCroc;
+    //public GameObject plushieCroc;
     private GameObject player;
     private Rigidbody RB;
     private NavMeshAgent NMA;

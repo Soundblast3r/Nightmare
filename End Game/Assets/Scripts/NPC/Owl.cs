@@ -45,9 +45,10 @@ public class Owl : NPC {
         //=================================================================================
 
         // when in TOY form, and not 'taken care of' and countdown reaches 0, transform to demon
-        //if (timeToTransform <= 0 && inToyForm) {
-        //    DemonForm();
-        //}
+        if (timeToTransform <= 0)
+        {
+            DemonForm();
+        }
 
         //// when in DEMON form, and conditions met, turns back to toy form
         //if (timeToRevert <= 0 && !inToyForm) {

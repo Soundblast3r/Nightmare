@@ -8,10 +8,12 @@ public class Interactions : MonoBehaviour
     //Raycast Pickups
     public Camera camera;
     public float rayDistance;
+    private float RayLine = 15f;
     private float SphereRadius;
     //public float Distance;
 
     //Items items;
+    private Vector3 origen;
 
     //Camera Rotations
     private float RotatY;
@@ -54,10 +56,11 @@ public class Interactions : MonoBehaviour
 	}
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
+        TorchLine();
         //Changes the controlls if you're hiding
-        if(isHiding)
+        if (isHiding)
         {
             HiddenMove();
         }
@@ -196,5 +199,28 @@ public class Interactions : MonoBehaviour
 
         //Debug.Log("Horizontal");
         //Debug.Log("Vertical");
+    }
+
+    void TorchLine()
+    {
+        RaycastHit point;
+        Ray torchline = camera.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(torchline, out point, rayDistance))
+        {
+            if (point.collider.tag == "Nightmare")
+            {
+                target = point.collider.gameObject;
+
+                Debug.Log(point);
+            }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        origen = transform.position;
+        Gizmos.color = Color.red;
+        Debug.DrawLine(origen, origen + transform.forward * RayLine);
     }
 }
