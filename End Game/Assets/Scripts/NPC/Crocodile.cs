@@ -107,7 +107,7 @@ public class Crocodile : NPC
     {
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.SetActive(false);
-        plushieCroc.SetActive(false);
+        //plushieCroc.SetActive(false);
         collider.enabled = !collider.enabled;
         NMA.isStopped = false;
         //inToyForm = false;
