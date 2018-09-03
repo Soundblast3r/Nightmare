@@ -4,18 +4,23 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class Owl : NPC {
-
+public class Owl : NPC
+{
     private GameObject player;
     private Rigidbody RB;
     private NavMeshAgent NMA;
 
-    void Start() {
+    GameManager game;
+
+    void Start()
+    {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
 
-        timeToTransformMax = 30;
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        timeToTransformMax = 0;
         timeToRevertMax = 30;
 
         timeToTransform = timeToTransformMax;
@@ -25,15 +30,17 @@ public class Owl : NPC {
         //inToyForm = true;
     }
 
-    void Update() {
+    void Update()
+    {
         //=================================================================================
         // Countdowns and timers
         //=================================================================================
 
-        // Countdown to demon form
-        //if (timeToTransform >= 0 && inToyForm) {
-        //    timeToTransform -= Time.deltaTime;
-        //}
+        //Countdown to demon form
+        if (timeToTransform >= 0)
+        {
+            timeToTransform -= Time.deltaTime;
+        }
 
         //// In demon form, countdown to toy form
         //if (timeToRevert >= 0 && !inToyForm) {
@@ -50,22 +57,25 @@ public class Owl : NPC {
             DemonForm();
         }
 
+        if (isSearching)
+        {
+            FollowPlayer();
+        }
+
         //// when in DEMON form, and conditions met, turns back to toy form
         //if (timeToRevert <= 0 && !inToyForm) {
         //    ToyForm();
         //}
     }
 
-    public void FixedUpdate() {
-        //if (isSearching && !inToyForm) {
-        //    FollowPlayer();
-        //}
-        //else if (!isSearching && inToyForm) {
-        //    StopSearching();
-        //}
-    }
+    //public void FixedUpdate() {
+    //    //else if (!isSearching && inToyForm) {
+    //    //    StopSearching();
+    //    //}
+    //}
 
-    public void DemonForm() {
+    public void DemonForm()
+    {
         NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;
@@ -74,24 +84,28 @@ public class Owl : NPC {
         timeToRevert = timeToRevertMax;
     }
 
-    public void ToyForm() {
+    public void ToyForm()
+    {
         StopSearching();
         //inToyForm = true;
         this.gameObject.transform.localScale = new Vector3(1, 1, 1); // scale size
         timeToTransform = timeToTransformMax;
     }
 
-    public void FollowPlayer() {
+    public void FollowPlayer()
+    {
         NMA.destination = player.transform.position;
     }
 
-    public void StopSearching() {
+    public void StopSearching()
+    {
         RB.velocity = new Vector3(0, 0, 0);
         NMA.isStopped = true;
         isSearching = false;
     }
 
-    public void KillPlayer() {
+    public void KillPlayer()
+    {
         // CALL CAMERA FUNTION FROM PLAYER SCRIPT
         // PUT PLAYER INFRONT OF MONSTER
         //playerCam.transform.position = playerKillPos.position;
@@ -100,16 +114,18 @@ public class Owl : NPC {
         //I AM HERE
 
         // PLAY KILL ANIMATION
-
+        game.isGameOver = true;
         // SET GAMEOVER THINGS
     }
 
-    public void Patrol() {
+    public void Patrol()
+    {
         // DO PATROL STUFF
     }
 
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other)
+    {
 
         if (other.gameObject == player) {
             StopSearching();

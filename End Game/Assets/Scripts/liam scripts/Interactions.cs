@@ -12,6 +12,8 @@ public class Interactions : MonoBehaviour
     private float SphereRadius;
     //public float Distance;
 
+    private Owl demon;
+
     //Items items;
     private Vector3 origen;
 
@@ -42,6 +44,7 @@ public class Interactions : MonoBehaviour
         //cursorLock = CursorLockMode.Locked;
         mainCamera = this.GetComponent<Camera>();
         HideCamera = GameObject.Find("HideCamera").GetComponent<Camera>();
+        demon = GameObject.FindGameObjectWithTag("Nightmare").GetComponent<Owl>();
         //items = GetComponent<Items>();
         mainCamera.enabled = true;
         HideCamera.enabled = false;
@@ -58,7 +61,7 @@ public class Interactions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TorchLine();
+        //TorchLine();
         //Changes the controlls if you're hiding
         if (isHiding)
         {
@@ -201,18 +204,17 @@ public class Interactions : MonoBehaviour
         //Debug.Log("Vertical");
     }
 
-    void TorchLine()
+    public void TorchLine()
     {
         RaycastHit point;
         Ray torchline = camera.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(torchline, out point, rayDistance))
+        if (Physics.Raycast(torchline, out point, RayLine))
         {
             if (point.collider.tag == "Nightmare")
             {
                 target = point.collider.gameObject;
-
-                Debug.Log(point);
+                demon.StopSearching();
             }
         }
     }

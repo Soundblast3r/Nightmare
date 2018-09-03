@@ -10,16 +10,20 @@ public class RedPanda : NPC {
     private Rigidbody RB;
     private NavMeshAgent NMA;
 
+    GameManager game;
+
     void Start() {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
 
-        timeToTransformMax = 30;
-        timeToRevertMax = 30;
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-        timeToTransform = timeToTransformMax;
-        timeToRevert = timeToRevertMax;
+        //timeToTransformMax = 30;
+        //timeToRevertMax = 30;
+
+        //timeToTransform = timeToTransformMax;
+        //timeToRevert = timeToRevertMax;
 
         isSearching = false;
         //inToyForm = true;
@@ -99,7 +103,7 @@ public class RedPanda : NPC {
         //I AM HERE
 
         // PLAY KILL ANIMATION
-
+        game.isGameOver = true;
         // SET GAMEOVER THINGS
     }
 
@@ -110,10 +114,10 @@ public class RedPanda : NPC {
 
     private void OnTriggerEnter(Collider other) {
 
-        if (other.gameObject == player) {
+        if (other.gameObject == player)
+        {
             StopSearching();
             KillPlayer();
         }
     }
-
 }

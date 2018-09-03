@@ -15,6 +15,8 @@ public class TeddyBear : NPC
     private Rigidbody RB;
     private NavMeshAgent NMA;
 
+    GameManager game;
+
     private bool ReachedTarget = false;
     private Vector3 SeekPosition = Vector3.zero;
     private int PatrolIterator = 0;
@@ -25,9 +27,11 @@ public class TeddyBear : NPC
         player = GameObject.Find("FPSController");
         //VisRange = GameObject.FindGameObjectWithTag("VisualRange");
 
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         //VisRange.SetActive(false);
 
-        timeToTransformMax = 30;
+        timeToTransformMax = 0;
         timeToRevertMax = 30;
         SphereRadius = 2.0f;
 
@@ -38,7 +42,7 @@ public class TeddyBear : NPC
         //inToyForm = true;
 
         SeekPosition = transform.position;
-        NMA.SetDestination(SeekPosition);
+
     }
 
     void Update() {
@@ -125,7 +129,7 @@ public class TeddyBear : NPC
         //I AM HERE
 
         // PLAY KILL ANIMATION
-
+        game.isGameOver = true;
         // SET GAMEOVER THINGS
     }
 
