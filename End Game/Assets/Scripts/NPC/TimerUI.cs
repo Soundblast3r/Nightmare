@@ -20,13 +20,14 @@ public class TimerUI : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Crocodile = GameObject.FindGameObjectWithTag("Crocodile").GetComponent<Crocodile>();
-        //Bear = GameObject.FindGameObjectWithTag("Bear").GetComponen;
+        //Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<;
         //Panda = GameObject.FindGameObjectWithTag("RedPanda");
         //Owl =  GameObject.FindGameObjectWithTag("Owl");
     }
 
     // Update is called once per frame
     void Update () {
+        //Crocodile.timeToTransform;
         CrocTimer.text = Crocodile.timeToTransform.ToString("F0");
     }
 }
