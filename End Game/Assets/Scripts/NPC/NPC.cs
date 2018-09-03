@@ -13,6 +13,7 @@ using UnityEngine.UI;
 
 public class NPC : MonoBehaviour {
 
+    public ParticleSystem FeedbackParticle;
     public bool isSearching;
     public bool isHunting;
 
@@ -33,6 +34,8 @@ public class NPC : MonoBehaviour {
         isHunting = false;
         //inToyForm = true;
     }
+
+    public virtual void PlayFeedback() {; }
 
 
 }

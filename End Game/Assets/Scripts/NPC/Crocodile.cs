@@ -27,6 +27,8 @@ public class Crocodile : NPC
     private Vector3 SeekPosition = Vector3.zero;
     private int PatrolIterator = 0;
 
+    private GameObject toyCroc;
+
     void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -57,6 +59,8 @@ public class Crocodile : NPC
 
         SeekPosition = transform.position;
         NMA.SetDestination(SeekPosition);
+
+        toyCroc = GameObject.Find("PlushieCroc");
     }
 
     void Update()
@@ -209,5 +213,12 @@ public class Crocodile : NPC
         Gizmos.color = Color.red;
         Debug.DrawLine(origen, origen + transform.forward * VisDist);
         Gizmos.DrawWireSphere(origen + transform.forward * VisDist, SphereRadius);
+    }
+
+    public override void PlayFeedback() {
+
+        if (toyCroc.activeInHierarchy && !FeedbackParticle.isPlaying) {
+            FeedbackParticle.Play();
+        }
     }
 }

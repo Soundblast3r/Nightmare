@@ -115,6 +115,8 @@ public class Items : MonoBehaviour
 
                     if (Croc.timeToTransform < Croc.timeToTransformMax) {
                         Croc.timeToTransform += (sprayTimerIncrease * 0.25f);
+
+                        Croc.PlayFeedback();
                     }
                 }
 
@@ -138,4 +140,5 @@ public class Items : MonoBehaviour
         //Play sound From the audio sorce
         //I'll figure out a way to change the channls later
     }
+
 }
