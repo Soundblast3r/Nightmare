@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
+//=======================================================
+//  Created By Liam Gates
+//  Updates: Edward ngo
+//=======================================================
+
 public class Interactions : MonoBehaviour
 {
     //Raycast Pickups

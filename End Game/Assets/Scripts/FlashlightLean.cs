@@ -25,6 +25,8 @@ public class FlashlightLean : MonoBehaviour {
 
     private Interactions OwlLight;
 
+    [HideInInspector] public bool TorchActive;
+
     //ActiveItems
     Items items;
 
@@ -45,6 +47,8 @@ public class FlashlightLean : MonoBehaviour {
         CameraMiddle.GetComponent<Camera>().enabled = true;
         Time.timeScale = 1;
 
+        TorchActive = true;
+
         items = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Items>();
         OwlLight = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Interactions>();
     }
@@ -59,7 +63,7 @@ public class FlashlightLean : MonoBehaviour {
 
         //flashlight
         {
-            if (items.TorchActive == true)
+            if (TorchActive == true)
             {
                 //Debug.Log(items.TorchActive);
                 if (Flashlight.activeSelf == true && Delay == false)

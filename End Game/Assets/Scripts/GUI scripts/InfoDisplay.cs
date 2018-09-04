@@ -8,17 +8,24 @@ using UnityEngine.UI;
 // Contributors:
 //=======================================================
 
-public class TimerUI : MonoBehaviour {
+public class InfoDisplay : MonoBehaviour {
 
+    private Items items;
+    private WalkieTalkie walkie;
     private Crocodile Crocodile;
     //private GameObject Bear;
     //private GameObject Panda;   
     //private GameObject Owl;
 
     public Text CrocTimer, BearTimer, PandaTimer, OwlTimer;
+    public Text WalkieChannel;
 
     // Use this for initialization
-    void Start () {
+    void Start() {
+
+        items = GameObject.Find("FirstPersonCharacter").GetComponent<Items>();
+        walkie = GameObject.Find("PlayerWalky").GetComponent<WalkieTalkie>();
+
         Crocodile = GameObject.FindGameObjectWithTag("Crocodile").GetComponent<Crocodile>();
         //Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<;
         //Panda = GameObject.FindGameObjectWithTag("RedPanda");
@@ -26,8 +33,12 @@ public class TimerUI : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
-        //Crocodile.timeToTransform;
+    void Update() {
+
+        if (items.currentItem == Items.ITEMTYPE.WALKYTALKY) {
+            WalkieChannel.text = "CH: " + walkie.currentChannel.ToString();
+        }
+
         CrocTimer.text = Crocodile.timeToTransform.ToString("F0");
     }
 }

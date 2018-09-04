@@ -2,101 +2,113 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Items : MonoBehaviour
-{   
-    //  Created By Liam Gates
-    //  Updates: Edward ngo
-    //
+//=======================================================
+//  Created By Liam Gates
+//  Updates: Edward ngo
+//=======================================================
 
-    Interactions interactions;
-    Camera cam;
-    Crocodile Croc;
-    //TeddyBear Tedd; 
-    GameObject Spraybottle;
-    GameObject WalkyTalky;
-    float rayDistance = 5;
-    private float SphereRadius;
+public class Items : MonoBehaviour
+{
+    private Interactions interactions;
+    private Camera cam;
+    private Crocodile Croc;
+    private WalkieTalkie wt;
+
+    private GameObject m_SprayBottle;
+    private GameObject m_WalkyTalky;
+
     public ParticleSystem Spray;
 
-    [HideInInspector] public bool TorchActive;
-    //[HideInInspector] public bool WalkyTalkyActive;
+    private float rayDistance = 5;
+    private float SphereRadius;
+    private int sprayTimerIncrease;
 
-    public int sprayTimerIncrease;      //each spray increases croc transform timer by x
-
-	// Use this for initialization
-	void Start ()
-    {
-        cam = this.GetComponent<Camera>();
-        interactions = GetComponent<Interactions>();
-        Croc = GameObject.Find("PlushieCroc").GetComponentInParent<Crocodile>();
-        //Spraybottle = GameObject.Find("CrocBottle");
-        Spraybottle = GameObject.FindGameObjectWithTag("Spray");
-        WalkyTalky = GameObject.FindGameObjectWithTag("Walky");
-        Spraybottle.SetActive(false);
-        WalkyTalky.SetActive(false);
-
-        TorchActive = true;
-
-        sprayTimerIncrease = 1;
-        SphereRadius = 0.10f;
-
-        //if (Spray == null)
-        //{
-        //    Spray = GameObject.Find("CrocBottle").GetComponent<ParticleSystem>();
-        //}
+    public enum ITEMTYPE {
+        NONE,
+        SPRAYBOTTLE,
+        WALKYTALKY
     }
 
-	// Update is called once per frame
+    public ITEMTYPE currentItem;
+
+	void Start ()
+    {
+        // Component References
+        cam = GetComponent<Camera>();
+        interactions = GetComponent<Interactions>();
+
+        // Toy/Demon references
+        Croc = GameObject.Find("PlushieCroc").GetComponentInParent<Crocodile>();
+
+        // Items attached to player
+        m_SprayBottle = GameObject.Find("PlayerBottle");
+        m_WalkyTalky = GameObject.Find("PlayerWalky");
+
+        wt = m_WalkyTalky.GetComponent<WalkieTalkie>(); 
+
+        // Set items to inactive (default)
+        m_SprayBottle.SetActive(false);
+        m_WalkyTalky.SetActive(false);
+
+        // Other variables
+        currentItem = ITEMTYPE.NONE;
+        sprayTimerIncrease = 1;
+        SphereRadius = 0.10f;
+    }
+
 	void Update ()
     {
         if(Input.GetMouseButton(0))
         {
-            if(interactions.SprayBottleActive == true)
-            {
-                SprayBottle();
+            if (currentItem == ITEMTYPE.NONE) {
+                return;
+            }
+
+            if (currentItem == ITEMTYPE.SPRAYBOTTLE) {
+                UseSprayBottle();
+            }
+
+            if (currentItem == ITEMTYPE.WALKYTALKY) {
+                UseWalky();
             }
         }
 
         if (Input.GetKey(KeyCode.Alpha1))
         {
-            //Debug.Log("Torch");
-            Spraybottle.SetActive(false);
-            WalkyTalky.SetActive(false);
-            TorchActive = true;
+            m_SprayBottle.SetActive(false);
+            m_WalkyTalky.SetActive(false);
         }
 
-        if (Input.GetKey(KeyCode.Alpha2))
-        {
-            //set everything else to false
-            if (interactions.SprayBottleActive == true)
-            {
-                TorchActive = false;
-                WalkyTalky.SetActive(false);
-                if (Spraybottle != null)
-                {
-                    Spraybottle.SetActive(true);
-                }
+        if (Input.GetKey(KeyCode.Alpha2) && interactions.SprayBottleActive == true) {
+            SwitchItem(2);
+        }
+
+        if (Input.GetKey(KeyCode.Alpha3) && interactions.WalkyTalkyActive == true) {
+            SwitchItem(3);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        }
+    }
+
+    void SwitchItem(int val) {
+
+        if (val == 2) {
+            currentItem = ITEMTYPE.SPRAYBOTTLE;
+            m_WalkyTalky.SetActive(false);
+            if (m_SprayBottle != null) {
+                m_SprayBottle.SetActive(true);
             }
         }
 
-        if (Input.GetKey(KeyCode.Alpha3))
-        {
-            if (interactions.WalkyTalkyActive == true)
-            {
-                TorchActive = false;
-                Spraybottle.SetActive(false);
-                if (WalkyTalky != null)
-                {
-                    WalkyTalky.SetActive(true);
-                }
+        if (val == 3) {
+            currentItem = ITEMTYPE.WALKYTALKY;
+            m_SprayBottle.SetActive(false);
+            if (m_WalkyTalky != null) {
+                m_WalkyTalky.SetActive(true);
             }
         }
     }
 
-
-    void SprayBottle()
+    void UseSprayBottle()
     {
-
         RaycastHit hit;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
@@ -104,10 +116,8 @@ public class Items : MonoBehaviour
             Spray.Play();
         }
 
-        //if(Physics.Raycast(ray, out hit, rayDistance))
         if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance))
         {
-
             if(interactions.SprayBottleActive == true)
             {
 
@@ -119,26 +129,17 @@ public class Items : MonoBehaviour
                         Croc.PlayFeedback();
                     }
                 }
-
-                //do something
-                //Debug.Log("Squek");
-
-                //if (!Spray.isPlaying)
-                //{
-                //    if (Spray != null)
-                //    {
-                //        Spray.Play();
-                //        Croc.timeToTransform += sprayTimerIncrease;
-                //    }
-                //}
             }
         }
     }
 
-    void TalkyWalky()
+    void UseWalky()
     {
-        //Play sound From the audio sorce
+        //Play sound From the audio source
+        Debug.Log("hellooo");
+
         //I'll figure out a way to change the channls later
+
     }
 
 }
