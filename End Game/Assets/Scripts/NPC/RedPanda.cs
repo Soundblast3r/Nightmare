@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class RedPanda : NPC {
 
     private GameObject player;
+    private GameObject origen;
     private Rigidbody RB;
     private NavMeshAgent NMA;
 
     GameManager game;
+
 
     void Start() {
         RB = GetComponent<Rigidbody>();
@@ -18,6 +20,7 @@ public class RedPanda : NPC {
         player = GameObject.Find("FPSController");
 
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        origen = GameObject.Find("Origen");
 
         //timeToTransformMax = 30;
         //timeToRevertMax = 30;
@@ -86,6 +89,13 @@ public class RedPanda : NPC {
 
     public void FollowPlayer() {
         NMA.destination = player.transform.position;
+    }
+
+    public void MoveToOrigen()
+    {
+        isSearching = false;
+        isHunting = false;
+        NMA.destination = origen.transform.position;
     }
 
     public void StopSearching() {

@@ -49,7 +49,7 @@ public class Interactions : MonoBehaviour
         //cursorLock = CursorLockMode.Locked;
         mainCamera = this.GetComponent<Camera>();
         HideCamera = GameObject.Find("HideCamera").GetComponent<Camera>();
-        demon = GameObject.FindGameObjectWithTag("Nightmare").GetComponent<Owl>();
+        //demon = GameObject.FindGameObjectWithTag("Nightmare").GetComponent<Owl>();
         //items = GetComponent<Items>();
         mainCamera.enabled = true;
         HideCamera.enabled = false;
