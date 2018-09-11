@@ -10,6 +10,8 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class Interactions : MonoBehaviour
 {
+
+    private Items items;
     //Raycast Pickups
     public Camera camera;
     public float rayDistance;
@@ -20,10 +22,10 @@ public class Interactions : MonoBehaviour
     private Owl demon;
 
     //Items items;
-    private Vector3 origen;
+    private Vector3 origin;
 
     //Camera Rotations
-    private float RotatY;
+    private float RotateY;
     //private float Vertical = 0.0f;
     //private float Horizontal = 0.0f;
     public float lookSpeed;
@@ -31,7 +33,7 @@ public class Interactions : MonoBehaviour
     public float MinRotation;
 
     // Camera
-    private Vector3 OrigionalCameraPos;
+    private Vector3 OriginalCameraPos;
 
     public GameObject target;
     public Camera mainCamera;
@@ -39,8 +41,8 @@ public class Interactions : MonoBehaviour
     //CursorLockMode cursorLock;
     
     //if cheack Bools 
-    [HideInInspector] public bool SprayBottleActive;
-    [HideInInspector] public bool WalkyTalkyActive;
+    //[HideInInspector] public bool SprayBottleActive;
+    //[HideInInspector] public bool WalkyTalkyActive;
 
     bool isHiding;
 	// Use this for initialization
@@ -49,15 +51,15 @@ public class Interactions : MonoBehaviour
         //cursorLock = CursorLockMode.Locked;
         mainCamera = this.GetComponent<Camera>();
         HideCamera = GameObject.Find("HideCamera").GetComponent<Camera>();
-        //demon = GameObject.FindGameObjectWithTag("Nightmare").GetComponent<Owl>();
-        //items = GetComponent<Items>();
+
+        items = GetComponent<Items>();
         mainCamera.enabled = true;
         HideCamera.enabled = false;
 
-        SprayBottleActive = false;
-        WalkyTalkyActive = false;
+        //SprayBottleActive = false;
+        //WalkyTalkyActive = false;
 
-        OrigionalCameraPos = camera.transform.localPosition;
+        OriginalCameraPos = camera.transform.localPosition;
 
         SphereRadius = 0.10f;
         isHiding = false;
@@ -103,12 +105,12 @@ public class Interactions : MonoBehaviour
                 if (hit.collider.name == "SprayBottle")
                 {
                     //adds the obejcts to your inventory
-                    SprayBottleActive = true;
+                    items.BottleAcquired = true;
                     //Debug.Log("picked up spray bottle");
                 }
                 if (hit.collider.name == "WalkyTalky")
                 {
-                    WalkyTalkyActive = true;
+                    items.WalkyAcquired = true;
                     //Debug.Log("picked up Walky Talky");
                 }
             }
@@ -193,16 +195,16 @@ public class Interactions : MonoBehaviour
     {
         Vector3 Angles = HideCamera.transform.localEulerAngles;
         //gets the mouse input to rotate the camera
-        RotatY = lookSpeed * Input.GetAxis("Mouse X") /* Time.deltaTime*/;
+        RotateY = lookSpeed * Input.GetAxis("Mouse X") /* Time.deltaTime*/;
         //RotatX = lookSpeed * Input.GetAxis("Mouse X") /* Time.deltaTime*/;
 
         //clamps the camera to a certain preset rainge
-        RotatY = Mathf.Clamp(Angles.y + RotatY, MinRotation, MaxRotation);
+        RotateY = Mathf.Clamp(Angles.y + RotateY, MinRotation, MaxRotation);
         //RotatX = Mathf.Clamp(Angles.x + RotatX, MinRotation, MaxRotation);
 
         //changes the cameras rotation using the
         //previusly set horizontal and vertical axis
-        HideCamera.transform.localEulerAngles = new Vector3(Angles.x, RotatY, Angles.z);
+        HideCamera.transform.localEulerAngles = new Vector3(Angles.x, RotateY, Angles.z);
         //HideCamera.transform.Rotate(RotatY, RotatX, 0.0f);
 
         //Debug.Log("Horizontal");
@@ -226,8 +228,8 @@ public class Interactions : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        origen = transform.position;
+        origin = transform.position;
         Gizmos.color = Color.red;
-        Debug.DrawLine(origen, origen + transform.forward * RayLine);
+        Debug.DrawLine(origin, origin + transform.forward * RayLine);
     }
 }

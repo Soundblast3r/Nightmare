@@ -17,6 +17,10 @@ public class Items : MonoBehaviour
     private GameObject m_SprayBottle;
     private GameObject m_WalkyTalky;
 
+    //if cheack Bools 
+    [HideInInspector] public bool BottleAcquired;
+    [HideInInspector] public bool WalkyAcquired;
+
     public ParticleSystem Spray;
 
     private float rayDistance = 5;
@@ -44,7 +48,10 @@ public class Items : MonoBehaviour
         m_SprayBottle = GameObject.Find("PlayerBottle");
         m_WalkyTalky = GameObject.Find("PlayerWalky");
 
-        wt = m_WalkyTalky.GetComponent<WalkieTalkie>(); 
+        wt = m_WalkyTalky.GetComponent<WalkieTalkie>();
+
+        BottleAcquired = false;
+        WalkyAcquired = false;
 
         // Set items to inactive (default)
         m_SprayBottle.SetActive(false);
@@ -75,20 +82,32 @@ public class Items : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Alpha1))
         {
-            m_SprayBottle.SetActive(false);
-            m_WalkyTalky.SetActive(false);
+            SwitchItem(0);
         }
 
-        if (Input.GetKey(KeyCode.Alpha2) && interactions.SprayBottleActive == true) {
-            SwitchItem(2);
+        if (Input.GetKey(KeyCode.Alpha2)) {
+            if (BottleAcquired && currentItem != ITEMTYPE.SPRAYBOTTLE) {
+                SwitchItem(2);
+            }
         }
 
-        if (Input.GetKey(KeyCode.Alpha3) && interactions.WalkyTalkyActive == true) {
-            SwitchItem(3);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        if (Input.GetKey(KeyCode.Alpha3)) {
+            if (WalkyAcquired && currentItem != ITEMTYPE.WALKYTALKY) {
+                SwitchItem(3);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+            }
         }
     }
 
     void SwitchItem(int val) {
+
+        if (val == 0) {
+            currentItem = ITEMTYPE.NONE;
+
+            if (m_SprayBottle != null || m_WalkyTalky != null) {
+                m_SprayBottle.SetActive(false);
+                m_WalkyTalky.SetActive(false);
+            }
+        }
 
         if (val == 2) {
             currentItem = ITEMTYPE.SPRAYBOTTLE;
@@ -118,7 +137,7 @@ public class Items : MonoBehaviour
 
         if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance))
         {
-            if(interactions.SprayBottleActive == true)
+            if(BottleAcquired == true)
             {
 
                 if (hit.collider.tag == "Plushie" && Spray.isPlaying) {
@@ -135,8 +154,8 @@ public class Items : MonoBehaviour
 
     void UseWalky()
     {
+        wt.MakeNoise();
         //Play sound From the audio source
-        Debug.Log("hellooo");
 
         //I'll figure out a way to change the channls later
 

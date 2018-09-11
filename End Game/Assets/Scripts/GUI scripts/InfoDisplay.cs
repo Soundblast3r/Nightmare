@@ -30,15 +30,31 @@ public class InfoDisplay : MonoBehaviour {
         //Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<;
         //Panda = GameObject.FindGameObjectWithTag("RedPanda");
         //Owl =  GameObject.FindGameObjectWithTag("Owl");
+
+        WalkieChannel.enabled = false;
     }
 
     // Update is called once per frame
     void Update() {
-
+        
+        // WALKY DISPLAY
         if (items.currentItem == Items.ITEMTYPE.WALKYTALKY) {
-            WalkieChannel.text = "CH: " + walkie.currentChannel.ToString();
+            if (!WalkieChannel.enabled) {
+                WalkieChannel.enabled = true;
+            }
+
+            if (WalkieChannel.enabled) {
+                WalkieChannel.text = "CH: " + walkie.currentChannel.ToString();
+            }
         }
 
+        if (items.currentItem != Items.ITEMTYPE.WALKYTALKY) {
+            if (WalkieChannel.enabled) {
+                WalkieChannel.enabled = false;
+            }
+        }
+
+        // TIMERS DISPLAY
         CrocTimer.text = Crocodile.timeToTransform.ToString("F0");
     }
 }

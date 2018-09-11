@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33047561215375466}
   - component: {fileID: 65365471802724038}
   - component: {fileID: 23678995157055700}
+  - component: {fileID: 114979660451636172}
   m_Layer: 0
   m_Name: Reciever
   m_TagString: Reciever
@@ -36,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1910777372678080}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.425, y: -9.852, z: 16.106}
-  m_LocalScale: {x: 0.32005, y: 0.46857998, z: 0.32005}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 55d7c0225cac3474ebefcaecfe09071f, type: 2}
+  - {fileID: 2100000, guid: e838d244f5838fc49ac5c8fbc5645f02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,3 +96,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114979660451636172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1910777372678080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7c07128f031d542a8347d22ec537a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCurrentChannel: 0
+  walkyNumber: 0
