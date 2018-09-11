@@ -4,17 +4,20 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class RedPanda : NPC {
-
+public class RedPanda : NPC
+{
     private GameObject player;
     private GameObject origen;
     private Rigidbody RB;
     private NavMeshAgent NMA;
+    private int rand;
 
+    Interactions cam;
     GameManager game;
 
 
-    void Start() {
+    void Start()
+    {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
@@ -22,6 +25,7 @@ public class RedPanda : NPC {
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         origen = GameObject.Find("Origen");
 
+        
         //timeToTransformMax = 30;
         //timeToRevertMax = 30;
 
@@ -32,7 +36,8 @@ public class RedPanda : NPC {
         //inToyForm = true;
     }
 
-    void Update() {
+    void Update()
+    {
         //=================================================================================
         // Countdowns and timers
         //=================================================================================
@@ -62,7 +67,8 @@ public class RedPanda : NPC {
         //}
     }
 
-    public void FixedUpdate() {
+    public void FixedUpdate()
+    {
         //if (isSearching && !inToyForm) {
         //    FollowPlayer();
         //}
@@ -71,7 +77,8 @@ public class RedPanda : NPC {
         //}
     }
 
-    public void DemonForm() {
+    public void DemonForm()
+    {
         NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;
@@ -80,14 +87,16 @@ public class RedPanda : NPC {
         timeToRevert = timeToRevertMax;
     }
 
-    public void ToyForm() {
+    public void ToyForm()
+    {
         StopSearching();
         //inToyForm = true;
         this.gameObject.transform.localScale = new Vector3(1, 1, 1); // scale size
         timeToTransform = timeToTransformMax;
     }
-
-    public void FollowPlayer() {
+    
+    public void FollowPlayer()
+    {
         NMA.destination = player.transform.position;
     }
 
@@ -98,13 +107,15 @@ public class RedPanda : NPC {
         NMA.destination = origen.transform.position;
     }
 
-    public void StopSearching() {
+    public void StopSearching()
+    {
         RB.velocity = new Vector3(0, 0, 0);
         NMA.isStopped = true;
         isSearching = false;
     }
 
-    public void KillPlayer() {
+    public void KillPlayer()
+    {
         // CALL CAMERA FUNTION FROM PLAYER SCRIPT
         // PUT PLAYER INFRONT OF MONSTER
         //playerCam.transform.position = playerKillPos.position;
@@ -117,13 +128,28 @@ public class RedPanda : NPC {
         // SET GAMEOVER THINGS
     }
 
-    public void Patrol() {
-        // DO PATROL STUFF
+    public void Search()
+    {
+        //DO SEARCH STUFF
+        rand = Random.Range(0, 1);
+
+        if(rand <= 0.5)
+        {
+            Debug.Log("Checked Hidding place");
+        }
+        else
+        {
+            Debug.Log("Didnt check hidding place");
+        }
     }
 
+    public void Distracted()
+    {
 
-    private void OnTriggerEnter(Collider other) {
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
         if (other.gameObject == player)
         {
             StopSearching();
