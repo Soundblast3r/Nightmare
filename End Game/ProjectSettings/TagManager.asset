@@ -15,6 +15,7 @@ TagManager:
   - Crocodile
   - Nightmare
   - Reciever
+  - RedPanda
   layers:
   - Default
   - TransparentFX
