@@ -6713,9 +6713,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0af2bad666e9e64d8c8ee8861518af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentChannel: 0
   m_recievers:
   - {fileID: 1194723108}
+  currentReciever: {fileID: 0}
+  currentChannel: 0
+  isChannelSet: 0
 --- !u!82 &442839272
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11143,7 +11145,7 @@ SphereCollider:
   m_GameObject: {fileID: 674407182}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
@@ -19448,6 +19450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b21b80cbe6f1674bb860549b9a10532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkyNumber: 0
+  soundDuration: 0
+  soundDurationMax: 0
 --- !u!23 &1194723110
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24950,6 +24955,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 325022563}
     m_Modifications:
+    - target: {fileID: 114357127677730832, guid: 08e67983cc04d1745a4e60b1095eb9fd,
+        type: 2}
+      propertyPath: hidding.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4923290032920058, guid: 08e67983cc04d1745a4e60b1095eb9fd, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.16898635
@@ -24982,10 +24992,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1468435552000060, guid: 08e67983cc04d1745a4e60b1095eb9fd, type: 2}
-      propertyPath: m_TagString
-      value: RedPanda
-      objectReference: {fileID: 0}
+    - target: {fileID: 114357127677730832, guid: 08e67983cc04d1745a4e60b1095eb9fd,
+        type: 2}
+      propertyPath: hidding.Array.data[0]
+      value: 
+      objectReference: {fileID: 1037138410}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08e67983cc04d1745a4e60b1095eb9fd, type: 2}
   m_IsPrefabParent: 0
@@ -31520,8 +31531,6 @@ MonoBehaviour:
   target: {fileID: 0}
   mainCamera: {fileID: 1899678584}
   HideCamera: {fileID: 1678546279}
-  SprayBottleActive: 0
-  WalkyTalkyActive: 0
 --- !u!124 &1899678586
 Behaviour:
   m_ObjectHideFlags: 0
@@ -31549,6 +31558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b61adfee4fb4145957a3749ee01999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BottleAcquired: 0
+  WalkyAcquired: 0
   Spray: {fileID: 0}
   currentItem: 0
 --- !u!1 &1902946788

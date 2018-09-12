@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 195163801628283172}
   m_Layer: 0
   m_Name: RedPanda
-  m_TagString: Untagged
+  m_TagString: RedPanda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1468435552000060}
   m_LocalRotation: {x: -0, y: 0.19426095, z: -0, w: 0.98094994}
-  m_LocalPosition: {x: 58.21, y: -9.88, z: 35.4}
+  m_LocalPosition: {x: 0.16898635, y: -5.4230785, z: 7.823818}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,14 +112,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750747bb3b4cfc74bad25b92804d6e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FeedbackParticle: {fileID: 0}
   isSearching: 0
+  isHunting: 0
   patrolPoints: []
   playerKillPos: {fileID: 0}
   timeToTransform: 0
-  TransformedTimer: 10
+  timeToTransformMax: 0
   timeToRevert: 0
-  revertTimer: 30
-  inToyForm: 0
+  timeToRevertMax: 0
+  hidding: []
+  counter: 0
+  isRunning: 0
 --- !u!136 &136695853052783078
 CapsuleCollider:
   m_ObjectHideFlags: 1

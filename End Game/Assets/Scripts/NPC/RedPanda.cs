@@ -7,14 +7,25 @@ using UnityEngine.UI;
 public class RedPanda : NPC
 {
     private GameObject player;
+    private GameObject Player;
     private GameObject origen;
+    public GameObject[] hidding;
     private Rigidbody RB;
     private NavMeshAgent NMA;
     private int rand;
 
-    Interactions cam;
-    GameManager game;
+    private float timeCheck;
+    public float counter;
+    private float VisDist = 10;
 
+    private float rayDistance;
+    private float SphereRadius;
+    private Vector3 Origen;
+
+    [HideInInspector] public bool isRunning;
+
+    //Interactions cam;
+    GameManager game;
 
     void Start()
     {
@@ -24,8 +35,18 @@ public class RedPanda : NPC
 
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         origen = GameObject.Find("Origen");
+        hidding = GameObject.FindGameObjectsWithTag("Hideable");
 
-        
+        Player = GameObject.FindGameObjectWithTag("Player");
+        hidding = GameObject.FindGameObjectsWithTag("Hideable");
+
+        isRunning = false;
+        timeCheck = 1000.0f;
+        counter = timeCheck;
+
+        rayDistance = 15;
+        SphereRadius = 2.0f;
+
         //timeToTransformMax = 30;
         //timeToRevertMax = 30;
 
@@ -55,6 +76,13 @@ public class RedPanda : NPC
         //=================================================================================
         // Timers  while in toy/demon form
         //=================================================================================
+
+        if (counter <= 0)
+        {
+            counter = timeCheck;
+            MoveToOrigen();
+        }
+        counter--;
 
         // when in TOY form, and not 'taken care of' and countdown reaches 0, transform to demon
         //if (timeToTransform <= 0 && inToyForm) {
@@ -155,5 +183,28 @@ public class RedPanda : NPC
             StopSearching();
             KillPlayer();
         }
+    }
+
+    public void Sense()
+    {
+        RaycastHit hit;
+        Origen = transform.position;
+
+        if (Physics.SphereCast(Origen, SphereRadius, transform.forward, out hit))
+        {
+            for (int i = 0; i < hidding.Length; i++)
+            {
+                if (hidding[i] == gameObject)
+                {
+                    Search();
+                }
+            }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Debug.DrawLine(Origen, Origen + transform.forward * VisDist);
     }
 }

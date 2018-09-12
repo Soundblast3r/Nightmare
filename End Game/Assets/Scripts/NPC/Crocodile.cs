@@ -215,9 +215,10 @@ public class Crocodile : NPC
         Gizmos.DrawWireSphere(origen + transform.forward * VisDist, SphereRadius);
     }
 
-    public override void PlayFeedback() {
-
-        if (toyCroc.activeInHierarchy && !FeedbackParticle.isPlaying) {
+    public override void PlayFeedback()
+    {
+        if (toyCroc.activeInHierarchy && !FeedbackParticle.isPlaying)
+        {
             FeedbackParticle.Play();
         }
     }

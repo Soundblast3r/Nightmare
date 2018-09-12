@@ -70,6 +70,12 @@ public class PandaSense : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Debug.DrawLine(origen, origen + transform.forward * rayDistance);
+    }
+
     //public void OnTriggerExit(Collider other)
     //{
     //    if (other.gameObject == Player && counter <= 0)
