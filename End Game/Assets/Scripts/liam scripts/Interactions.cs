@@ -10,20 +10,17 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class Interactions : MonoBehaviour
 {
-
     private Items items;
+    private InfoDisplay infoDisplay;
+
     //Raycast Pickups
     public Camera camera;
     public float rayDistance;
     private float RayLine = 15f;
     private float SphereRadius;
-    //public float Distance;
 
-    private Owl demon;
-
-    //Items items;
     private Vector3 origin;
-
+    private Owl demon;
     //Camera Rotations
     private float RotateY;
     //private float Vertical = 0.0f;
@@ -34,16 +31,11 @@ public class Interactions : MonoBehaviour
 
     // Camera
     private Vector3 OriginalCameraPos;
-
     public GameObject target;
     public Camera mainCamera;
     public Camera HideCamera;
     //CursorLockMode cursorLock;
     
-    //if cheack Bools 
-    //[HideInInspector] public bool SprayBottleActive;
-    //[HideInInspector] public bool WalkyTalkyActive;
-
     bool isHiding;
 	// Use this for initialization
 	void Start ()
@@ -51,7 +43,7 @@ public class Interactions : MonoBehaviour
         //cursorLock = CursorLockMode.Locked;
         mainCamera = this.GetComponent<Camera>();
         HideCamera = GameObject.Find("HideCamera").GetComponent<Camera>();
-
+        infoDisplay = GameObject.Find("GameUI").GetComponent<InfoDisplay>();
         items = GetComponent<Items>();
         mainCamera.enabled = true;
         HideCamera.enabled = false;
@@ -81,6 +73,10 @@ public class Interactions : MonoBehaviour
             Interact();
             AnimalInteract();
         }
+
+        LookAt();
+
+
 	}
 
     void Interact()
@@ -91,8 +87,8 @@ public class Interactions : MonoBehaviour
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         
         //cheacks if the ray actualy hit something within a set distance
-        //if (Physics.Raycast(ray, out hit, rayDistance))
-        if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance))
+        /*if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance))*/
+        if (Physics.Raycast(ray, out hit, rayDistance))
         {
             //cheacks if you are able to pick up the object
             if (hit.collider.tag == "Pickup")
@@ -209,6 +205,37 @@ public class Interactions : MonoBehaviour
 
         //Debug.Log("Horizontal");
         //Debug.Log("Vertical");
+    }
+
+    void LookAt() {
+
+        RaycastHit hit;
+        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+
+        //if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance)) {
+        if (Physics.Raycast(ray, out hit, rayDistance)) {
+            if (hit.collider.tag == "Pickup") {
+                infoDisplay.DisplayTooltip(hit.collider.name);
+            }
+
+            if (hit.collider.tag == "Hideable") {
+                infoDisplay.DisplayTooltip("Hide");
+            }
+
+            if (hit.collider.tag == "Plushie") {
+                GameObject temp = hit.collider.transform.parent.gameObject;
+                infoDisplay.DisplayTooltip(temp.tag.ToString());
+            }
+
+        }
+
+        // CHECKS IF NOT LOOKING AT OBJECT, CLEARS TOOLTIP
+       if (Physics.Raycast(ray, out hit, 100)) {
+           if (hit.collider.tag != "Pickup" && hit.collider.tag != "Hideable" && hit.collider.tag != "Plushie" &&
+              (hit.collider.tag != "Crocodile" || hit.collider.tag != "RedPanda" || hit.collider.tag != "Owl" || hit.collider.tag != "Bear" ))  {
+               infoDisplay.ClearTooltip();
+           }
+       }
     }
 
     public void TorchLine()

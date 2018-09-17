@@ -19,7 +19,8 @@ public class InfoDisplay : MonoBehaviour {
 
     public Text CrocTimer, BearTimer, PandaTimer, OwlTimer;
     public Text WalkieChannel;
-
+    public Sprite CentreDot;
+    public Text Tooltip;
     // Use this for initialization
     void Start() {
 
@@ -30,6 +31,8 @@ public class InfoDisplay : MonoBehaviour {
         //Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<;
         //Panda = GameObject.FindGameObjectWithTag("RedPanda");
         //Owl =  GameObject.FindGameObjectWithTag("Owl");
+
+        Tooltip.text = string.Empty;
 
         WalkieChannel.enabled = false;
     }
@@ -55,6 +58,21 @@ public class InfoDisplay : MonoBehaviour {
         }
 
         // TIMERS DISPLAY
-        CrocTimer.text = Crocodile.timeToTransform.ToString("F0");
+        CrocTimer.text = "Croc: " + Crocodile.timeToTransform.ToString("F0");
+        //BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
+        //PandaTimer.text = "Panda: " + Panda.timeToTransform.ToString("F0");
+        //OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
+
+
     }
+
+    public void DisplayTooltip(string word) {
+        Tooltip.text = word.ToString();
+    }
+
+    public void ClearTooltip() {
+        Tooltip.text = string.Empty;
+    }
+
+    
 }

@@ -155,9 +155,8 @@ public class Items : MonoBehaviour
     void UseWalky()
     {
         wt.MakeNoise();
-        //Play sound From the audio source
-
-        //I'll figure out a way to change the channls later
+        
+        // PLAY NORMAL AUDIO CLIP HERE, PLAY DISTORTED AUDIO CLIP @ RECIEVER
 
     }
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider))]
+
 public class WalkieReciever : MonoBehaviour {
 
     public int walkyNumber;
@@ -10,8 +12,8 @@ public class WalkieReciever : MonoBehaviour {
     public float soundDuration;
     public float soundDurationMax;
 
-	void Start () {
-
+    void Start () {
+        GetComponent<BoxCollider>().isTrigger = true;
         walkyNumber = 0;
         emittingSound = false;
         soundDurationMax = 2;
@@ -30,13 +32,12 @@ public class WalkieReciever : MonoBehaviour {
 
     private void OnTriggerStay(Collider other) {
         if (emittingSound) {
-            if (other.gameObject.GetComponent<Crocodile>() ||
-                other.gameObject.GetComponent<Crocodile>() ||
-                other.gameObject.GetComponent<Crocodile>() ||
-                other.gameObject.GetComponent<Crocodile>()) {
+            if (other.gameObject.GetComponent<Crocodile>()  ||
+                other.gameObject.GetComponent<Owl>()        ||
+                other.gameObject.GetComponent<RedPanda>()   ||
+                other.gameObject.GetComponent<TeddyBear>()) {
 
-                // AGGRO/DISTRACT temporarily
-                
+                // CALL DISTRACT FUNCTION WHEN ITS READY          
             }
         }
     }
@@ -46,7 +47,6 @@ public class WalkieReciever : MonoBehaviour {
     }
 
     public int GetChannel() {
-
         return walkyNumber;
     }
 
@@ -54,6 +54,8 @@ public class WalkieReciever : MonoBehaviour {
         soundDuration = soundDurationMax;
         emittingSound = true;
         Debug.Log("HELLO FROM RECIEVER " + walkyNumber);
+
+        //PLAY DISTORTED AUDIO HERE
     }
 
 }
