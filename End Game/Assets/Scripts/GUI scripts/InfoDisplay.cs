@@ -25,7 +25,7 @@ public class InfoDisplay : MonoBehaviour {
     void Start() {
 
         items = GameObject.Find("FirstPersonCharacter").GetComponent<Items>();
-        walkie = GameObject.Find("PlayerWalky").GetComponent<WalkieTalkie>();
+        walkie = GameObject.Find("FirstPersonCharacter").GetComponent<WalkieTalkie>();
 
         Crocodile = GameObject.FindGameObjectWithTag("Crocodile").GetComponent<Crocodile>();
         //Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<;

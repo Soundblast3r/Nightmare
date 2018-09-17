@@ -36,7 +36,7 @@ public class Interactions : MonoBehaviour
     public Camera HideCamera;
     //CursorLockMode cursorLock;
     
-    bool isHiding;
+    public bool isHiding;
 	// Use this for initialization
 	void Start ()
     {
@@ -215,11 +215,16 @@ public class Interactions : MonoBehaviour
         //if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance)) {
         if (Physics.Raycast(ray, out hit, rayDistance)) {
             if (hit.collider.tag == "Pickup") {
-                infoDisplay.DisplayTooltip(hit.collider.name);
+                infoDisplay.DisplayTooltip("Take " + hit.collider.name);
+            }
+
+            if (hit.collider.tag == "Reciever") {
+                GameObject temp = hit.collider.gameObject;
+                infoDisplay.DisplayTooltip("reciever " + temp.GetComponent<WalkieReciever>().walkyNumber);
             }
 
             if (hit.collider.tag == "Hideable") {
-                infoDisplay.DisplayTooltip("Hide");
+                infoDisplay.DisplayTooltip("Hide in " + hit.collider.name);
             }
 
             if (hit.collider.tag == "Plushie") {
@@ -230,8 +235,10 @@ public class Interactions : MonoBehaviour
         }
 
         // CHECKS IF NOT LOOKING AT OBJECT, CLEARS TOOLTIP
+        // ADD ITEMS THAT CAN BE DISPLAYED ON TOOLTIP HERE
        if (Physics.Raycast(ray, out hit, 100)) {
            if (hit.collider.tag != "Pickup" && hit.collider.tag != "Hideable" && hit.collider.tag != "Plushie" &&
+               hit.collider.tag != "Reciever" &&
               (hit.collider.tag != "Crocodile" || hit.collider.tag != "RedPanda" || hit.collider.tag != "Owl" || hit.collider.tag != "Bear" ))  {
                infoDisplay.ClearTooltip();
            }

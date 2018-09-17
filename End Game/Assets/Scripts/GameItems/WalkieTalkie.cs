@@ -22,8 +22,9 @@ public class WalkieTalkie : MonoBehaviour {
     private int prevChannel = 0;
 
     void Start () {
-        items = GetComponentInParent<Items>();
-        
+        //items = GetComponentInParent<Items>();
+        items = GetComponent<Items>();
+
         m_Channel = 1;
         currentChannel = m_Channel;
 

@@ -9,11 +9,13 @@ using UnityEngine;
 
 public class Items : MonoBehaviour
 {
+    // Script references
     private Interactions interactions;
     private Camera cam;
     private Crocodile Croc;
     private WalkieTalkie wt;
 
+    // Gameobject references
     private GameObject m_SprayBottle;
     private GameObject m_WalkyTalky;
 
@@ -40,6 +42,7 @@ public class Items : MonoBehaviour
         // Component References
         cam = GetComponent<Camera>();
         interactions = GetComponent<Interactions>();
+        wt = GetComponent<WalkieTalkie>();
 
         // Toy/Demon references
         Croc = GameObject.Find("PlushieCroc").GetComponentInParent<Crocodile>();
@@ -48,8 +51,7 @@ public class Items : MonoBehaviour
         m_SprayBottle = GameObject.Find("PlayerBottle");
         m_WalkyTalky = GameObject.Find("PlayerWalky");
 
-        wt = m_WalkyTalky.GetComponent<WalkieTalkie>();
-
+        // Check if player has an item
         BottleAcquired = false;
         WalkyAcquired = false;
 
@@ -65,37 +67,52 @@ public class Items : MonoBehaviour
 
 	void Update ()
     {
-        if(Input.GetMouseButton(0))
-        {
-            if (currentItem == ITEMTYPE.NONE) {
-                return;
-            }
+        // Hide walky gameobject while hidden
+        if (currentItem == ITEMTYPE.WALKYTALKY && interactions.isHiding) {
+            m_WalkyTalky.GetComponent<Renderer>().enabled = false;
+            m_WalkyTalky.GetComponent<BoxCollider>().enabled = false;
+            //Vector3 prevTransform = m_WalkyTalky.transform.localPosition;
+            //m_WalkyTalky.transform.position = transform.position;
+        } 
 
-            if (currentItem == ITEMTYPE.SPRAYBOTTLE) {
-                UseSprayBottle();
-            }
-
-            if (currentItem == ITEMTYPE.WALKYTALKY) {
-                UseWalky();
-            }
+        // Disable spray bottle when going into hiding
+        if (currentItem == ITEMTYPE.SPRAYBOTTLE && interactions.isHiding) {
+            SwitchItem(0);
         }
 
-        if (Input.GetKey(KeyCode.Alpha1))
+        // SWITCH ITEM
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SwitchItem(0);
         }
 
-        if (Input.GetKey(KeyCode.Alpha2)) {
+        if (Input.GetKeyDown(KeyCode.Alpha2) && !interactions.isHiding) {
             if (BottleAcquired && currentItem != ITEMTYPE.SPRAYBOTTLE) {
                 SwitchItem(2);
             }
         }
 
-        if (Input.GetKey(KeyCode.Alpha3)) {
+        if (Input.GetKeyDown(KeyCode.Alpha3)) {
             if (WalkyAcquired && currentItem != ITEMTYPE.WALKYTALKY) {
                 SwitchItem(3);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
             }
         }
+
+        // USE ITEM ON LEFT CLICK
+        if (currentItem == ITEMTYPE.NONE) {
+            return;
+        }
+
+        if (currentItem == ITEMTYPE.SPRAYBOTTLE && !interactions.isHiding && Input.GetMouseButton(0)) {
+            UseSprayBottle();
+        }
+
+        if (currentItem == ITEMTYPE.WALKYTALKY && Input.GetMouseButtonDown(0)) {
+            UseWalky();
+        }
+        
+
+
     }
 
     void SwitchItem(int val) {
