@@ -16,11 +16,13 @@ public class RedPanda : NPC
 
     private float timeCheck;
     public float counter;
-    private float VisDist = 10;
+    private float VisDist;
 
     private float rayDistance;
     private float SphereRadius;
     private Vector3 Origen;
+
+    private GameObject target;
 
     [HideInInspector] public bool isRunning;
 
@@ -35,16 +37,17 @@ public class RedPanda : NPC
 
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         origen = GameObject.Find("Origen");
-        hidding = GameObject.FindGameObjectsWithTag("Hideable");
+        //hidding = GameObject.FindGameObjectsWithTag("Hideable");
 
         Player = GameObject.FindGameObjectWithTag("Player");
         hidding = GameObject.FindGameObjectsWithTag("Hideable");
 
         isRunning = false;
-        timeCheck = 1000.0f;
+        timeCheck = 100.0f;
         counter = timeCheck;
 
         rayDistance = 15;
+        VisDist = rayDistance;
         SphereRadius = 2.0f;
 
         //timeToTransformMax = 30;
@@ -81,7 +84,7 @@ public class RedPanda : NPC
         if (counter <= 0)
         {
             counter = timeCheck;
-            MoveToOrigen();
+            Sense();
         }
         counter--;
 
@@ -160,15 +163,17 @@ public class RedPanda : NPC
     public void Search()
     {
         //DO SEARCH STUFF
-        rand = Random.Range(0, 1);
+        rand = Random.Range(0, 2);
 
-        if(rand <= 0.5)
+        if(rand < 1)
         {
             Debug.Log("Checked Hidding place");
+            KillPlayer();
         }
         else
         {
             Debug.Log("Didnt check hidding place");
+            MoveToOrigen();
         }
     }
 
@@ -193,96 +198,151 @@ public class RedPanda : NPC
         //0 degrees
         if (Physics.Raycast(Origen, transform.forward, out hit, rayDistance))
         {
+            target = hit.collider.gameObject;
+
             for (int i = 0; i < hidding.Length; i++)
             {
-                if (hidding[i] == gameObject)
+                if (target == hidding[i])
                 {
                     Search();
                 }
+            }
+            if (hit.collider.tag == "Player")
+            {
+                FollowPlayer();
             }
         }
 
         //45 degrees
         if (Physics.Raycast(Origen, (transform.forward + transform.right), out hit, rayDistance))
         {
+            target = hit.collider.gameObject;
+
             for (int i = 0; i < hidding.Length; i++)
             {
-                if (hidding[i] == gameObject)
+                if (target == hidding[i])
                 {
                     Search();
                 }
+            }
+
+            if (hit.collider.tag == "Player")
+            {
+                FollowPlayer();
             }
         }
 
         //90 degrees
         if (Physics.Raycast(Origen, transform.right, out hit, rayDistance))
         {
+            target = hit.collider.gameObject;
+
             for (int i = 0; i < hidding.Length; i++)
             {
-                if (hidding[i] == gameObject)
+                if (target == hidding[i])
                 {
                     Search();
                 }
+            }
+
+            if (hit.collider.tag == "Player")
+            {
+                FollowPlayer();
             }
         }
 
         //135 degrees
         if (Physics.Raycast(Origen, (transform.right -transform.forward), out hit, rayDistance))
         {
+            target = hit.collider.gameObject;
+
             for (int i = 0; i < hidding.Length; i++)
             {
-                if (hidding[i] == gameObject)
+                if (target == hidding[i])
                 {
                     Search();
                 }
+            }
+
+            if (hit.collider.tag == "Player")
+            {
+                FollowPlayer();
             }
         }
 
         //180 degrees
         if (Physics.Raycast(Origen, -transform.forward, out hit, rayDistance))
         {
+            target = hit.collider.gameObject;
+
             for (int i = 0; i < hidding.Length; i++)
             {
-                if (hidding[i] == gameObject)
+                if (target == hidding[i])
                 {
                     Search();
                 }
+            }
+
+            if (hit.collider.tag == "Player")
+            {
+                FollowPlayer();
             }
         }
 
         //225 degrees
         if (Physics.Raycast(Origen, (-transform.forward + -transform.right), out hit, rayDistance))
         {
+            target = hit.collider.gameObject;
+
             for (int i = 0; i < hidding.Length; i++)
             {
-                if (hidding[i] == gameObject)
+                if (target == hidding[i])
                 {
                     Search();
                 }
+            }
+
+            if (hit.collider.tag == "Player")
+            {
+                FollowPlayer();
             }
         }
 
         //270 degrees
         if (Physics.Raycast(Origen, -transform.right, out hit, rayDistance))
         {
+            target = hit.collider.gameObject;
+
             for (int i = 0; i < hidding.Length; i++)
             {
-                if (hidding[i] == gameObject)
+                if (target == hidding[i])
                 {
                     Search();
                 }
+            }
+
+            if (hit.collider.tag == "Player")
+            {
+                FollowPlayer();
             }
         }
 
         //395 degrees
         if (Physics.Raycast(Origen, (-transform.forward + transform.forward), out hit, rayDistance))
         {
+            target = hit.collider.gameObject;
+
             for (int i = 0; i < hidding.Length; i++)
             {
-                if (hidding[i] == gameObject)
+                if (target == hidding[i])
                 {
                     Search();
                 }
+            }
+
+            if (hit.collider.tag == "Player")
+            {
+                FollowPlayer();
             }
         }
 
@@ -309,8 +369,7 @@ public class RedPanda : NPC
         //395 degrees
         Debug.DrawLine(Origen, Origen + (-transform.right + transform.forward) * (VisDist - 2));
 
-
-        
+       
         //Gizmos.DrawWireSphere(Origen + transform.forward * VisDist, SphereRadius);
     }
 }

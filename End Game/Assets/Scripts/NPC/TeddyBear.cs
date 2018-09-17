@@ -99,7 +99,7 @@ public class TeddyBear : NPC
         //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, 10, 0);
-        this.gameObject.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f); //scale size
+        this.gameObject.transform.localScale = new Vector3(scale, scale, scale); //scale size
         //timeToRevert = timeToRevertMax;
     }
 
