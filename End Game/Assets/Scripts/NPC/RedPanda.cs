@@ -76,6 +76,7 @@ public class RedPanda : NPC
         //=================================================================================
         // Timers  while in toy/demon form
         //=================================================================================
+        Origen = transform.position;
 
         if (counter <= 0)
         {
@@ -187,10 +188,10 @@ public class RedPanda : NPC
 
     public void Sense()
     {
-        RaycastHit hit;
-        Origen = transform.position;
+        RaycastHit hit; 
 
-        if (Physics.SphereCast(Origen, SphereRadius, transform.forward, out hit))
+        //0 degrees
+        if (Physics.Raycast(Origen, transform.forward, out hit, rayDistance))
         {
             for (int i = 0; i < hidding.Length; i++)
             {
@@ -200,11 +201,116 @@ public class RedPanda : NPC
                 }
             }
         }
+
+        //45 degrees
+        if (Physics.Raycast(Origen, (transform.forward + transform.right), out hit, rayDistance))
+        {
+            for (int i = 0; i < hidding.Length; i++)
+            {
+                if (hidding[i] == gameObject)
+                {
+                    Search();
+                }
+            }
+        }
+
+        //90 degrees
+        if (Physics.Raycast(Origen, transform.right, out hit, rayDistance))
+        {
+            for (int i = 0; i < hidding.Length; i++)
+            {
+                if (hidding[i] == gameObject)
+                {
+                    Search();
+                }
+            }
+        }
+
+        //135 degrees
+        if (Physics.Raycast(Origen, (transform.right -transform.forward), out hit, rayDistance))
+        {
+            for (int i = 0; i < hidding.Length; i++)
+            {
+                if (hidding[i] == gameObject)
+                {
+                    Search();
+                }
+            }
+        }
+
+        //180 degrees
+        if (Physics.Raycast(Origen, -transform.forward, out hit, rayDistance))
+        {
+            for (int i = 0; i < hidding.Length; i++)
+            {
+                if (hidding[i] == gameObject)
+                {
+                    Search();
+                }
+            }
+        }
+
+        //225 degrees
+        if (Physics.Raycast(Origen, (-transform.forward + -transform.right), out hit, rayDistance))
+        {
+            for (int i = 0; i < hidding.Length; i++)
+            {
+                if (hidding[i] == gameObject)
+                {
+                    Search();
+                }
+            }
+        }
+
+        //270 degrees
+        if (Physics.Raycast(Origen, -transform.right, out hit, rayDistance))
+        {
+            for (int i = 0; i < hidding.Length; i++)
+            {
+                if (hidding[i] == gameObject)
+                {
+                    Search();
+                }
+            }
+        }
+
+        //395 degrees
+        if (Physics.Raycast(Origen, (-transform.forward + transform.forward), out hit, rayDistance))
+        {
+            for (int i = 0; i < hidding.Length; i++)
+            {
+                if (hidding[i] == gameObject)
+                {
+                    Search();
+                }
+            }
+        }
+
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
+
+        //0 degrees
         Debug.DrawLine(Origen, Origen + transform.forward * VisDist);
+        //45 degrees
+        Debug.DrawLine(Origen, Origen + (transform.forward + transform.right) * (VisDist - 2));
+        //90 degrees
+        Debug.DrawLine(Origen, Origen + transform.right * VisDist);
+        //135 degrees
+        Debug.DrawLine(Origen, Origen + (transform.right + -transform.forward) * (VisDist - 2));
+        //180 degrees
+        Debug.DrawLine(Origen, Origen + -transform.forward * VisDist);
+        //225 degrees
+        Debug.DrawLine(Origen, Origen + (-transform.forward + -transform.right) * (VisDist - 2));
+        //270 degrees
+        Debug.DrawLine(Origen, Origen + -transform.right * VisDist);
+        //395 degrees
+        Debug.DrawLine(Origen, Origen + (-transform.right + transform.forward) * (VisDist - 2));
+
+
+        
+        //Gizmos.DrawWireSphere(Origen + transform.forward * VisDist, SphereRadius);
     }
 }

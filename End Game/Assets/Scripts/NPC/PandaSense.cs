@@ -38,7 +38,7 @@ public class PandaSense : MonoBehaviour
         if (counter <= 0)
         {
             counter = timeCheck;
-            panda.MoveToOrigen();
+            panda.Sense();
         }
         counter--;
     }
@@ -53,22 +53,22 @@ public class PandaSense : MonoBehaviour
         }
     }
 
-    public void Sense()
-    {
-        RaycastHit hit;
-        origen = panda.gameObject.transform.position;
+    //public void Sense()
+    //{
+    //    RaycastHit hit;
+    //    origen = panda.gameObject.transform.position;
 
-        if (Physics.SphereCast(origen, SphereRadius, transform.forward, out hit))
-        {
-            for (int i = 0; i < hidding.Length; i++)
-            {
-                if (hidding[i] == gameObject)
-                {
-                    panda.Search();
-                }
-            }
-        }
-    }
+    //    if (Physics.SphereCast(origen, SphereRadius, transform.forward, out hit))
+    //    {
+    //        for (int i = 0; i < hidding.Length; i++)
+    //        {
+    //            if (hidding[i] == gameObject)
+    //            {
+    //                panda.Search();
+    //            }
+    //        }
+    //    }
+    //}
 
     private void OnDrawGizmos()
     {
