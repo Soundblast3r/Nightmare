@@ -27,6 +27,8 @@ public class NPC : MonoBehaviour {
     public float timeToRevert;              // while in demon form, countdown to revert to toy
     public float timeToRevertMax;               // Set this as max time to revert
 
+
+    public float scale = 2.5f;
     //public bool inToyForm;                 
     
     void Start () {
