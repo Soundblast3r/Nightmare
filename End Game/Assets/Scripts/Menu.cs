@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
     public GameObject ContinueButton;
     public GameObject QuitGameButton;
     public GameObject OptionsButton;
-    public GameObject UnlockablesButton;
+  //  public GameObject UnlockablesButton;
     public bool UnlockablesUnlocked;
     //public Button OptionsBackButton;
     //public Button UnlockablesBackButton;
@@ -20,12 +20,12 @@ public class Menu : MonoBehaviour
     //Panels
     public GameObject MainMenuPanel;
     public GameObject OptionsPanel;
-    public GameObject UnlockablesPanel;
+  //  public GameObject UnlockablesPanel;
     void Start()
     {
         MainMenuPanel.SetActive(true);
         OptionsPanel.SetActive(false);
-        UnlockablesPanel.SetActive(false);
+   //     UnlockablesPanel.SetActive(false);
 
         {
             
@@ -63,20 +63,20 @@ public class Menu : MonoBehaviour
 
         MainMenuPanel.SetActive(false);
         OptionsPanel.SetActive(true);
-        UnlockablesPanel.SetActive(false);
+   //     UnlockablesPanel.SetActive(false);
     }
 
     ///Unlockables
     public void Extras()
     {
         //Output this to console when the Button is clicked
-        if (UnlockablesButton.activeSelf == true)
+     //   if (UnlockablesButton.activeSelf == true)
         {
-            //Debug.Log("Unlockables opened");
-
-            MainMenuPanel.SetActive(false);
-            OptionsPanel.SetActive(false);
-            UnlockablesPanel.SetActive(true);
+      //      //Debug.Log("Unlockables opened");
+      //
+      //      MainMenuPanel.SetActive(false);
+      //      OptionsPanel.SetActive(false);
+     //       UnlockablesPanel.SetActive(true);
         }
     }
 
@@ -86,7 +86,7 @@ public class Menu : MonoBehaviour
         //Debug.Log("Options Closed");
 
         OptionsPanel.SetActive(false);
-        UnlockablesPanel.SetActive(false);
+     //   UnlockablesPanel.SetActive(false);
         MainMenuPanel.SetActive(true);
     }
 
@@ -94,26 +94,26 @@ public class Menu : MonoBehaviour
     public void CloseExtras()
     {
         //Output this to console when the Button is clicked
-        if (UnlockablesPanel.activeSelf == true)
-        {
-            //Debug.Log("Unlockables Closed");
-
-            OptionsPanel.SetActive(false);
-            UnlockablesPanel.SetActive(false);
-            MainMenuPanel.SetActive(true);
-        }
+      // if (UnlockablesPanel.activeSelf == true)
+      // {
+      //     //Debug.Log("Unlockables Closed");
+      //
+      //     OptionsPanel.SetActive(false);
+      //     UnlockablesPanel.SetActive(false);
+      //     MainMenuPanel.SetActive(true);
+      // }
     }
 
     private void Update()
     {
-        if (UnlockablesUnlocked == true)
-        {
-            UnlockablesButton.SetActive(true);
-        }
-
-        else
-        {
-            UnlockablesButton.SetActive(false);
-        }
+        //     if (UnlockablesUnlocked == true)
+        //     {
+        //         UnlockablesButton.SetActive(true);
+        //     }
+        //
+        //     else
+        //     {
+        //         UnlockablesButton.SetActive(false);
+        //     }
     }
 }
