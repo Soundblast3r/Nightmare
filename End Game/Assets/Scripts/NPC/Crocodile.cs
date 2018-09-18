@@ -33,7 +33,7 @@ public class Crocodile : NPC
     {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("FPSController");
+        //player = GameObject.Find("FPSController");
         //Toy = GameObject.FindGameObjectWithTag("Plushie");
         //Nightmare = GameObject.FindGameObjectWithTag("Nightmare");
         //render = this.GetComponentInChildren<MeshRenderer>();

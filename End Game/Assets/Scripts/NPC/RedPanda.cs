@@ -33,7 +33,7 @@ public class RedPanda : NPC
     {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("FPSController");
+        //player = GameObject.Find("FPSController");
 
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         origen = GameObject.Find("Origen");
@@ -186,7 +186,7 @@ public class RedPanda : NPC
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject.tag == "Player")
         {
             StopSearching();
             KillPlayer();

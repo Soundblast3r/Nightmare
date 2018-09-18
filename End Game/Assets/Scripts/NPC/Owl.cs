@@ -16,7 +16,7 @@ public class Owl : NPC
     {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("FPSController");
+        //player = GameObject.Find("FPSController");
 
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
 
@@ -127,7 +127,7 @@ public class Owl : NPC
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject == player)
+        if (other.gameObject.tag == "Player")
         {
             StopSearching();
             KillPlayer();

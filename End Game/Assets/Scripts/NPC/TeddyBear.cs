@@ -24,7 +24,7 @@ public class TeddyBear : NPC
     void Start () {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("FPSController");
+        //player = GameObject.Find("FPSController");
         //VisRange = GameObject.FindGameObjectWithTag("VisualRange");
 
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -179,7 +179,8 @@ public class TeddyBear : NPC
 
     private void OnTriggerEnter(Collider other) {
 
-        if (other.gameObject == player) {
+        if (other.gameObject.tag == "Player")
+        {
             StopSearching();
             KillPlayer();
         }
