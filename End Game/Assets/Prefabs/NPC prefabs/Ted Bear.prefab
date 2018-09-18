@@ -21,13 +21,13 @@ GameObject:
   - component: {fileID: 4052616493632546}
   - component: {fileID: 54946200477743260}
   - component: {fileID: 33929649463926024}
-  - component: {fileID: 136002529124123956}
   - component: {fileID: 23061648073471176}
   - component: {fileID: 114567038405035704}
   - component: {fileID: 195637749806891458}
+  - component: {fileID: 65401062930549380}
   m_Layer: 0
   m_Name: Ted Bear
-  m_TagString: Untagged
+  m_TagString: Bear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884106004689216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.3072267, y: -18.580158, z: 5.152204}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -32.161015, y: 2.81, z: -13.066181}
+  m_LocalScale: {x: 0.003, y: 0.003, z: 0.003}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884106004689216}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: c5850e902ebc98e43a973f3670bd7f39, type: 3}
 --- !u!54 &54946200477743260
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -101,6 +101,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65401062930549380
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884106004689216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 451.79056, y: 722.812, z: 570.18677}
+  m_Center: {x: 0, y: 13, z: 0}
 --- !u!114 &114567038405035704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,9 +124,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d53d844c1f44be4493486e84e7a075b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FeedbackParticle: {fileID: 0}
   isSearching: 0
   isHunting: 0
   patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -125,19 +148,7 @@ MonoBehaviour:
   timeToTransformMax: 0
   timeToRevert: 0
   timeToRevertMax: 0
---- !u!136 &136002529124123956
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1884106004689216}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  scale: 0.007
 --- !u!195 &195637749806891458
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -146,7 +157,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1884106004689216}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 300
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -155,7 +166,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
+  m_Height: 500
+  m_BaseOffset: 348
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
