@@ -20,7 +20,7 @@ public class Owl : NPC
 
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-        timeToTransformMax = 0;
+        timeToTransformMax = 30;
         //timeToRevertMax = 30;
 
         timeToTransform = timeToTransformMax;
