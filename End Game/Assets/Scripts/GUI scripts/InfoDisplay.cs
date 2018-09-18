@@ -13,24 +13,24 @@ public class InfoDisplay : MonoBehaviour {
     private Items items;
     private WalkieTalkie walkie;
     private Crocodile Crocodile;
-    //private GameObject Bear;
-    //private GameObject Panda;   
-    //private GameObject Owl;
+    private TeddyBear Bear;
+    private RedPanda Panda;   
+    private Owl Owl;
 
     public Text CrocTimer, BearTimer, PandaTimer, OwlTimer;
     public Text WalkieChannel;
     public Sprite CentreDot;
     public Text Tooltip;
-    // Use this for initialization
+
     void Start() {
 
         items = GameObject.Find("FirstPersonCharacter").GetComponent<Items>();
         walkie = GameObject.Find("FirstPersonCharacter").GetComponent<WalkieTalkie>();
 
         Crocodile = GameObject.FindGameObjectWithTag("Crocodile").GetComponent<Crocodile>();
-        //Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<;
-        //Panda = GameObject.FindGameObjectWithTag("RedPanda");
-        //Owl =  GameObject.FindGameObjectWithTag("Owl");
+        Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<TeddyBear>();
+        Panda = GameObject.FindGameObjectWithTag("RedPanda").GetComponent<RedPanda>();
+        Owl =  GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
 
         Tooltip.text = string.Empty;
 
@@ -59,9 +59,9 @@ public class InfoDisplay : MonoBehaviour {
 
         // TIMERS DISPLAY
         CrocTimer.text = "Croc: " + Crocodile.timeToTransform.ToString("F0");
-        //BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
-        //PandaTimer.text = "Panda: " + Panda.timeToTransform.ToString("F0");
-        //OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
+        BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
+        PandaTimer.text = "Panda: " + Panda.timeToTransform.ToString("F0");
+        OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
 
 
     }
