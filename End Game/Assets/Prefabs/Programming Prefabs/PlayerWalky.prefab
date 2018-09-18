@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65171572860887126}
   - component: {fileID: 23516457147514314}
   - component: {fileID: 82803819071171556}
-  - component: {fileID: 114371269612662076}
+  - component: {fileID: 114185688920883742}
   m_Layer: 0
   m_Name: PlayerWalky
   m_TagString: Walky
@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42722845a4623854bab0587d8a6da97d, type: 2}
+  - {fileID: 2100000, guid: 6c037d762436b5d46bca4f3268662b21, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -177,7 +177,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114371269612662076
+--- !u!114 &114185688920883742
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -185,13 +185,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1689099001275782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eed93d51abe7af4288c2cbc248fd5f2, type: 3}
+  m_Script: {fileID: 11500000, guid: e25689a99f45ba34dafc942e75fbe3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_recievers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  m_recievers: []
   currentReciever: {fileID: 0}
   currentChannel: 0
   isChannelSet: 0

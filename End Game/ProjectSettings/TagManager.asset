@@ -16,6 +16,8 @@ TagManager:
   - Nightmare
   - Reciever
   - RedPanda
+  - Owl
+  - Bear
   layers:
   - Default
   - TransparentFX

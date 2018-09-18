@@ -19,7 +19,7 @@ public class InfoDisplay : MonoBehaviour {
 
     public Text CrocTimer, BearTimer, PandaTimer, OwlTimer;
     public Text WalkieChannel;
-    public Sprite CentreDot;
+	public Image CentreDot;
     public Text Tooltip;
 
     void Start() {
