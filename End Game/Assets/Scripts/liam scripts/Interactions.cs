@@ -223,7 +223,7 @@ public class Interactions : MonoBehaviour
                 infoDisplay.DisplayTooltip("reciever " + temp.GetComponent<WalkieReciever>().walkyNumber);
             }
 
-            if (hit.collider.tag == "Hideable") {
+            if (hit.collider.tag == "Hideable" && !isHiding) {
                 infoDisplay.DisplayTooltip("Hide in " + hit.collider.name);
             }
 
