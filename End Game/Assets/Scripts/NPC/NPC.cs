@@ -28,7 +28,7 @@ public class NPC : MonoBehaviour {
     public float timeToRevertMax;               // Set this as max time to revert
 
 
-    public float scale = 2.5f;
+    public float scale;
     //public bool inToyForm;                 
     
     void Start () {

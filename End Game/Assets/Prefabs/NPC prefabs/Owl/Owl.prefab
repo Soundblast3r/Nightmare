@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 54344272342322418}
   m_Layer: 0
   m_Name: Owl
-  m_TagString: Untagged
+  m_TagString: Owl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325935259797320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.82, y: -8.199, z: -7.16}
+  m_LocalPosition: {x: 29.357424, y: -26.819, z: 5.7215366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b653104fa54934abad91f4616e91c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FeedbackParticle: {fileID: 0}
   isSearching: 0
   isHunting: 0
   patrolPoints: []
@@ -120,6 +121,7 @@ MonoBehaviour:
   timeToTransformMax: 0
   timeToRevert: 0
   timeToRevertMax: 0
+  scale: 2.5
 --- !u!136 &136121425528888660
 CapsuleCollider:
   m_ObjectHideFlags: 1

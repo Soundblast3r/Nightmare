@@ -165,9 +165,11 @@ public class RedPanda : NPC
         //DO SEARCH STUFF
         rand = Random.Range(0, 2);
 
+        Debug.Log(rand);
         if(rand < 1)
         {
             Debug.Log("Checked Hidding place");
+
             KillPlayer();
         }
         else

@@ -117,7 +117,7 @@ public class Crocodile : NPC
         //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, MoveSpeed, 0);
-        this.gameObject.transform.localScale = new Vector3(3f, 3f, 3f); //scale size
+        this.gameObject.transform.localScale = new Vector3(scale, scale, scale); //scale size
         timeToRevert = timeToRevertMax;
     }
     

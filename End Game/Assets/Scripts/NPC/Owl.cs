@@ -21,10 +21,10 @@ public class Owl : NPC
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         timeToTransformMax = 0;
-        timeToRevertMax = 30;
+        //timeToRevertMax = 30;
 
         timeToTransform = timeToTransformMax;
-        timeToRevert = timeToRevertMax;
+        //timeToRevert = timeToRevertMax;
 
         isSearching = false;
         //inToyForm = true;
@@ -80,15 +80,15 @@ public class Owl : NPC
         //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, 10, 0);
-        this.gameObject.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f); //scale size
-        timeToRevert = timeToRevertMax;
+        this.gameObject.transform.localScale = new Vector3(scale, scale, scale); //scale size
+        //timeToRevert = timeToRevertMax;
     }
 
     public void ToyForm()
     {
         StopSearching();
         //inToyForm = true;
-        this.gameObject.transform.localScale = new Vector3(1, 1, 1); // scale size
+        this.gameObject.transform.localScale = new Vector3(scale, scale, scale); // scale size
         timeToTransform = timeToTransformMax;
     }
 
@@ -127,7 +127,8 @@ public class Owl : NPC
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject == player) {
+        if (other.gameObject == player)
+        {
             StopSearching();
             KillPlayer();
         }

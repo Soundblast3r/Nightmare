@@ -31,8 +31,8 @@ public class TeddyBear : NPC
 
         //VisRange.SetActive(false);
 
-        timeToTransformMax = 0;
-        timeToRevertMax = 30;
+        timeToTransformMax = 30;
+        //timeToRevertMax = 30;
         SphereRadius = 2.0f;
 
         timeToTransform = timeToTransformMax;
