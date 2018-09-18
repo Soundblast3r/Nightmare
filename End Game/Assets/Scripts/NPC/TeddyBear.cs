@@ -17,6 +17,8 @@ public class TeddyBear : NPC
 
     GameManager game;
 
+    MeshRenderer Render;
+
     private bool ReachedTarget = false;
     private Vector3 SeekPosition = Vector3.zero;
     private int PatrolIterator = 0;
@@ -29,6 +31,8 @@ public class TeddyBear : NPC
 
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
 
+        Render = gameObject.GetComponent<MeshRenderer>();
+        Render.enabled = false;
         //VisRange.SetActive(false);
 
         timeToTransformMax = 30;
@@ -94,8 +98,11 @@ public class TeddyBear : NPC
         //}
     }
     
-    public void DemonForm() {
+    public void DemonForm()
+    {
         NMA.isStopped = false;
+        transform.GetChild(0).gameObject.SetActive(false);
+        Render.enabled = true;
         //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, 10, 0);
