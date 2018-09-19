@@ -23,6 +23,7 @@ public class RedPanda : NPC
     private Vector3 Origen;
 
     private GameObject target;
+    private Collider collider;
 
     [HideInInspector] public bool isRunning;
 
@@ -33,14 +34,18 @@ public class RedPanda : NPC
     {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
-        //player = GameObject.Find("FPSController");
+        player = GameObject.Find("FPSController");
 
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         origen = GameObject.Find("Origen");
         //hidding = GameObject.FindGameObjectsWithTag("Hideable");
-
+         
         Player = GameObject.FindGameObjectWithTag("Player");
         hidding = GameObject.FindGameObjectsWithTag("Hideable");
+
+        transform.GetChild(0).gameObject.SetActive(false);
+        collider = GetComponent<Collider>();
+        collider.enabled = !collider.enabled;
 
         isRunning = false;
         timeCheck = 100.0f;
@@ -111,6 +116,9 @@ public class RedPanda : NPC
 
     public void DemonForm()
     {
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(1).gameObject.SetActive(false);
+        collider.enabled = !collider.enabled;
         NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;
