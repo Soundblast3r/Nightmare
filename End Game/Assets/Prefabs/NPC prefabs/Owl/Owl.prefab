@@ -20,11 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4227473505496448}
   - component: {fileID: 33587507871161906}
-  - component: {fileID: 136121425528888660}
   - component: {fileID: 23736841319506780}
   - component: {fileID: 114795718028780612}
   - component: {fileID: 195697494225018772}
   - component: {fileID: 54344272342322418}
+  - component: {fileID: 136542389623966812}
   m_Layer: 0
   m_Name: Owl
   m_TagString: Owl
@@ -38,13 +38,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325935259797320}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.357424, y: -26.819, z: 5.7215366}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000035762784}
+  m_LocalPosition: {x: 161.03331, y: -37.32, z: -7.699999}
+  m_LocalScale: {x: 0.014350175, y: 0.0143501945, z: 0.0143501945}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
 --- !u!23 &23736841319506780
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -59,7 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0d60062309fbce241844fc760fb146ad, type: 2}
+  - {fileID: 2100000, guid: faa097c76afdb2c4d9a09ce1cf79a004, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325935259797320}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 671b58f7d4694f540b109c271557764f, type: 3}
 --- !u!54 &54344272342322418
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -121,8 +121,8 @@ MonoBehaviour:
   timeToTransformMax: 0
   timeToRevert: 0
   timeToRevertMax: 0
-  scale: 2.5
---- !u!136 &136121425528888660
+  scale: 0.007
+--- !u!136 &136542389623966812
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -131,10 +131,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 418.20395
+  m_Height: 677.42804
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 323.4877, z: -0.00012207031}
 --- !u!195 &195697494225018772
 NavMeshAgent:
   m_ObjectHideFlags: 1
