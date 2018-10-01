@@ -20,7 +20,7 @@ public class Interactions : MonoBehaviour
     private float SphereRadius;
 
     private Vector3 origin;
-    private Owl demon;
+    private Owl Demon;
     //Camera Rotations
     private float RotateY;
     //private float Vertical = 0.0f;
@@ -252,10 +252,11 @@ public class Interactions : MonoBehaviour
 
         if (Physics.Raycast(torchline, out point, RayLine))
         {
-            if (point.collider.tag == "Nightmare")
+            if (point.collider.tag == "Owl")
             {
                 target = point.collider.gameObject;
-                demon.StopSearching();
+                Demon.StopSearching();
+                Debug.Log(target);
             }
         }
     }
