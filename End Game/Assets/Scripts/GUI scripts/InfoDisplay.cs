@@ -16,21 +16,29 @@ public class InfoDisplay : MonoBehaviour {
     private TeddyBear Bear;
     private RedPanda Panda;   
     private Owl Owl;
+    private GameManager game;
 
     public Text CrocTimer, BearTimer, PandaTimer, OwlTimer;
+    public Text CountdownTimer;
     public Text WalkieChannel;
 	public Image CentreDot;
     public Text Tooltip;
 
+    // timer info
+    string timeRemaining;
+    int timerMinute;
+    int timerSecond;
+
     void Start() {
 
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
         items = GameObject.Find("FirstPersonCharacter").GetComponent<Items>();
         walkie = GameObject.Find("FirstPersonCharacter").GetComponent<WalkieTalkie>();
 
         Crocodile = GameObject.FindGameObjectWithTag("Crocodile").GetComponent<Crocodile>();
-        Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<TeddyBear>();
-        Panda = GameObject.FindGameObjectWithTag("RedPanda").GetComponent<RedPanda>();
-        Owl =  GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
+        //Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<TeddyBear>();
+        //Panda = GameObject.FindGameObjectWithTag("RedPanda").GetComponent<RedPanda>();
+        //Owl =  GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
 
         Tooltip.text = string.Empty;
 
@@ -57,12 +65,17 @@ public class InfoDisplay : MonoBehaviour {
             }
         }
 
-        // TIMERS DISPLAY
-        CrocTimer.text = "Croc: " + Crocodile.timeToTransform.ToString("F0");
-        BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
-        PandaTimer.text = "Panda: " + Panda.timeToTransform.ToString("F0");
-        OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
+        timeRemaining = string.Format("{0:0}:{1:00}", timerMinute, timerSecond);
+        timerMinute = Mathf.FloorToInt(game.GameTimer / 60f);
+        timerSecond = Mathf.FloorToInt(game.GameTimer - timerMinute * 60);
 
+        // TIMERS DISPLAY
+        CountdownTimer.text = timeRemaining;
+
+        CrocTimer.text = "Croc: " + Crocodile.timeToTransform.ToString("F0");
+       //BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
+       //PandaTimer.text = "Panda: " + Panda.timeToTransform.ToString("F0");
+       //OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
 
     }
 

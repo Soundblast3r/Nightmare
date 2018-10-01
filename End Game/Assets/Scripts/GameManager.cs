@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    /// <summary>
+    //=======================================================
     // Created by Liam Gates
     // Updates:
     // by Callum Bradshaw
-    /// </summary>
+    // -Edward Ngo
+    //=======================================================
+
+    private Button m_Resume;
+    private Button m_Restart;
+    private Button m_MainMenu;
+
     public GameObject EndgameScreen;
     public GameObject WinScreen;
     public GameObject YouDied;
     public GameObject pausePanel;
-    public GameObject optionsPanel;
-    public GameObject soundPanelOptions;
-    public GameObject controlsPanelOptions;
-    public GameObject graphicalPanelOptions;
     public GameObject mainMenuPanel;
     public GameObject restartPanel;
     public GameObject PauseMenu;
@@ -30,14 +33,11 @@ public class GameManager : MonoBehaviour
 
     bool isPaused;
 
-    //public int WorldClock;
-    // TimeLimit
     [HideInInspector] public bool isGameOver;
 
     // Use this for initialization
     void Awake()
     {
-        
         Pause();
     }
 
@@ -49,13 +49,9 @@ public class GameManager : MonoBehaviour
         WinScreen.SetActive(false);
         YouDied.SetActive(false);
         pausePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        soundPanelOptions.SetActive(false);
-        controlsPanelOptions.SetActive(false);
-        graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
-        GameTimer = 1000;
+        GameTimer = 300;
     }
 
     
@@ -64,49 +60,51 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        /*
         //from here
-        //if (GameTimer <= 0)
-        //{
-        //    if (CurrentScene == 1)
-        //    {
-        //        Debug.Log("Scene 2 loaded");
-        //        CurrentScene = 2;
-        //        SceneManager.LoadScene(2);
-        //        GameTimer = 10;
-        //    }
+        if (GameTimer <= 0)
+        {
+            if (CurrentScene == 1)
+            {
+                Debug.Log("Scene 2 loaded");
+                CurrentScene = 2;
+                SceneManager.LoadScene(2);
+                GameTimer = 10;
+            }
 
-        //    else if (CurrentScene == 2)
-        //    {
-        //        Debug.Log("Scene 3 loaded");
-        //        CurrentScene = 3;
-        //        SceneManager.LoadScene(3);
-        //        GameTimer = 5;
-        //    }
+            else if (CurrentScene == 2)
+            {
+                Debug.Log("Scene 3 loaded");
+                CurrentScene = 3;
+                SceneManager.LoadScene(3);
+                GameTimer = 5;
+            }
 
-        //    else if (CurrentScene == 3)
-        //    {
-        //        Debug.Log("Scene 4 loaded");
-        //        CurrentScene = 4;
-        //        SceneManager.LoadScene(4);
-        //        GameTimer = 10;
-        //    }
+            else if (CurrentScene == 3)
+            {
+                Debug.Log("Scene 4 loaded");
+                CurrentScene = 4;
+                SceneManager.LoadScene(4);
+                GameTimer = 10;
+            }
 
-        //    else if (CurrentScene == 4)
-        //    {
-        //        Debug.Log("Scene 5 loaded");
-        //        CurrentScene = 5;
-        //        SceneManager.LoadScene(5);
-        //        GameTimer = 15;
-        //    }
+            else if (CurrentScene == 4)
+            {
+                Debug.Log("Scene 5 loaded");
+                CurrentScene = 5;
+                SceneManager.LoadScene(5);
+                GameTimer = 15;
+            }
 
-        //    else if (CurrentScene == 5)
-        //    {
-        //        Debug.Log("end of game loaded");
-        //        CurrentScene = 6;
-        //        SceneManager.LoadScene(6);
-        //    }
-        //}
+            else if (CurrentScene == 5)
+            {
+                Debug.Log("end of game loaded");
+                CurrentScene = 6;
+                SceneManager.LoadScene(6);
+            }
+        }
         //to here
+        */
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -126,10 +124,6 @@ public class GameManager : MonoBehaviour
                     Time.timeScale = 1;
                     PauseMenu.SetActive(false);
                     pausePanel.SetActive(false);
-                    optionsPanel.SetActive(false);
-                    soundPanelOptions.SetActive(false);
-                    controlsPanelOptions.SetActive(false);
-                    graphicalPanelOptions.SetActive(false);
                     mainMenuPanel.SetActive(false);
                     restartPanel.SetActive(false);
                 }
@@ -142,6 +136,7 @@ public class GameManager : MonoBehaviour
         {
             //nothing
         }
+
         //if (GameTimer <= 0)
         //{
         //    Time.timeScale = 0;
@@ -175,10 +170,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate ()
     {
+
+        // GAME WIN COUNTDOWN 
+        if (GameTimer > 0) {
            GameTimer -= Time.fixedDeltaTime;
-
-           // Debug.Log(GameTimer);
-
+        }
 	}
 
     public void ReturnToMenu()
@@ -186,7 +182,6 @@ public class GameManager : MonoBehaviour
         EndgameScreen.SetActive(false);
         YouDied.SetActive(false);
         WinScreen.SetActive(false);
-        //Debug.Log("Back To Main Menu");
         SceneManager.LoadScene(0);
     }
 
@@ -195,53 +190,26 @@ public class GameManager : MonoBehaviour
         EndgameScreen.SetActive(false);
         YouDied.SetActive(false);
         WinScreen.SetActive(false);
-        //Debug.Log("Restart Game");
         SceneManager.LoadScene(CurrentScene);
     }
 
     public void Pause()
     {
-        //set active pause panel
         pausePanel.SetActive(true);
-        // nothing else active
-        optionsPanel.SetActive(false);
-        soundPanelOptions.SetActive(false);
-        controlsPanelOptions.SetActive(false);
-        graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
     }
 
     public void Options()
     {
-        //set active options panel
-        optionsPanel.SetActive(true);
-        // nothing else active
-        soundPanelOptions.SetActive(false);
-        controlsPanelOptions.SetActive(false);
-        graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
         pausePanel.SetActive(false);
-
-        //sound
-        ///player
-        ///enviromnet
-        ///npc
-        ///music
-        //controls
-        ///image of controls
-        //graphical
-        ///aspect ratio
     }
 
     public void MainMenu()
     {
         pausePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        soundPanelOptions.SetActive(false);
-        controlsPanelOptions.SetActive(false);
-        graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(true);
         restartPanel.SetActive(false);
     }
@@ -249,10 +217,6 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         pausePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        soundPanelOptions.SetActive(false);
-        controlsPanelOptions.SetActive(false);
-        graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(true);
     }
@@ -260,10 +224,6 @@ public class GameManager : MonoBehaviour
     public void Resume()
     {
         pausePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        soundPanelOptions.SetActive(false);
-        controlsPanelOptions.SetActive(false);
-        graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
         PauseMenu.SetActive(false);
@@ -273,10 +233,6 @@ public class GameManager : MonoBehaviour
     public void Confirm()
     {
         pausePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        soundPanelOptions.SetActive(false);
-        controlsPanelOptions.SetActive(false);
-        graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
     }
@@ -284,10 +240,6 @@ public class GameManager : MonoBehaviour
     public void SoundPanel()
     {
         pausePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        soundPanelOptions.SetActive(true);
-        controlsPanelOptions.SetActive(false);
-        graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
     }
@@ -295,10 +247,6 @@ public class GameManager : MonoBehaviour
     public void Controls()
     {
         pausePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        soundPanelOptions.SetActive(false);
-        controlsPanelOptions.SetActive(true);
-        graphicalPanelOptions.SetActive(false);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
     }
@@ -306,12 +254,18 @@ public class GameManager : MonoBehaviour
     public void Graphicaloptions()
     {
         pausePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        soundPanelOptions.SetActive(false);
-        controlsPanelOptions.SetActive(false);
-        graphicalPanelOptions.SetActive(true);
         mainMenuPanel.SetActive(false);
         restartPanel.SetActive(false);
     }
 
+
+    public void WinGame() {
+
+
+        // add win stuff here; 
+        // -CUTSCENE
+        // -HIGHSCORE
+        // -REPLAY/QUIT
+        // -SCORE?
+    }
 }
