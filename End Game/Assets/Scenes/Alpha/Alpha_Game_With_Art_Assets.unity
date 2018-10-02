@@ -16676,6 +16676,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114756796320084928, guid: 415363cb9910fd9409f73ad7206b3fbe,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1106860402}
+    - target: {fileID: 114756796320084928, guid: 415363cb9910fd9409f73ad7206b3fbe,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1251082608}
+    - target: {fileID: 114756796320084928, guid: 415363cb9910fd9409f73ad7206b3fbe,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 448873307}
+    - target: {fileID: 114756796320084928, guid: 415363cb9910fd9409f73ad7206b3fbe,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 100737280}
+    - target: {fileID: 114756796320084928, guid: 415363cb9910fd9409f73ad7206b3fbe,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1361791342}
+    - target: {fileID: 114756796320084928, guid: 415363cb9910fd9409f73ad7206b3fbe,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 912907408}
+    - target: {fileID: 114756796320084928, guid: 415363cb9910fd9409f73ad7206b3fbe,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 1947487527}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 415363cb9910fd9409f73ad7206b3fbe, type: 2}
   m_IsPrefabParent: 0

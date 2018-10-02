@@ -2384,7 +2384,14 @@ MonoBehaviour:
   FeedbackParticle: {fileID: 198475390603610490}
   isSearching: 0
   isHunting: 0
-  patrolPoints: []
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   playerKillPos: {fileID: 0}
   timeToTransform: 0
   timeToTransformMax: 0
