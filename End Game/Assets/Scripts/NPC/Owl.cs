@@ -37,7 +37,7 @@ public class Owl : NPC
         //=================================================================================
 
         //Countdown to demon form
-        if (timeToTransform >= 0)
+        if (timeToTransform >= 0 && game.isTutorialFinished)
         {
             timeToTransform -= Time.deltaTime;
         }
