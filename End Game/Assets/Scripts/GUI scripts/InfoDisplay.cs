@@ -36,7 +36,6 @@ public class InfoDisplay : MonoBehaviour {
 
         Crocodile = GameObject.FindGameObjectWithTag("Crocodile").GetComponent<Crocodile>();
         Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<TeddyBear>();
-        //Panda = GameObject.FindGameObjectWithTag("RedPanda").GetComponent<RedPanda>();
         //Owl =  GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
 
         Tooltip.text = string.Empty;
@@ -73,7 +72,6 @@ public class InfoDisplay : MonoBehaviour {
 
         CrocTimer.text = "Croc: " + Crocodile.timeToTransform.ToString("F0");
         BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
-       //PandaTimer.text = "Panda: " + Panda.timeToTransform.ToString("F0");
        //OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
 
     }

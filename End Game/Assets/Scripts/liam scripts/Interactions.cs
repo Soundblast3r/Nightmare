@@ -15,7 +15,7 @@ public class Interactions : MonoBehaviour
 
     //Raycast Pickups
     public Camera Cam;
-    public float rayDistance;
+    public float rayDistance = 5;
     private float RayLine = 15f;
     private float SphereRadius;
 
@@ -207,9 +207,9 @@ public class Interactions : MonoBehaviour
                 infoDisplay.DisplayTooltip("reciever " + temp.GetComponent<WalkieReciever>().walkyNumber);
             }
 
-            if (hit.collider.tag == "Hideable") {
-                infoDisplay.DisplayTooltip("Hide in " + hit.collider.name);
-            }
+            //if (hit.collider.tag == "Hideable") {
+            //    infoDisplay.DisplayTooltip("Hide in " + hit.collider.name);
+            //}
 
             if (hit.collider.tag == "Plushie") {
                 GameObject temp = hit.collider.transform.parent.gameObject;
@@ -221,9 +221,8 @@ public class Interactions : MonoBehaviour
         // CHECKS IF NOT LOOKING AT OBJECT, CLEARS TOOLTIP
         // ADD ITEMS THAT CAN BE DISPLAYED ON TOOLTIP HERE
        if (Physics.Raycast(ray, out hit, 100)) {
-           if (hit.collider.tag != "Pickup" && hit.collider.tag != "Hideable" && hit.collider.tag != "Plushie" &&
-               hit.collider.tag != "Reciever" &&
-              (hit.collider.tag != "Crocodile" || hit.collider.tag != "RedPanda" || hit.collider.tag != "Owl" || hit.collider.tag != "Bear" ))  {
+           if (hit.collider.tag != "Pickup" && hit.collider.tag != "Plushie" && hit.collider.tag != "Reciever" &&
+              (hit.collider.tag != "Crocodile" || hit.collider.tag != "Owl" || hit.collider.tag != "Bear" ))  {
                infoDisplay.ClearTooltip();
            }
        }
