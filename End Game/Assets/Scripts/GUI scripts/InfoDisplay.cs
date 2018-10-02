@@ -18,12 +18,14 @@ public class InfoDisplay : MonoBehaviour {
     private Owl Owl;
     private GameManagerScript game;
 
+    // USE TO DISPLAY IN GAME MESSAGES
+    private string MiscInfo;
+
     // PLUG IN INSPECTOR
     public Text CrocTimer, BearTimer, OwlTimer;
     public Text CountdownTimer;
     public Text WalkieChannel;
     public Text Tooltip;
-    private Text MiscInfo;
 	public Image CentreDot;
 
     // GAME MANAGER TIMER INFO
@@ -33,7 +35,7 @@ public class InfoDisplay : MonoBehaviour {
 
     void Start() {
 
-        game = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        game =  GetComponent<GameManagerScript>();
         items = GameObject.Find("FirstPersonCharacter").GetComponent<Items>();
         walkie = GameObject.Find("FirstPersonCharacter").GetComponent<WalkieTalkie>();
 
@@ -49,6 +51,10 @@ public class InfoDisplay : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         
+        if (Input.GetMouseButtonDown(0)) {
+            DisplayMessage();
+        }
+
         // WALKY CHANNELS DISPLAY
         if (items.currentItem == Items.ITEMTYPE.WALKYTALKY) {
             if (!WalkieChannel.enabled) {
@@ -97,5 +103,15 @@ public class InfoDisplay : MonoBehaviour {
         Tooltip.text = string.Empty;
     }
 
-    
+    //private void OnGUI() {
+    //    float textBoxWidth = 400;
+    //    float textBoxHeight = 100;
+    //    float textBoxPosX = (Screen.width * 0.5f) - (textBoxWidth * 0.5f);
+    //    float textBoxPosY = (Screen.height - textBoxHeight) - 100 ;
+    //    GUI.TextField(new Rect(textBoxPosX, textBoxPosY, textBoxWidth, textBoxHeight), "hello");
+    //}
+
+    public void DisplayMessage() {
+
+    }
 }
