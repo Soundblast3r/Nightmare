@@ -12,6 +12,8 @@ public class Owl : NPC
 
     GameManagerScript game;
 
+    MeshRenderer Render;
+
     void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -20,7 +22,10 @@ public class Owl : NPC
 
         game = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>();
 
-        timeToTransformMax = 0;
+        Render = gameObject.GetComponent<MeshRenderer>();
+        Render.enabled = false;
+
+        timeToTransformMax = 5;
         //timeToRevertMax = 30;
 
         timeToTransform = timeToTransformMax;
@@ -77,6 +82,8 @@ public class Owl : NPC
     public void DemonForm()
     {
         NMA.isStopped = false;
+        transform.GetChild(0).gameObject.SetActive(false);
+        Render.enabled = true;
         //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, 10, 0);
