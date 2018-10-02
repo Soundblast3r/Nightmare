@@ -11,7 +11,7 @@ public class Crocodile : NPC
     private Vector3 origen;
     private float MoveSpeed;
 
-    GameManager game;
+    GameManagerScript game;
 
     //private GameObject Toy;
     private Collider coll;
@@ -33,12 +33,12 @@ public class Crocodile : NPC
     {
         RB = GetComponent<Rigidbody>();
         NMA = GetComponent<NavMeshAgent>();
-        //player = GameObject.Find("FPSController");
+        player = GameObject.Find("FPSController");
         //Toy = GameObject.FindGameObjectWithTag("Plushie");
         //Nightmare = GameObject.FindGameObjectWithTag("Nightmare");
         //render = this.GetComponentInChildren<MeshRenderer>();
 
-        game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        game = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
 
         transform.GetChild(0).gameObject.SetActive(false);
         coll = GetComponent<Collider>();

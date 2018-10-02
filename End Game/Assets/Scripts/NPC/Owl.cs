@@ -10,7 +10,7 @@ public class Owl : NPC
     private Rigidbody RB;
     private NavMeshAgent NMA;
 
-    GameManager game;
+    GameManagerScript game;
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class Owl : NPC
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
 
-        game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        game = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
 
         timeToTransformMax = 0;
         //timeToRevertMax = 30;

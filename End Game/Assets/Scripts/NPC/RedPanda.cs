@@ -23,12 +23,12 @@ public class RedPanda : NPC
     private Vector3 Origen;
 
     private GameObject target;
-    private Collider collider;
+    private Collider coll;
 
     [HideInInspector] public bool isRunning;
 
     //Interactions cam;
-    GameManager game;
+    GameManagerScript game;
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class RedPanda : NPC
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
 
-        game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        game = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
         origen = GameObject.Find("Origen");
         //hidding = GameObject.FindGameObjectsWithTag("Hideable");
          
@@ -44,8 +44,8 @@ public class RedPanda : NPC
         hidding = GameObject.FindGameObjectsWithTag("Hideable");
 
         transform.GetChild(0).gameObject.SetActive(false);
-        collider = GetComponent<Collider>();
-        collider.enabled = !collider.enabled;
+        coll = GetComponent<Collider>();
+        coll.enabled = !coll.enabled;
 
         isRunning = false;
         timeCheck = 100.0f;
@@ -118,7 +118,7 @@ public class RedPanda : NPC
     {
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.SetActive(false);
-        collider.enabled = !collider.enabled;
+        coll.enabled = !coll.enabled;
         NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;
