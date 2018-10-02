@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManagerScript : MonoBehaviour
 {
     //=======================================================
     // Created by Liam Gates
@@ -17,7 +17,10 @@ public class GameManager : MonoBehaviour
     public GameObject WinScreen;
     public GameObject YouDied;
 
+    public float tutorialTimer;
+    public bool isTutorialFinished;
     public float GameTimer;
+    public bool isNightmareStarted;
     public int CurrentScene = 1;
 
     [HideInInspector] public bool isGameOver;
@@ -28,6 +31,9 @@ public class GameManager : MonoBehaviour
         EndgameScreen.SetActive(false);
         WinScreen.SetActive(false);
         YouDied.SetActive(false);
+
+        isTutorialFinished = false;
+        tutorialTimer = 30;
         GameTimer = 300;
     }
 
@@ -35,23 +41,39 @@ public class GameManager : MonoBehaviour
     {
         if(isGameOver)
         {
-            Time.timeScale = 0;
-            GameTimer = 0;
-            //Debug.Log("WIN");
-            EndgameScreen.SetActive(true);
-            YouDied.SetActive(true);
+            SetGameOver();
         }
+
+        // TUTORIAL COUNTDOWN
+        if (!isTutorialFinished) {
+            if (tutorialTimer > 0) {
+                tutorialTimer -= Time.deltaTime;
+            }
+
+            if (tutorialTimer <= 0) {
+                isTutorialFinished = true;
+            }
+        }
+
+        // GAME COUNTDOWN
+        if (isTutorialFinished) {
+            if (GameTimer > 0) {
+                GameTimer -= Time.fixedDeltaTime;
+            }
+
+            if (GameTimer <= 0) {
+                WinGame();
+            }
+        }
+
     }
 
-    // Update is called once per frame
-    void FixedUpdate ()
-    {
-
-        // GAME WIN COUNTDOWN 
-        if (GameTimer > 0) {
-           GameTimer -= Time.fixedDeltaTime;
-        }
-	}
+    public void SetGameOver() {
+        Time.timeScale = 0;
+        GameTimer = 0;
+        EndgameScreen.SetActive(true);
+        YouDied.SetActive(true);
+    }
 
     public void WinGame()
     {
