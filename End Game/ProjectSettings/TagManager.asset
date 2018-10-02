@@ -18,6 +18,7 @@ TagManager:
   - RedPanda
   - Owl
   - Bear
+  - GameManager
   layers:
   - Default
   - TransparentFX

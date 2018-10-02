@@ -38,7 +38,7 @@ public class Crocodile : NPC
         //Nightmare = GameObject.FindGameObjectWithTag("Nightmare");
         //render = this.GetComponentInChildren<MeshRenderer>();
 
-        game = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        game = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>();
 
         transform.GetChild(0).gameObject.SetActive(false);
         coll = GetComponent<Collider>();

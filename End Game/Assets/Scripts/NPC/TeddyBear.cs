@@ -29,7 +29,7 @@ public class TeddyBear : NPC
         player = GameObject.Find("FPSController");
         //VisRange = GameObject.FindGameObjectWithTag("VisualRange");
 
-        game = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        game = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>();
 
         Render = gameObject.GetComponent<MeshRenderer>();
         Render.enabled = false;

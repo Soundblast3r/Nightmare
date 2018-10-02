@@ -31,6 +31,7 @@ public class Interactions : MonoBehaviour
 
     // Camera
     private Vector3 OriginalCameraPos;
+    [HideInInspector]
     public GameObject target;
     //CursorLockMode cursorLock;
 

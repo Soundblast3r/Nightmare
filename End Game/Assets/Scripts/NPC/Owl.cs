@@ -18,7 +18,7 @@ public class Owl : NPC
         NMA = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FPSController");
 
-        game = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        game = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>();
 
         timeToTransformMax = 0;
         //timeToRevertMax = 30;
