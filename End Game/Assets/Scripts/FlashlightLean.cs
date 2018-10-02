@@ -65,7 +65,7 @@ public class FlashlightLean : MonoBehaviour {
         {
             if (TorchActive == true)
             {
-                //Debug.Log(items.TorchActive);
+
                 if (Flashlight.activeSelf == true && Delay == false)
                 {
                     StartCoroutine(ChargeDecrement());

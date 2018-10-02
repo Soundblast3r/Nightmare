@@ -74,12 +74,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void InternalLockUpdate()
         {
-            if (pauseActive.activeInHierarchy == false)
-            {
-                //m_cursorIsLocked = true;
-                Time.timeScale = 1;
-            }
-
             if (EndGameActive.activeInHierarchy == true)
             {
                 //m_cursorIsLocked = true;

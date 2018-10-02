@@ -34,7 +34,7 @@ public class WalkieReciever : MonoBehaviour {
         if (emittingSound) {
             if (other.gameObject.GetComponent<Crocodile>()  ||
                 other.gameObject.GetComponent<Owl>()        ||
-                other.gameObject.GetComponent<RedPanda>()   ||
+                /*other.gameObject.GetComponent<RedPanda>()   ||*/
                 other.gameObject.GetComponent<TeddyBear>()) {
 
                 // CALL DISTRACT FUNCTION WHEN ITS READY          

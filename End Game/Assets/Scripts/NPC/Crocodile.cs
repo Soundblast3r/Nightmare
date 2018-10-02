@@ -14,7 +14,7 @@ public class Crocodile : NPC
     GameManager game;
 
     //private GameObject Toy;
-    private Collider collider;
+    private Collider coll;
     //private MeshRenderer render;
 
 
@@ -41,8 +41,8 @@ public class Crocodile : NPC
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         transform.GetChild(0).gameObject.SetActive(false);
-        collider = GetComponent<Collider>();
-        collider.enabled = !collider.enabled;
+        coll = GetComponent<Collider>();
+        coll.enabled = !coll.enabled;
 
         timeToTransformMax = 30;
         timeToRevertMax = 30;
@@ -112,7 +112,7 @@ public class Crocodile : NPC
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.SetActive(false);
         //plushieCroc.SetActive(false);
-        collider.enabled = !collider.enabled;
+        coll.enabled = !coll.enabled;
         NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;

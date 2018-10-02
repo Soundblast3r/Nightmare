@@ -32,30 +32,22 @@ public class Interactions : MonoBehaviour
     // Camera
     private Vector3 OriginalCameraPos;
     public GameObject target;
-    public Camera mainCamera;
-    public Camera HideCamera;
     //CursorLockMode cursorLock;
-    
-    public bool isHiding;
+
 	// Use this for initialization
 	void Start ()
     {
         //cursorLock = CursorLockMode.Locked;
-        mainCamera = this.GetComponent<Camera>();
-        HideCamera = GameObject.Find("HideCamera").GetComponent<Camera>();
+        Cam = this.GetComponent<Camera>();
         infoDisplay = GameObject.Find("GameUI").GetComponent<InfoDisplay>();
         Demon = GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
         items = GetComponent<Items>();
-        mainCamera.enabled = true;
-        HideCamera.enabled = false;
-
         //SprayBottleActive = false;
         //WalkyTalkyActive = false;
 
         OriginalCameraPos = Cam.transform.localPosition;
 
         SphereRadius = 0.10f;
-        isHiding = false;
 	}
 
     // Update is called once per frame
@@ -63,10 +55,10 @@ public class Interactions : MonoBehaviour
     {
         //TorchLine();
         //Changes the controlls if you're hiding
-        if (isHiding)
-        {
-            HiddenMove();
-        }
+        //if (isHiding)
+        //{
+        //    HiddenMove();
+        //}
 
         //Interactions
         if (Input.GetKeyDown(KeyCode.E))
@@ -112,52 +104,48 @@ public class Interactions : MonoBehaviour
                 }
             }
 
-            if(hit.collider.tag == "Climbable" && isHiding == false)
-            {
-                //Debug.Log("can climb this");
-                target = hit.collider.gameObject;
+            //if(hit.collider.tag == "Climbable")
+            //{
+            //    //Debug.Log("can climb this");
+            //    target = hit.collider.gameObject;
 
-                GameObject.Find("FPSController").transform.position = GameObject.Find("ClimbingPoint").transform.position;
-            }
-
+            //    GameObject.Find("FPSController").transform.position = GameObject.Find("ClimbingPoint").transform.position;
+            //}
+        
             //cheacks if you are able to hide in the target and
             //only if you're not alrady hiding
-            if (hit.collider.tag == "Hideable" && isHiding == false)
-            {
-                //sets the hideable object to the current target
-                //Debug.Log("Can Hide Here");
-                target = hit.collider.gameObject;
+            //if (hit.collider.tag == "Hideable")
+            //{
+            //    //sets the hideable object to the current target
+            //    //Debug.Log("Can Hide Here");
+            //    target = hit.collider.gameObject;
 
-                //finds scripts and colliders attached to the player and turns them off
-                GameObject.Find("FPSController").GetComponent<FlashlightLean>().enabled = false;
-                GameObject.Find("Character").GetComponent<CapsuleCollider>().enabled = false;
-                GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = false;
+            //    //finds scripts and colliders attached to the player and turns them off
+            //    GameObject.Find("FPSController").GetComponent<FlashlightLean>().enabled = false;
+            //    GameObject.Find("Character").GetComponent<CapsuleCollider>().enabled = false;
+            //    GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = false;
 
-                //switches the your main camera from the plays to the hidden one
-                mainCamera.enabled = false;
-                HideCamera.enabled = true;
-                //camera.transform.position = target.transform.position;
-                //this.camera.transform.position = target.transform.position;
-                //this.GetComponent<Camera>()
-                
-                //you are now hidding
-                isHiding = true;
-            }
-            //if you are already hidding lets you leave the hiding place
-            else if (isHiding == true)
-            {
-                //turns the scripts attached to the play back on
-                GameObject.Find("FPSController").GetComponent<FlashlightLean>().enabled = true;
-                GameObject.Find("Character").GetComponent<CapsuleCollider>().enabled = false;
-                GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
+            //    //switches the your main camera from the plays to the hidden one
+            //    mainCamera.enabled = false;
+            //    //camera.transform.position = target.transform.position;
+            //    //this.camera.transform.position = target.transform.position;
+            //    //this.GetComponent<Camera>()
 
-                //changes the main camera back to players from the hidden one
-                mainCamera.enabled = true;
-                HideCamera.enabled = false;
+            //}
+            ////if you are already hidding lets you leave the hiding place
+            //else if (isHiding == true)
+            //{
+            //    //turns the scripts attached to the play back on
+            //    GameObject.Find("FPSController").GetComponent<FlashlightLean>().enabled = true;
+            //    GameObject.Find("Character").GetComponent<CapsuleCollider>().enabled = false;
+            //    GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
 
-                //you are no longer hidding
-                isHiding = false;
-            }
+            //    //changes the main camera back to players from the hidden one
+            //    mainCamera.enabled = true;
+
+            //    //you are no longer hidding
+            //    isHiding = false;
+            //}
         }
     }
 
@@ -183,28 +171,28 @@ public class Interactions : MonoBehaviour
         }
     }
 
-    void HiddenMove()
+    //void HiddenMove()
+    //{
+    //    Vector3 Angles = HideCamera.transform.localEulerAngles;
+    //    //gets the mouse input to rotate the camera
+    //    RotateY = lookSpeed * Input.GetAxis("Mouse X") /* Time.deltaTime*/;
+    //    //RotatX = lookSpeed * Input.GetAxis("Mouse X") /* Time.deltaTime*/;
+
+    //    //clamps the camera to a certain preset rainge
+    //    RotateY = Mathf.Clamp(Angles.y + RotateY, MinRotation, MaxRotation);
+    //    //RotatX = Mathf.Clamp(Angles.x + RotatX, MinRotation, MaxRotation);
+
+    //    //changes the cameras rotation using the
+    //    //previusly set horizontal and vertical axis
+    //    HideCamera.transform.localEulerAngles = new Vector3(Angles.x, RotateY, Angles.z);
+    //    //HideCamera.transform.Rotate(RotatY, RotatX, 0.0f);
+
+    //    //Debug.Log("Horizontal");
+    //    //Debug.Log("Vertical");
+    //}
+
+    void LookAt()
     {
-        Vector3 Angles = HideCamera.transform.localEulerAngles;
-        //gets the mouse input to rotate the camera
-        RotateY = lookSpeed * Input.GetAxis("Mouse X") /* Time.deltaTime*/;
-        //RotatX = lookSpeed * Input.GetAxis("Mouse X") /* Time.deltaTime*/;
-
-        //clamps the camera to a certain preset rainge
-        RotateY = Mathf.Clamp(Angles.y + RotateY, MinRotation, MaxRotation);
-        //RotatX = Mathf.Clamp(Angles.x + RotatX, MinRotation, MaxRotation);
-
-        //changes the cameras rotation using the
-        //previusly set horizontal and vertical axis
-        HideCamera.transform.localEulerAngles = new Vector3(Angles.x, RotateY, Angles.z);
-        //HideCamera.transform.Rotate(RotatY, RotatX, 0.0f);
-
-        //Debug.Log("Horizontal");
-        //Debug.Log("Vertical");
-    }
-
-    void LookAt() {
-
         RaycastHit hit;
         Ray ray = Cam.ScreenPointToRay(Input.mousePosition);
 
@@ -219,7 +207,7 @@ public class Interactions : MonoBehaviour
                 infoDisplay.DisplayTooltip("reciever " + temp.GetComponent<WalkieReciever>().walkyNumber);
             }
 
-            if (hit.collider.tag == "Hideable" && !isHiding) {
+            if (hit.collider.tag == "Hideable") {
                 infoDisplay.DisplayTooltip("Hide in " + hit.collider.name);
             }
 

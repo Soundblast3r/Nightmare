@@ -42,8 +42,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
-        private PandaSense panda;
-
         // Use this for initialization
         private void Start()
         {
@@ -57,7 +55,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
-            panda = GameObject.Find("PandaSense").GetComponent<PandaSense>();
         }
 
 
@@ -220,10 +217,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
-            if(!m_IsWalking)
-            {
-                panda.isRunning = true;
-            }
+            if(!m_IsWalking){}
 
             // normalize input if it exceeds 1 in combined length:
             if (m_Input.sqrMagnitude > 1)

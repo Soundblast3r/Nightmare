@@ -35,7 +35,7 @@ public class InfoDisplay : MonoBehaviour {
         walkie = GameObject.Find("FirstPersonCharacter").GetComponent<WalkieTalkie>();
 
         Crocodile = GameObject.FindGameObjectWithTag("Crocodile").GetComponent<Crocodile>();
-        //Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<TeddyBear>();
+        Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<TeddyBear>();
         //Panda = GameObject.FindGameObjectWithTag("RedPanda").GetComponent<RedPanda>();
         //Owl =  GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
 
@@ -72,7 +72,7 @@ public class InfoDisplay : MonoBehaviour {
         CountdownTimer.text = timeRemaining;
 
         CrocTimer.text = "Croc: " + Crocodile.timeToTransform.ToString("F0");
-       //BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
+        BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
        //PandaTimer.text = "Panda: " + Panda.timeToTransform.ToString("F0");
        //OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
 

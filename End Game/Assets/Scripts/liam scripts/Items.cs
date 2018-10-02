@@ -69,7 +69,8 @@ public class Items : MonoBehaviour
 	void Update ()
     {
         // Hide walky gameobject while hidden
-        if (currentItem == ITEMTYPE.WALKYTALKY && interactions.isHiding) {
+        if (currentItem == ITEMTYPE.WALKYTALKY)
+        {
             m_WalkyTalky.GetComponent<Renderer>().enabled = false;
             m_WalkyTalky.GetComponent<BoxCollider>().enabled = false;
             //Vector3 prevTransform = m_WalkyTalky.transform.localPosition;
@@ -77,7 +78,7 @@ public class Items : MonoBehaviour
         } 
 
         // Disable spray bottle when going into hiding
-        if (currentItem == ITEMTYPE.SPRAYBOTTLE && interactions.isHiding) {
+        if (currentItem == ITEMTYPE.SPRAYBOTTLE) {
             SwitchItem(0);
         }
 
@@ -87,7 +88,7 @@ public class Items : MonoBehaviour
             SwitchItem(0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && !interactions.isHiding) {
+        if (Input.GetKeyDown(KeyCode.Alpha2)) {
             if (BottleAcquired && currentItem != ITEMTYPE.SPRAYBOTTLE) {
                 SwitchItem(2);
             }
@@ -104,7 +105,7 @@ public class Items : MonoBehaviour
             return;
         }
 
-        if (currentItem == ITEMTYPE.SPRAYBOTTLE && !interactions.isHiding && Input.GetMouseButton(0)) {
+        if (currentItem == ITEMTYPE.SPRAYBOTTLE && Input.GetMouseButton(0)) {
             UseSprayBottle();
         }
 
