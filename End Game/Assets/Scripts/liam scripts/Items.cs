@@ -45,7 +45,6 @@ public class Items : MonoBehaviour
         wt = GetComponent<WalkieTalkie>();
 
         // Toy/Demon references
-        Croc = GameObject.Find("PlushieCroc").GetComponentInParent<Crocodile>();
 
         // Items attached to player
         m_SprayBottle = GameObject.Find("PlayerBottle");
@@ -63,6 +62,8 @@ public class Items : MonoBehaviour
         currentItem = ITEMTYPE.NONE;
         sprayTimerIncrease = 1;
         SphereRadius = 0.10f;
+
+        Croc = GameObject.Find("PlushieCroc").GetComponentInParent<Crocodile>();
     }
 
 	void Update ()

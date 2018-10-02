@@ -85,7 +85,7 @@ public class FlashlightLean : MonoBehaviour {
                 {
                     Torchflat = true;
                     TorchCharge = 0;
-                    Debug.Log("flashlight is flat");
+                    //Debug.Log("flashlight is flat");
                 }
 
                 if (TorchCharge > 1000)
@@ -93,7 +93,7 @@ public class FlashlightLean : MonoBehaviour {
                     Torchflat = false;
                     TorchCharge = 1000;
                     Flashlight.GetComponentInChildren<Light>().intensity = 0.5f;
-                    Debug.Log("torch is Fully charged");
+                    //Debug.Log("torch is Fully charged");
                 }
 
 
@@ -106,8 +106,8 @@ public class FlashlightLean : MonoBehaviour {
                             torchSwitchLimit = true;
                             Flashlight.SetActive(true);
                             StartCoroutine(FlashlightCooldown());
-                            if (Flashlight.activeInHierarchy && Torchflat == false)
-                                Debug.Log("Flashlight on");
+                            //if (Flashlight.activeInHierarchy && Torchflat == false)
+                            //    Debug.Log("Flashlight on");
                         }
 
                         else if (Input.GetKey(KeyCode.F) && Flashlight.activeSelf == true)
@@ -115,7 +115,7 @@ public class FlashlightLean : MonoBehaviour {
                             torchSwitchLimit = true;
                             Flashlight.SetActive(false);
                             StartCoroutine(FlashlightCooldown());
-                            Debug.Log("Flashlight off");
+                            //Debug.Log("Flashlight off");
                         }
 
                     }

@@ -14,7 +14,7 @@ public class Interactions : MonoBehaviour
     private InfoDisplay infoDisplay;
 
     //Raycast Pickups
-    public Camera camera;
+    public Camera Cam;
     public float rayDistance;
     private float RayLine = 15f;
     private float SphereRadius;
@@ -44,6 +44,7 @@ public class Interactions : MonoBehaviour
         mainCamera = this.GetComponent<Camera>();
         HideCamera = GameObject.Find("HideCamera").GetComponent<Camera>();
         infoDisplay = GameObject.Find("GameUI").GetComponent<InfoDisplay>();
+        Demon = GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
         items = GetComponent<Items>();
         mainCamera.enabled = true;
         HideCamera.enabled = false;
@@ -51,7 +52,7 @@ public class Interactions : MonoBehaviour
         //SprayBottleActive = false;
         //WalkyTalkyActive = false;
 
-        OriginalCameraPos = camera.transform.localPosition;
+        OriginalCameraPos = Cam.transform.localPosition;
 
         SphereRadius = 0.10f;
         isHiding = false;
@@ -84,7 +85,7 @@ public class Interactions : MonoBehaviour
         //creats a ray of specific distance between the objects you're
         //looking at the screen
         RaycastHit hit;
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Cam.ScreenPointToRay(Input.mousePosition);
         
         //cheacks if the ray actualy hit something within a set distance
         /*if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance))*/
@@ -163,7 +164,7 @@ public class Interactions : MonoBehaviour
     void AnimalInteract()
     {
         RaycastHit hit;
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Cam.ScreenPointToRay(Input.mousePosition);
 
         if(Physics.Raycast(ray, out hit, rayDistance))
         {
@@ -171,17 +172,12 @@ public class Interactions : MonoBehaviour
             {
                 if(hit.collider.name == "Ted Bear")
                 {
-                    Debug.Log("Play: Giving Bear, tea animation");
+                    //Play Giving Bear tea animation
                 }
 
                 if(hit.collider.name == "Owl")
                 {
-                    Debug.Log("Play: Winding Owl animation");
-                }
-
-                if(hit.collider.name == "RedPanda")
-                {
-                    Debug.Log("Play: Peting Red Panda animation");
+                    //Play Winding Owl animation
                 }
             }
         }
@@ -210,7 +206,7 @@ public class Interactions : MonoBehaviour
     void LookAt() {
 
         RaycastHit hit;
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Cam.ScreenPointToRay(Input.mousePosition);
 
         //if (Physics.SphereCast(ray, SphereRadius, out hit, rayDistance)) {
         if (Physics.Raycast(ray, out hit, rayDistance)) {
@@ -248,7 +244,7 @@ public class Interactions : MonoBehaviour
     public void TorchLine()
     {
         RaycastHit point;
-        Ray torchline = camera.ScreenPointToRay(Input.mousePosition);
+        Ray torchline = Cam.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(torchline, out point, RayLine))
         {
@@ -256,7 +252,7 @@ public class Interactions : MonoBehaviour
             {
                 target = point.collider.gameObject;
                 Demon.StopSearching();
-                Debug.Log(target);
+                //Debug.Log(target);
             }
         }
     }

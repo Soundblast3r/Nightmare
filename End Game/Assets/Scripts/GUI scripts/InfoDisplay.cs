@@ -13,12 +13,11 @@ public class InfoDisplay : MonoBehaviour {
     private Items items;
     private WalkieTalkie walkie;
     private Crocodile Crocodile;
-    private TeddyBear Bear;
-    private RedPanda Panda;   
+    private TeddyBear Bear;  
     private Owl Owl;
     private GameManager game;
 
-    public Text CrocTimer, BearTimer, PandaTimer, OwlTimer;
+    public Text CrocTimer, BearTimer, OwlTimer;
     public Text CountdownTimer;
     public Text WalkieChannel;
 	public Image CentreDot;
