@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
         mainMenuPanel.SetActive(true);
         controlsPanel.SetActive(false);
     }
-
+    //Game Start
     public void StartGame()
     {
         SceneManager.LoadScene(1);
