@@ -63,25 +63,11 @@ public class Items : MonoBehaviour
         sprayTimerIncrease = 1;
         SphereRadius = 0.10f;
 
-        Croc = GameObject.Find("PlushieCroc").GetComponentInParent<Crocodile>();
+        //Croc = GameObject.Find("PlushieCroc").GetComponentInParent<Crocodile>();
     }
 
 	void Update ()
     {
-        // Hide walky gameobject while hidden
-        if (currentItem == ITEMTYPE.WALKYTALKY)
-        {
-            m_WalkyTalky.GetComponent<Renderer>().enabled = false;
-            m_WalkyTalky.GetComponent<BoxCollider>().enabled = false;
-            //Vector3 prevTransform = m_WalkyTalky.transform.localPosition;
-            //m_WalkyTalky.transform.position = transform.position;
-        } 
-
-        // Disable spray bottle when going into hiding
-        if (currentItem == ITEMTYPE.SPRAYBOTTLE) {
-            SwitchItem(0);
-        }
-
         // SWITCH ITEM
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -112,9 +98,6 @@ public class Items : MonoBehaviour
         if (currentItem == ITEMTYPE.WALKYTALKY && Input.GetMouseButtonDown(0)) {
             UseWalky();
         }
-        
-
-
     }
 
     void SwitchItem(int val) {
@@ -171,12 +154,9 @@ public class Items : MonoBehaviour
         }
     }
 
-    void UseWalky()
-    {
+    void UseWalky() {
         wt.MakeNoise();
         
-        // PLAY NORMAL AUDIO CLIP HERE, PLAY DISTORTED AUDIO CLIP @ RECIEVER
-
     }
 
 }

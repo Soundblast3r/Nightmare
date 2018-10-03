@@ -4,14 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManagerScript : MonoBehaviour
-{
     //=======================================================
     // Created by Liam Gates
     // Updates:
     // by Callum Bradshaw
     // -Edward Ngo
     //=======================================================
+
+public class GameManagerScript : MonoBehaviour
+{
+    private Items items;
+    private InfoDisplay infoDisplay;
 
     public GameObject EndgameScreen;
     public GameObject WinScreen;
@@ -27,6 +30,8 @@ public class GameManagerScript : MonoBehaviour
 
     void Start()
     {
+        items = GameObject.Find("FirstPersonCharacter").GetComponent<Items>();
+
         isGameOver = false;
         EndgameScreen.SetActive(false);
         WinScreen.SetActive(false);
@@ -39,23 +44,22 @@ public class GameManagerScript : MonoBehaviour
 
     private void Update()
     {
-        if(isGameOver)
-        {
-            SetGameOver();
-        }
 
-        // TUTORIAL COUNTDOWN
-        if (!isTutorialFinished) {
-            if (tutorialTimer > 0) {
-                tutorialTimer -= Time.deltaTime;
-            }
+        // TUTORIAL COUNTDOWM ==============================================
 
-            if (tutorialTimer <= 0) {
-                isTutorialFinished = true;
-            }
-        }
+        //if (!isTutorialFinished) {
+        //    if (tutorialTimer > 0) {
+        //        tutorialTimer -= Time.deltaTime;
+        //    }
+        //    
+        //    if (tutorialTimer <= 0) {
+        //        isTutorialFinished = true;
+        //    }
+        //}
 
-        // GAME COUNTDOWN
+
+
+        // GAME COUNTDOWN ==============================================
         if (isTutorialFinished) {
             if (GameTimer > 0) {
                 GameTimer -= Time.fixedDeltaTime;
@@ -66,6 +70,10 @@ public class GameManagerScript : MonoBehaviour
             }
         }
 
+        if(isGameOver)
+        {
+            SetGameOver();
+        }
     }
 
     public void SetGameOver() {
@@ -75,8 +83,11 @@ public class GameManagerScript : MonoBehaviour
         YouDied.SetActive(true);
     }
 
-    public void WinGame()
-    {
+    public void WinGame() {
+        Time.timeScale = 0;
+        GameTimer = 0;
+        infoDisplay.DisplayMessage("win message", 15);
+        EndgameScreen.SetActive(true);
         // add win stuff here; 
         // -CUTSCENE
         // -HIGHSCORE

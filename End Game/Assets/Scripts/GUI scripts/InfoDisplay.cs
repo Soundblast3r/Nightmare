@@ -19,7 +19,18 @@ public class InfoDisplay : MonoBehaviour {
     private GameManagerScript game;
 
     // USE TO DISPLAY IN GAME MESSAGES
-    private string MiscInfo;
+    private string aMessage;
+    private Text MsgBox;
+    public float MsgTimer;
+
+    public string tutorialMsg1;
+    public string tutorialMsg2;
+    public string tutorialMsg3;
+
+    private bool tutorialMsg1Played = false;
+    private bool tutorialMsg2Played = false;
+    private bool tutorialMsg3Played = false;
+
 
     // PLUG IN INSPECTOR
     public Text CrocTimer, BearTimer, OwlTimer;
@@ -38,22 +49,81 @@ public class InfoDisplay : MonoBehaviour {
         game =  GetComponent<GameManagerScript>();
         items = GameObject.Find("FirstPersonCharacter").GetComponent<Items>();
         walkie = GameObject.Find("FirstPersonCharacter").GetComponent<WalkieTalkie>();
+        MsgBox = GameObject.Find("MessageBox").GetComponent<Text>();
+
+        Tooltip.text = string.Empty;
+        MsgBox.text = string.Empty;
+        CountdownTimer.text = string.Empty;
+        MsgTimer = 0;
+        WalkieChannel.enabled = false;
 
         Crocodile = GameObject.FindGameObjectWithTag("Crocodile").GetComponent<Crocodile>();
         Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<TeddyBear>();
         Owl =  GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
 
-        Tooltip.text = string.Empty;
-
-        WalkieChannel.enabled = false;
     }
 
-    // Update is called once per frame
     void Update() {
-        
-        if (Input.GetMouseButtonDown(0)) {
-            DisplayMessage();
+
+        // TUTORIAL TIMER ==============================================
+        if (!game.isTutorialFinished) {
+            if (!tutorialMsg1Played) {
+                DisplayMessage(tutorialMsg1, 3);
+                tutorialMsg1Played = true;
+                CountdownTimer.text = "Find spray bottle!";
+            }
+
+            if (items.BottleAcquired) {
+                if (!items.WalkyAcquired && !tutorialMsg2Played) {
+                    DisplayMessage(tutorialMsg2, 3);
+                    CountdownTimer.text = "Find walky talky!";
+                    tutorialMsg2Played = true;
+                }               
+            }
+
+            if (items.WalkyAcquired) {
+                if (!items.BottleAcquired && !tutorialMsg3Played) {
+                    DisplayMessage(tutorialMsg1, 3);
+                    CountdownTimer.text = "Find spray bottle!";
+                    tutorialMsg3Played = true;
+                }
+            }
+
+            if (items.WalkyAcquired && items.BottleAcquired) {
+                DisplayMessage(tutorialMsg3, 3);
+                game.isTutorialFinished = true;
+            }
+
+            //GRACE PERIOD?
+            //timeRemaining = string.Format("{0:0}:{1:00}", timerMinute, timerSecond);
+            //timerMinute = Mathf.FloorToInt(game.tutorialTimer / 60f);
+            //timerSecond = Mathf.FloorToInt(game.tutorialTimer - timerMinute * 60);
         }
+
+        // IN GAME TIMER ==============================================
+        if (game.isTutorialFinished) {
+            timeRemaining = string.Format("{0:0}:{1:00}", timerMinute, timerSecond);
+            timerMinute = Mathf.FloorToInt(game.GameTimer / 60f);
+            timerSecond = Mathf.FloorToInt(game.GameTimer - timerMinute * 60);
+            CountdownTimer.text = timeRemaining;
+        }
+
+
+        // MESSAGE DISPLAY TIMER ==============================================
+        if (MsgBox.text != null) {
+            if (MsgTimer > 0) {
+                MsgTimer -= Time.deltaTime;
+            }
+
+            if (MsgTimer <= 0) {
+                MsgBox.text = string.Empty;
+            }
+        }
+
+        // MONSTER TRANSFORM TIMER
+        CrocTimer.text = "Croc: " + Crocodile.timeToTransform.ToString("F0");
+        BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
+        OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
 
         // WALKY CHANNELS DISPLAY
         if (items.currentItem == Items.ITEMTYPE.WALKYTALKY) {
@@ -71,28 +141,7 @@ public class InfoDisplay : MonoBehaviour {
                 WalkieChannel.enabled = false;
             }
         }
-
-        // TUTORIAL TIMER
-        if (!game.isTutorialFinished) {
-            timeRemaining = string.Format("{0:0}:{1:00}", timerMinute, timerSecond);
-            timerMinute = Mathf.FloorToInt(game.tutorialTimer / 60f);
-            timerSecond = Mathf.FloorToInt(game.tutorialTimer - timerMinute * 60);
-            CountdownTimer.text = timeRemaining;
-        }
-
-        // IN GAME TIMER
-        if (game.isTutorialFinished) {
-            timeRemaining = string.Format("{0:0}:{1:00}", timerMinute, timerSecond);
-            timerMinute = Mathf.FloorToInt(game.GameTimer / 60f);
-            timerSecond = Mathf.FloorToInt(game.GameTimer - timerMinute * 60);
-            CountdownTimer.text = timeRemaining;
-        }
-
-        // MONSTER TRANSFORM TIMER
-        CrocTimer.text = "Croc: " + Crocodile.timeToTransform.ToString("F0");
-        BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
-        OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
-
+        
     }
 
     public void DisplayTooltip(string word) {
@@ -103,15 +152,13 @@ public class InfoDisplay : MonoBehaviour {
         Tooltip.text = string.Empty;
     }
 
-    //private void OnGUI() {
-    //    float textBoxWidth = 400;
-    //    float textBoxHeight = 100;
-    //    float textBoxPosX = (Screen.width * 0.5f) - (textBoxWidth * 0.5f);
-    //    float textBoxPosY = (Screen.height - textBoxHeight) - 100 ;
-    //    GUI.TextField(new Rect(textBoxPosX, textBoxPosY, textBoxWidth, textBoxHeight), "hello");
-    //}
+    public void DisplayMessage(string msg, float time) {
 
-    public void DisplayMessage() {
+        if (MsgBox.text != null) {
+            MsgBox.text = string.Empty;
+        }
 
+        MsgTimer = time;
+        MsgBox.text = msg;
     }
 }

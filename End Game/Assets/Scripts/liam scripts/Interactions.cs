@@ -41,8 +41,8 @@ public class Interactions : MonoBehaviour
         //cursorLock = CursorLockMode.Locked;
         Cam = this.GetComponent<Camera>();
         infoDisplay = GameObject.Find("GameUI").GetComponent<InfoDisplay>();
-        Demon = GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
         items = GetComponent<Items>();
+        Demon = GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
         //SprayBottleActive = false;
         //WalkyTalkyActive = false;
 
