@@ -11,8 +11,8 @@ public class Owl : NPC
     private NavMeshAgent NMA;
 
     GameManagerScript game;
-
     MeshRenderer Render;
+    private Collider coll;
 
     void Start()
     {
@@ -24,6 +24,8 @@ public class Owl : NPC
 
         Render = gameObject.GetComponent<MeshRenderer>();
         Render.enabled = false;
+        coll = GetComponent<Collider>();
+        coll.enabled = !coll.enabled;
 
         timeToTransformMax = 5;
         //timeToRevertMax = 30;
@@ -81,14 +83,14 @@ public class Owl : NPC
 
     public void DemonForm()
     {
-        NMA.isStopped = false;
         transform.GetChild(0).gameObject.SetActive(false);
         Render.enabled = true;
+        coll.enabled = !coll.enabled;
+        NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, 10, 0);
         this.gameObject.transform.localScale = new Vector3(scale, scale, scale); //scale size
-        //timeToRevert = timeToRevertMax;
     }
 
     public void ToyForm()
@@ -133,7 +135,6 @@ public class Owl : NPC
 
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.gameObject.tag == "Player")
         {
             StopSearching();

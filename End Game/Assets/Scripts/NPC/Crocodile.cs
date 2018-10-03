@@ -21,6 +21,7 @@ public class Crocodile : NPC
     //public GameObject plushieCroc;
     private GameObject player;
     private Rigidbody RB;
+
     private NavMeshAgent NMA;
 
     private bool ReachedTarget = false;
@@ -111,14 +112,12 @@ public class Crocodile : NPC
     {
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.SetActive(false);
-        //plushieCroc.SetActive(false);
         coll.enabled = !coll.enabled;
         NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, MoveSpeed, 0);
         this.gameObject.transform.localScale = new Vector3(scale, scale, scale); //scale size
-        timeToRevert = timeToRevertMax;
     }
     
     public void ToyForm()

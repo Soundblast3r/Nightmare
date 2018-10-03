@@ -16,8 +16,8 @@ public class TeddyBear : NPC
     private NavMeshAgent NMA;
 
     GameManagerScript game;
-
     MeshRenderer Render;
+    private Collider coll;
 
     private bool ReachedTarget = false;
     private Vector3 SeekPosition = Vector3.zero;
@@ -33,7 +33,8 @@ public class TeddyBear : NPC
 
         Render = gameObject.GetComponent<MeshRenderer>();
         Render.enabled = false;
-        //VisRange.SetActive(false);
+        coll = GetComponent<Collider>();
+        coll.enabled = !coll.enabled;
 
         timeToTransformMax = 30;
         //timeToRevertMax = 30;
@@ -100,14 +101,14 @@ public class TeddyBear : NPC
     
     public void DemonForm()
     {
-        NMA.isStopped = false;
         transform.GetChild(0).gameObject.SetActive(false);
         Render.enabled = true;
+        coll.enabled = !coll.enabled;
+        NMA.isStopped = false;
         //inToyForm = false;
         isSearching = true;
         RB.AddForce(0, 10, 0);
         this.gameObject.transform.localScale = new Vector3(scale, scale, scale); //scale size
-        //timeToRevert = timeToRevertMax;
     }
 
     public void ToyForm() {
