@@ -18,6 +18,7 @@ public class Interactions : MonoBehaviour
     public float rayDistance = 5;
     private float RayLine = 15f;
     private float SphereRadius;
+    //private int layerMask;
 
     private Vector3 origin;
     private Owl Demon;
@@ -31,8 +32,7 @@ public class Interactions : MonoBehaviour
 
     // Camera
     private Vector3 OriginalCameraPos;
-    [HideInInspector]
-    public GameObject target;
+    [HideInInspector] public GameObject target;
     //CursorLockMode cursorLock;
 
 	// Use this for initialization
@@ -69,8 +69,6 @@ public class Interactions : MonoBehaviour
         }
 
         LookAt();
-
-
 	}
 
     void Interact()
@@ -221,7 +219,7 @@ public class Interactions : MonoBehaviour
 
         // CHECKS IF NOT LOOKING AT OBJECT, CLEARS TOOLTIP
         // ADD ITEMS THAT CAN BE DISPLAYED ON TOOLTIP HERE
-       if (Physics.Raycast(ray, out hit, 100)) {
+       if (Physics.Raycast(ray, out hit, 50)) {
            if (hit.collider.tag != "Pickup" && hit.collider.tag != "Plushie" && hit.collider.tag != "Reciever" &&
               (hit.collider.tag != "Crocodile" || hit.collider.tag != "Owl" || hit.collider.tag != "Bear" ))  {
                infoDisplay.ClearTooltip();

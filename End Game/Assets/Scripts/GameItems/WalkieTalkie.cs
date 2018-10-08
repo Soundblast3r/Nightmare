@@ -21,16 +21,23 @@ public class WalkieTalkie : MonoBehaviour {
     private int maxChannel;
     private int prevChannel = 0;
 
+    public float cooldownTime;
+    public float cooldownTimeMax;
+    public bool isOnCooldown;
+
     void Start () {
 
         items = GetComponent<Items>();
 
         m_Channel = 1;
         currentChannel = m_Channel;
-
         maxChannel = m_recievers.Length;
-
         isChannelSet = false;
+
+        cooldownTime = 0;
+        cooldownTimeMax = 5;
+        isOnCooldown = false;
+
     }
 
     void Update () {
@@ -44,6 +51,23 @@ public class WalkieTalkie : MonoBehaviour {
             isChannelSet = true;
         }
 
+        // use walky talky cooldown timer
+        if (cooldownTime > 0) {
+
+            if (!isOnCooldown) {
+                isOnCooldown = true;
+            }
+
+            cooldownTime -= Time.deltaTime;
+        }
+
+        if (cooldownTime <= 0) {
+            if (isOnCooldown) {
+                isOnCooldown = false;
+            }
+        }
+
+        // If walky talky is currently active
         if (items.currentItem == Items.ITEMTYPE.WALKYTALKY) {
 
             // Detect scroll wheel to change channel
@@ -68,6 +92,16 @@ public class WalkieTalkie : MonoBehaviour {
                     }
                 }
             }
+
+            if (Input.GetMouseButtonDown(0)) {
+                if (!isOnCooldown) {
+                    MakeNoise();
+                }
+
+                else {
+                    Debug.Log("walky is on cooldown");
+                }
+            }
         }
 	}
 
@@ -77,6 +111,8 @@ public class WalkieTalkie : MonoBehaviour {
 
     public void MakeNoise() {
         currentReciever.GetComponent<WalkieReciever>().PlaySound();
+        
+
     }
     
 

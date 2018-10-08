@@ -60,7 +60,6 @@ public class InfoDisplay : MonoBehaviour {
         Crocodile = GameObject.FindGameObjectWithTag("Crocodile").GetComponent<Crocodile>();
         Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<TeddyBear>();
         Owl =  GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
-
     }
 
     void Update() {
@@ -140,8 +139,7 @@ public class InfoDisplay : MonoBehaviour {
             if (WalkieChannel.enabled) {
                 WalkieChannel.enabled = false;
             }
-        }
-        
+        }       
     }
 
     public void DisplayTooltip(string word) {
