@@ -24,6 +24,7 @@ public class FlashlightLean : MonoBehaviour {
     public GameObject CameraRight;
 
     private Interactions OwlLight;
+    private Owl OwlOn;
 
     [HideInInspector] public bool TorchActive;
 
@@ -51,14 +52,17 @@ public class FlashlightLean : MonoBehaviour {
 
         items = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Items>();
         OwlLight = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Interactions>();
+        OwlOn = GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        OwlOn.inTorch = false;
         if (Flashlight.activeSelf)
         {
-            OwlLight.TorchLine();
+            OwlOn.inTorch = OwlLight.TorchLine();
+            OwlOn.inTorch = true;
         }
 
         //flashlight

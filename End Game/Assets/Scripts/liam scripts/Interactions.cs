@@ -227,7 +227,7 @@ public class Interactions : MonoBehaviour
        }
     }
 
-    public void TorchLine()
+    public bool TorchLine()
     {
         RaycastHit point;
         Ray torchline = Cam.ScreenPointToRay(Input.mousePosition);
@@ -241,6 +241,7 @@ public class Interactions : MonoBehaviour
                 //Debug.Log(target);
             }
         }
+        return false;
     }
 
     private void OnDrawGizmosSelected()

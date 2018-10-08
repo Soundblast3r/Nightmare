@@ -12,7 +12,10 @@ public class Owl : NPC
 
     GameManagerScript game;
     MeshRenderer Render;
+    Interactions Inter;
     private Collider coll;
+
+    public bool inTorch = false;
 
     void Start()
     {
@@ -21,6 +24,7 @@ public class Owl : NPC
         player = GameObject.Find("FPSController");
 
         game = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>();
+        Inter = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Interactions>();
 
         Render = gameObject.GetComponent<MeshRenderer>();
         Render.enabled = false;
@@ -37,9 +41,21 @@ public class Owl : NPC
         //inToyForm = true;
     }
 
+    // Funtoin to set daze and animation and position.
+
+
+
+
     void Update()
     {
-        //=================================================================================
+
+        //dazeTimer -= Time.deltaTime;
+        //if (dazeTime > 0)
+        //{
+        //    T.pos = stunnpos
+        //    return;
+        //}
+            //=================================================================================
         // Countdowns and timers
         //=================================================================================
 
@@ -59,14 +75,20 @@ public class Owl : NPC
         //=================================================================================
 
         // when in TOY form, and not 'taken care of' and countdown reaches 0, transform to demon
-        if (timeToTransform <= 0)
+        if (inTorch)
         {
-            DemonForm();
+            StopSearching();
         }
-
-        if (isSearching)
-        {
-            FollowPlayer();
+        else if(!inTorch)
+        { 
+            if (isSearching)
+            {
+                FollowPlayer();
+            }
+            else if (timeToTransform <= 0)
+            {
+                DemonForm();
+            }
         }
 
         //// when in DEMON form, and conditions met, turns back to toy form
