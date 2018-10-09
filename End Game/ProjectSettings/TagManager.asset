@@ -20,6 +20,7 @@ TagManager:
   - Bear
   - GameManager
   - PlushieBear
+  - PlushieOwl
   layers:
   - Default
   - TransparentFX

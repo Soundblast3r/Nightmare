@@ -21,7 +21,7 @@ public class Interactions : MonoBehaviour
     //private int layerMask;
 
     private Vector3 origin;
-    private Owl owl;
+    private Owl Owl;
     private TeddyBear Bear;
     //Camera Rotations
     private float RotateY;
@@ -43,7 +43,7 @@ public class Interactions : MonoBehaviour
         Cam = this.GetComponent<Camera>();
         infoDisplay = GameObject.Find("GameUI").GetComponent<InfoDisplay>();
         items = GetComponent<Items>();
-        owl = GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
+        Owl = GameObject.FindGameObjectWithTag("Owl").GetComponent<Owl>();
         Bear = GameObject.FindGameObjectWithTag("Bear").GetComponent<TeddyBear>();
         //SprayBottleActive = false;
         //WalkyTalkyActive = false;
@@ -167,8 +167,12 @@ public class Interactions : MonoBehaviour
                 //Play Giving Bear tea animation
             }
 
-            if(hit.collider.name == "PlushieOwl")
+            if(hit.collider.tag == "PlushieOwl")
             {
+                if(Owl.timeToTransform < Owl.timeToTransformMax)
+                {
+                    Owl.timeToTransform = Owl.timeToTransformMax;
+                }
                 //Play Winding Owl animation
             }
         }
@@ -241,7 +245,7 @@ public class Interactions : MonoBehaviour
             if (point.collider.tag == "Owl")
             {
                 target = point.collider.gameObject;
-                owl.StopSearching();
+                Owl.StopSearching();
                 //Debug.Log(target);
             }
         }
