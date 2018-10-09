@@ -57,7 +57,7 @@ public class Crocodile : NPC
         coll = GetComponent<Collider>();
         coll.enabled = !coll.enabled;
 
-        timeToTransformMax = 0;
+        timeToTransformMax = 30;
         timeToRevertMax = 30;
         //SphereRadius = 2.0f;
         MoveSpeed = 10f;
@@ -174,7 +174,7 @@ public class Crocodile : NPC
     public void Patrol()
     {
         // DO PATROL STUFF
-        //animat.SetBool("isRunning", false);
+        animat.SetBool("isRunning", false);
         animat.SetBool("isWalking", true);
         if (ReachedTarget)
         {

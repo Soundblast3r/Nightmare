@@ -122,7 +122,7 @@ public class InfoDisplay : MonoBehaviour {
         // MONSTER TRANSFORM TIMER
         CrocTimer.text = "Croc: " + Crocodile.timeToTransform.ToString("F0");
         BearTimer.text = "Bear: " + Bear.timeToTransform.ToString("F0");
-        OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
+       // OwlTimer.text = "Owl: " + Owl.timeToTransform.ToString("F0");
 
         // WALKY CHANNELS DISPLAY
         if (items.currentItem == Items.ITEMTYPE.WALKYTALKY) {

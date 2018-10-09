@@ -16,7 +16,6 @@ public class GameManagerScript : MonoBehaviour
     private Items items;
     private InfoDisplay infoDisplay;
 
-    public GameObject EndgameScreen;
     public GameObject WinScreen;
     public GameObject YouDied;
 
@@ -33,7 +32,6 @@ public class GameManagerScript : MonoBehaviour
         items = GameObject.Find("FirstPersonCharacter").GetComponent<Items>();
 
         isGameOver = false;
-        EndgameScreen.SetActive(false);
         WinScreen.SetActive(false);
         YouDied.SetActive(false);
 
@@ -79,7 +77,6 @@ public class GameManagerScript : MonoBehaviour
     public void SetGameOver() {
         Time.timeScale = 0;
         GameTimer = 0;
-        EndgameScreen.SetActive(true);
         YouDied.SetActive(true);
     }
 
@@ -87,11 +84,5 @@ public class GameManagerScript : MonoBehaviour
         Time.timeScale = 0;
         GameTimer = 0;
         infoDisplay.DisplayMessage("win message", 15);
-        EndgameScreen.SetActive(true);
-        // add win stuff here; 
-        // -CUTSCENE
-        // -HIGHSCORE
-        // -REPLAY/QUIT
-        // -SCORE?
     }
 }

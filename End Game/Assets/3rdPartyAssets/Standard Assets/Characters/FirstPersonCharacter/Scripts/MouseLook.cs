@@ -16,7 +16,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float smoothTime = 5f;
         public bool lockCursor = true;
         public GameObject pauseActive;
-        public GameObject EndGameActive;
+        public GameObject WinScreen;
+        public GameObject YouDied;
 
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
@@ -74,7 +75,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void InternalLockUpdate()
         {
-            if (EndGameActive.activeInHierarchy == true)
+            if (WinScreen.activeInHierarchy == true || YouDied.activeInHierarchy == true)
             {
                 //m_cursorIsLocked = true;
                 Time.timeScale = 0;

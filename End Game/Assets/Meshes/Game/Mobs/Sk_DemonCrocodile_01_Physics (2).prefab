@@ -2945,6 +2945,9 @@ MonoBehaviour:
   timeToRevert: 0
   timeToRevertMax: 0
   scale: 6
+  yOffSet: 0
+  zOffSet: 0
+  target: {fileID: 0}
 --- !u!137 &137548304794158310
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

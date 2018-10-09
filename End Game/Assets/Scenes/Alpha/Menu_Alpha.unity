@@ -883,6 +883,26 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 764505c3734b071428fe0b32f6af99c6, type: 2}
+    - target: {fileID: 23828154606435932, guid: 44d513c2afee34c40843818a77739ccd,
+        type: 2}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23828154606435932, guid: 44d513c2afee34c40843818a77739ccd,
+        type: 2}
+      propertyPath: m_StitchLightmapSeams
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23828154606435932, guid: 44d513c2afee34c40843818a77739ccd,
+        type: 2}
+      propertyPath: m_ImportantGI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23828154606435932, guid: 44d513c2afee34c40843818a77739ccd,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc1a6efdec6c4e943becb1d8a4d377d9, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44d513c2afee34c40843818a77739ccd, type: 2}
   m_IsPrefabParent: 0
@@ -1045,7 +1065,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -874533081
+  randomSeed: -1086282103
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4484,7 +4504,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ecfb7f86ad4e0dc40878ab81799cb1f8,
+      type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 6095455232a3c3b4784e026fd74172e2, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -4625,8 +4646,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ca1ef0f1ed46f5d4a98efab6a85cc677,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: ad77b5bd9724fa04ca05a5f8290c8dc9, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -4659,7 +4681,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ff3afc457ca73624c93426e6fdc286b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0e21e3d94d7da142a1faae39497d910, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4799,7 +4821,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: f233f634eeace9544a21fc79793ea182,
+      type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 810ec0a6cdf01c1448ccf509261943e2, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:

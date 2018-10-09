@@ -89,15 +89,16 @@ public class Interactions : MonoBehaviour
                 //Debug.Log("Object hit");
                 target = hit.collider.gameObject;
                 //makes the world obejct invisable
-                target.SetActive(false);
                 if (hit.collider.name == "SprayBottle")
                 {
+                    target.SetActive(false);
                     //adds the obejcts to your inventory
                     items.BottleAcquired = true;
                     //Debug.Log("picked up spray bottle");
                 }
                 if (hit.collider.name == "WalkyTalky")
                 {
+                    target.SetActive(false);
                     items.WalkyAcquired = true;
                     //Debug.Log("picked up Walky Talky");
                 }
