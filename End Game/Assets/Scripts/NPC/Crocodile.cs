@@ -102,6 +102,7 @@ public class Crocodile : NPC
         VisualRange();
         if(isHunting)
         {
+            animat.SetBool("isRunning", true);
             FollowPlayer();
         }
         if(isSearching && !isHunting)
@@ -134,6 +135,7 @@ public class Crocodile : NPC
     public void FollowPlayer()
     {
         //RB.AddForce(player.transform.position, ForceMode.Acceleration);
+
         NMA.speed = 1000;
         NMA.destination = player.transform.position;
         //MoveSpeed = 100;
