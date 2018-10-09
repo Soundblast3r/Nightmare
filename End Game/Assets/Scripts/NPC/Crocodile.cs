@@ -6,9 +6,17 @@ using UnityEngine.UI;
 
 public class Crocodile : NPC
 {
-    private float VisDist = 10;
-    private float SphereRadius;
+    private float VisDist = 30;
+    //private float SphereRadius;
+
+    [SerializeField]
+    private float yOffSet;
+    [SerializeField]
+    private float zOffSet;
+
+
     private Vector3 origen;
+
     private float MoveSpeed;
 
     GameManagerScript game;
@@ -31,6 +39,8 @@ public class Crocodile : NPC
     private GameObject toyCroc;
     private Animator animat;
 
+    [HideInInspector] public GameObject target;
+
     void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -49,7 +59,7 @@ public class Crocodile : NPC
 
         timeToTransformMax = 0;
         timeToRevertMax = 30;
-        SphereRadius = 2.0f;
+        //SphereRadius = 2.0f;
         MoveSpeed = 10f;
 
         timeToTransform = timeToTransformMax;
@@ -102,12 +112,10 @@ public class Crocodile : NPC
         VisualRange();
         if(isHunting)
         {
-            animat.SetBool("isRunning", true);
             FollowPlayer();
         }
         if(isSearching && !isHunting)
         {
-            animat.SetBool("isWalking", true);
             Patrol();
         }
     }
@@ -135,7 +143,8 @@ public class Crocodile : NPC
     public void FollowPlayer()
     {
         //RB.AddForce(player.transform.position, ForceMode.Acceleration);
-
+        animat.SetBool("isWalking", false);
+        animat.SetBool("isRunning", true);
         NMA.speed = 1000;
         NMA.destination = player.transform.position;
         //MoveSpeed = 100;
@@ -165,7 +174,8 @@ public class Crocodile : NPC
     public void Patrol()
     {
         // DO PATROL STUFF
-        
+        //animat.SetBool("isRunning", false);
+        animat.SetBool("isWalking", true);
         if (ReachedTarget)
         {
 
@@ -185,10 +195,18 @@ public class Crocodile : NPC
     public void VisualRange()
     {
         RaycastHit hit;
-        origen = transform.position;
+        origen = new Vector3(transform.position.x, transform.position.y + yOffSet, transform.position.z - zOffSet);
 
-        if (Physics.SphereCast(origen, SphereRadius, transform.forward, out hit))
+        Debug.DrawRay(origen, transform.forward * VisDist, Color.red);
+
+        //if (Physics.SphereCast(origen, SphereRadius, transform.forward, out hit, VisDist))
+        //{
+        //}
+
+        if(Physics.Raycast(origen, transform.forward, out hit, VisDist))
         {
+            //target = hit.collider.gameObject;
+            //Debug.Log(target);
             if (hit.collider.tag == "Player" && isSearching)
             {
                 isSearching = false;
@@ -210,13 +228,6 @@ public class Crocodile : NPC
             StopSearching();
             KillPlayer();
         }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Debug.DrawLine(origen, origen + transform.forward * VisDist);
-        Gizmos.DrawWireSphere(origen + transform.forward * VisDist, SphereRadius);
     }
 
     public override void PlayFeedback()
