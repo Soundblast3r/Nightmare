@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.31
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.014724896, g: 0.017588263, b: 0.08464358, a: 0.31}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.31}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -114,6 +114,35 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &12787173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100134, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 12787174}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe1_Knuckle_03_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &12787174
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400134, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 12787173}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12865795, y: 3.5527135e-16, z: 8.5265126e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1254070520}
+  m_Father: {fileID: 1371157056}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &13306783
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +623,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 38408546}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &42360202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100010, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 42360203}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Hand_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &42360203
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400010, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 42360202}
+  m_LocalRotation: {x: -0.41440228, y: 0.4428782, z: 0.50198585, w: 0.61655486}
+  m_LocalPosition: {x: -0.5218545, y: 0.031709548, z: 0.84788346}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
+  m_Children:
+  - {fileID: 1582622591}
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &56980711
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,6 +980,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 67683439}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &71475237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100052, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 71475238}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Clavical_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &71475238
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400052, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71475237}
+  m_LocalRotation: {x: 0.17986274, y: 0.98369175, z: 7.124717e-17, w: -4.9220333e-17}
+  m_LocalPosition: {x: 0.041024294, y: -0.21753918, z: 0.67800003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1063743971}
+  m_Father: {fileID: 1823179040}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &71665908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1334,7 @@ Transform:
   - {fileID: 257628451}
   - {fileID: 1710748959}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &96140967
 GameObject:
@@ -2083,6 +2170,121 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 122251503}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &134381047
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1567526918}
+    m_Modifications:
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114322112353003020, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: EndgameScreen
+      value: 
+      objectReference: {fileID: 1549710963}
+    - target: {fileID: 114322112353003020, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: WinScreen
+      value: 
+      objectReference: {fileID: 364183492}
+    - target: {fileID: 114322112353003020, guid: e5c413e32513ba847b59d9447823696f,
+        type: 2}
+      propertyPath: YouDied
+      value: 
+      objectReference: {fileID: 731521040}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e5c413e32513ba847b59d9447823696f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &134891252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,6 +2415,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.2639837, y: 2.5, z: 0.039923105}
   m_Center: {x: 0.0000009536743, y: 0.00000023841858, z: -0.00000047683716}
+--- !u!1 &143271758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100166, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 143271759}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe3_Knuckle_03_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &143271759
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400166, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 143271758}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12865795, y: 5.684342e-16, z: 1.4210854e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1278193060}
+  m_Father: {fileID: 333607469}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &143856624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2917,6 +3148,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 169084110}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &170519191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100088, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 170519192}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Foot_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &170519192
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400088, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170519191}
+  m_LocalRotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -6.123234e-17}
+  m_LocalPosition: {x: 0.33011642, y: -0.0000005494345, z: -0.0000025728107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 836107903}
+  - {fileID: 1505180770}
+  - {fileID: 1391724747}
+  m_Father: {fileID: 879319485}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170538085
 GameObject:
   m_ObjectHideFlags: 0
@@ -3438,6 +3700,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 193368642}
+--- !u!1 &193524239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100126, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 193524240}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe1_Knuckle_01_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &193524240
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400126, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193524239}
+  m_LocalRotation: {x: 0.07981213, y: 0.99400663, z: 0.07370054, w: 0.012208944}
+  m_LocalPosition: {x: 0.31377307, y: 0.015581178, z: -0.3136658}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1371157056}
+  m_Father: {fileID: 1028041642}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194995763
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,6 +3848,120 @@ Transform:
   m_Father: {fileID: 1886289897}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &200784778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100176, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 200784779}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Wrist_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &200784779
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400176, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 200784778}
+  m_LocalRotation: {x: -0.22376586, y: -0.54168975, z: -0.30791742, w: 0.74945843}
+  m_LocalPosition: {x: 1.7132133, y: -0.011831161, z: -0.8691045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1897480436}
+  m_Father: {fileID: 1463042320}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &208260499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100020, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 208260500}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Jaw 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &208260500
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400020, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208260499}
+  m_LocalRotation: {x: 0.07202728, y: 0.08136266, z: 0.41215742, w: 0.90460956}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1832269570}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &208284516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100038, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 208284517}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:ikHandle1 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &208284517
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400038, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208284516}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1368684e-15, y: -3.5527136e-17, z: -5.684342e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224001208}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &213898334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100158, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 213898335}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe3_Knuckle_01_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &213898335
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400158, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 213898334}
+  m_LocalRotation: {x: -0.035664298, y: 0.9952855, z: 0.074917726, w: 0.050221067}
+  m_LocalPosition: {x: 0.3453424, y: -0.08255461, z: 0.26822144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 333607469}
+  m_Father: {fileID: 1028041642}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &215120208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,8 +3972,8 @@ GameObject:
   m_Component:
   - component: {fileID: 215120209}
   - component: {fileID: 215120212}
-  - component: {fileID: 215120211}
   - component: {fileID: 215120210}
+  - component: {fileID: 215120211}
   m_Layer: 0
   m_Name: PlayerBottle
   m_TagString: Spray
@@ -3583,14 +3988,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 215120208}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.181, y: -0.099, z: 0.337}
-  m_LocalScale: {x: 0.07058006, y: 0.12958767, z: 0.07392672}
+  m_LocalRotation: {x: -0, y: -0.7894147, z: -0, w: 0.61386025}
+  m_LocalPosition: {x: 0.1898, y: -0.1243, z: 0.2713}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 1807418625}
   m_Father: {fileID: 220837597}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -104.26201, z: 0}
 --- !u!23 &215120210
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3606,7 +4011,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0090b3d19cc50a24394f51b37ed01ef6, type: 2}
+  - {fileID: 2100000, guid: 597c0a11ee3f9c84f83d386020017649, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3637,8 +4042,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.9, z: 1}
+  m_Center: {x: 0, y: 0.44, z: 0}
 --- !u!33 &215120212
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3646,7 +4051,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 215120208}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300002, guid: 94c095368cb05364196dc198fccafd1a, type: 3}
 --- !u!1 &215425820
 GameObject:
   m_ObjectHideFlags: 0
@@ -3881,10 +4286,90 @@ Transform:
   m_Father: {fileID: 461960295}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &224001207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224001208}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Foot_R 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &224001208
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400008, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 224001207}
+  m_LocalRotation: {x: 0.060514882, y: 0.27861646, z: 0.22450453, w: 0.93183076}
+  m_LocalPosition: {x: -2.1737108, y: 0.09816182, z: 0.662978}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 208284517}
+  m_Father: {fileID: 1959761270}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &227747400 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1674582028509604, guid: 5f3beee042d31fe4db368d020d8489c2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2090664039}
+--- !u!95 &227747403
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227747400}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 2c84d2af8cecb1441979a5a2b1b135bf, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5eb86f91decb56045bac5fbdb97e0ffe, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &228868573 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: d99ea4bb42c7b3841a0ba9751ee43c8c, type: 3}
   m_PrefabInternal: {fileID: 510266059}
+--- !u!1 &231265571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100178, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 231265572}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:joint10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &231265572
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400178, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 231265571}
+  m_LocalRotation: {x: -0.008265496, y: 0.086762935, z: 0.09447505, w: 0.9917048}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 759852055}
+  m_Father: {fileID: 1064047725}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &235746909 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100016, guid: d99ea4bb42c7b3841a0ba9751ee43c8c, type: 3}
@@ -4483,6 +4968,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 271300924}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &281265194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100016, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 281265195}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Hand_R 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &281265195
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400016, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281265194}
+  m_LocalRotation: {x: 3.627202e-17, y: 0.9382702, z: -3.627202e-17, w: -0.3459032}
+  m_LocalPosition: {x: -4.9210577, y: 1.0651029, z: -0.43836108}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 471053371}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281463751
 GameObject:
   m_ObjectHideFlags: 0
@@ -5122,6 +5635,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 322918256}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &333607468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100162, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 333607469}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe3_Knuckle_02_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &333607469
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400162, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 333607468}
+  m_LocalRotation: {x: 0, y: 0, z: 0.15672848, w: 0.98764175}
+  m_LocalPosition: {x: -0.18512793, y: -7.105427e-17, z: 8.5265126e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 143271759}
+  m_Father: {fileID: 213898335}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &342989280
 GameObject:
   m_ObjectHideFlags: 0
@@ -5867,6 +6409,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 364183492}
+--- !u!1 &365449960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100164, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 365449961}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe3_Knuckle_02_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &365449961
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400164, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 365449960}
+  m_LocalRotation: {x: 0, y: 0, z: 0.15672848, w: 0.98764175}
+  m_LocalPosition: {x: 0.18512747, y: 0.0000007645787, z: 0.0000017278594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1431125688}
+  m_Father: {fileID: 1391724747}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &365450921
 GameObject:
   m_ObjectHideFlags: 0
@@ -5893,6 +6464,35 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 924875343}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &372873781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100142, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 372873782}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe2_Knuckle_01_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &372873782
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400142, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 372873781}
+  m_LocalRotation: {x: 0.062296193, y: 0.995258, z: 0.07347413, w: 0.013504853}
+  m_LocalPosition: {x: 0.40445587, y: -0.033705212, z: -0.015446541}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1691795414}
+  m_Father: {fileID: 1028041642}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &379038561
@@ -5939,6 +6539,34 @@ MonoBehaviour:
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &396404915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100036, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 396404916}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:ikHandle1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &396404916
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400036, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396404915}
+  m_LocalRotation: {x: -0.007958764, y: 0.24399766, z: 0.06627486, w: 0.96747583}
+  m_LocalPosition: {x: -0.179344, y: 0.072729036, z: 0.14486603}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
+  m_Children: []
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &406053400
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,6 +6711,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.001786, y: 2.4999998, z: 0.039923105}
   m_Center: {x: 0.63110244, y: -0.00000025028814, z: -0.0000004766262}
+--- !u!1 &435801750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 435801751}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Foot_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &435801751
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435801750}
+  m_LocalRotation: {x: 0.11065175, y: 0.48506162, z: 0.033883136, w: 0.8667891}
+  m_LocalPosition: {x: -0.32574722, y: 0.07011018, z: -0.030391926}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
+  m_Children:
+  - {fileID: 1150680172}
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &448873306
 GameObject:
   m_ObjectHideFlags: 0
@@ -6359,6 +7016,63 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300008, guid: d99ea4bb42c7b3841a0ba9751ee43c8c, type: 3}
+--- !u!1 &465068699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100066, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 465068700}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger1_Tip_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &465068700
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400066, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 465068699}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.35847995, y: 0.033035304, z: -0.19833125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1866924343}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &471053370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100014, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 471053371}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Hand_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471053371
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400014, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471053370}
+  m_LocalRotation: {x: 0.61655486, y: -0.50198585, z: 0.4428782, w: 0.41440228}
+  m_LocalPosition: {x: 0.52181745, y: 0.031709474, z: 0.8478827}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
+  m_Children:
+  - {fileID: 281265195}
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &471113424
 GameObject:
   m_ObjectHideFlags: 0
@@ -6459,6 +7173,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 471113424}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &471567317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100120, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 471567318}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Spine_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471567318
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400120, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471567317}
+  m_LocalRotation: {x: -0.045770105, y: 0.04934769, z: 0.25644064, w: 0.9642137}
+  m_LocalPosition: {x: -1, y: -1.9895197e-15, z: -1.3329269e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1823179040}
+  m_Father: {fileID: 1961259945}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &476152686
 GameObject:
   m_ObjectHideFlags: 0
@@ -6866,7 +7609,7 @@ Transform:
   - {fileID: 1738015249}
   - {fileID: 1263851936}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &492155408
 GameObject:
@@ -7697,6 +8440,85 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 552698412}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &553369195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100024, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 553369196}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Pelvis 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &553369196
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400024, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553369195}
+  m_LocalRotation: {x: -0.10082342, y: 0.07736454, z: -0.60382545, w: 0.7869207}
+  m_LocalPosition: {x: 2.0011635, y: 0.4904698, z: 5.577049e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1076469415}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &555654783
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 38.569893
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -28.297913
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 35.109993
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 23401514565843672, guid: 2ddaf11d3080750469c141f3787f4a06,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e838d244f5838fc49ac5c8fbc5645f02, type: 2}
+    - target: {fileID: 1653796119238808, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_Name
+      value: WalkyReciever (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &560402188
 GameObject:
   m_ObjectHideFlags: 0
@@ -7811,6 +8633,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560436917}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &563836985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100108, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 563836986}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Neck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &563836986
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400108, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563836985}
+  m_LocalRotation: {x: 0.17986274, y: 0.98369175, z: 7.124717e-17, w: -4.9220333e-17}
+  m_LocalPosition: {x: -0.5939043, y: 0.005635847, z: -7.211366e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 971040869}
+  m_Father: {fileID: 1823179040}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &565539749
 GameObject:
   m_ObjectHideFlags: 0
@@ -8198,6 +9049,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 577352873}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &579296405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100100, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 579296406}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Jaw_Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &579296406
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400100, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579296405}
+  m_LocalRotation: {x: 0.096164376, y: 0.050598677, z: 0.065260045, w: 0.9919342}
+  m_LocalPosition: {x: -0.8078501, y: 0.09889175, z: -0.63842744}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2107111488}
+  m_Father: {fileID: 971040869}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &580052139
 GameObject:
   m_ObjectHideFlags: 0
@@ -8526,6 +9406,34 @@ Transform:
   m_Father: {fileID: 1886289897}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &620698655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100068, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 620698656}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger1_Tip_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &620698656
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400068, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 620698655}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.35847953, y: -0.033039104, z: 0.19833137}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1983103259}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &629918972
 GameObject:
   m_ObjectHideFlags: 0
@@ -8769,6 +9677,64 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: 00000000
+--- !u!1 &634994842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100046, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 634994843}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Ankle_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &634994843
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400046, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634994842}
+  m_LocalRotation: {x: 0.000001237987, y: 0.0000017175297, z: -0.63057804, w: 0.7761259}
+  m_LocalPosition: {x: -1.2994348, y: 4.0856205e-16, z: -2.842171e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 636659154}
+  m_Father: {fileID: 1770903205}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &636659153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100092, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 636659154}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Heel_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &636659154
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400092, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 636659153}
+  m_LocalRotation: {x: -0.030207189, y: 0.020921385, z: -0.0025493014, w: 0.99932146}
+  m_LocalPosition: {x: -0.4026165, y: 1.7053025e-15, z: 5.684342e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1028041642}
+  m_Father: {fileID: 634994843}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &636761426
 GameObject:
   m_ObjectHideFlags: 0
@@ -9190,6 +10156,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 650732479}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &654666417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100060, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 654666418}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Eye_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &654666418
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400060, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 654666417}
+  m_LocalRotation: {x: 0.3856934, y: 0.92262703, z: 8.011152e-17, w: -3.28777e-17}
+  m_LocalPosition: {x: -0.64689666, y: 0.9886359, z: 0.36499998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 971040869}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &661611633
 GameObject:
   m_ObjectHideFlags: 0
@@ -9908,6 +10902,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 694501520}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &695180437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100044, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 695180438}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:ikHandle4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &695180438
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400044, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695180437}
+  m_LocalRotation: {x: 0.9251936, y: 0.14314432, z: -0.062269557, w: 0.3459032}
+  m_LocalPosition: {x: 0.23870629, y: 0.29355377, z: 0.051922485}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
+  m_Children: []
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705172171
 GameObject:
   m_ObjectHideFlags: 0
@@ -10226,6 +11248,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 725788207}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &729273245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100148, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 729273246}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe2_Knuckle_02_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &729273246
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400148, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729273245}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.20740232, y: 0.0000012875394, z: -0.000005497937}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2097119737}
+  m_Father: {fileID: 1505180770}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &731357856
 GameObject:
   m_ObjectHideFlags: 0
@@ -10486,6 +11537,63 @@ Transform:
   - {fileID: 413872926}
   m_Father: {fileID: 199919624}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &759852054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100180, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 759852055}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:joint11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &759852055
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400180, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 759852054}
+  m_LocalRotation: {x: -0.008956873, y: 0.086694285, z: 0.10237753, w: 0.9909202}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1720855565}
+  m_Father: {fileID: 231265572}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &768069209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100084, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 768069210}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger3_Tip_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &768069210
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400084, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768069209}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.04426441, y: -0.26109442, z: 0.39664787}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1935945566}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &773767672
 GameObject:
@@ -11503,6 +12611,177 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 818486470}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &819076626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100196, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 819076631}
+  - component: {fileID: 819076630}
+  - component: {fileID: 819076628}
+  - component: {fileID: 819076627}
+  - component: {fileID: 819076629}
+  - component: {fileID: 819076632}
+  m_Layer: 0
+  m_Name: Sk_DemonCrocodile_01_Physics (2)
+  m_TagString: Crocodile
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &819076627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819076626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4527a1a2db5c68449482230e159cb88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FeedbackParticle: {fileID: 0}
+  isSearching: 0
+  isHunting: 0
+  patrolPoints:
+  - {fileID: 1106860402}
+  - {fileID: 1251082608}
+  - {fileID: 448873307}
+  - {fileID: 100737280}
+  - {fileID: 1361791342}
+  - {fileID: 912907408}
+  - {fileID: 1947487527}
+  playerKillPos: {fileID: 0}
+  timeToTransform: 0
+  timeToTransformMax: 0
+  timeToRevert: 0
+  timeToRevertMax: 0
+  scale: 6
+--- !u!54 &819076628
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819076626}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!195 &819076629
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819076626}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 6
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!95 &819076630
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 59dad5e689c19964dac86de5b6ad510f,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819076626}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5eb86f91decb56045bac5fbdb97e0ffe, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!4 &819076631
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400196, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819076626}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00031858144}
+  m_LocalPosition: {x: 46.00564, y: -19.52787, z: 34.902386}
+  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_Children:
+  - {fileID: 435801751}
+  - {fileID: 1959761270}
+  - {fileID: 42360203}
+  - {fileID: 471053371}
+  - {fileID: 1832269570}
+  - {fileID: 1076469415}
+  - {fileID: 1158976859}
+  - {fileID: 1694545477}
+  - {fileID: 1123943911}
+  - {fileID: 396404916}
+  - {fileID: 1410983983}
+  - {fileID: 1856652663}
+  - {fileID: 695180438}
+  - {fileID: 964645055}
+  - {fileID: 1044416805}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 179.964, z: 0}
+--- !u!65 &819076632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819076626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5335614, y: 0.79132384, z: 0.20821351}
+  m_Center: {x: 0.06941148, y: 0.42939848, z: 0.27845266}
+--- !u!1 &821565192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100054, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 821565193}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Elbow_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &821565193
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400054, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 821565192}
+  m_LocalRotation: {x: -0.2758428, y: 0.17554323, z: 0.3769432, w: 0.86660784}
+  m_LocalPosition: {x: -1.6863449, y: 0.06670853, z: 0.3391033}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1745620009}
+  m_Father: {fileID: 1742859921}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826377827 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100016, guid: 6f0866f75fc9f6147bef8ec1939127c7, type: 3}
@@ -11774,6 +13053,35 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: f6996d6494e86fe4599b31acd87141bc, type: 3}
   m_PrefabInternal: {fileID: 835133914}
+--- !u!1 &836107902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100128, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 836107903}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe1_Knuckle_01_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &836107903
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400128, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836107902}
+  m_LocalRotation: {x: 0.07981213, y: 0.99400663, z: 0.07370054, w: 0.012208944}
+  m_LocalPosition: {x: -0.31377178, y: -0.015581679, z: 0.31366768}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1365345288}
+  m_Father: {fileID: 170519192}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &838292156
 GameObject:
   m_ObjectHideFlags: 0
@@ -11921,6 +13229,35 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2074104446}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &846571240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100098, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 846571241}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Hip_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &846571241
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400098, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846571240}
+  m_LocalRotation: {x: -0.08446892, y: -0.10774103, z: 0.018265463, w: 0.99041575}
+  m_LocalPosition: {x: 0.17018373, y: -0.6955508, z: 0.89146894}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2001573829}
+  m_Father: {fileID: 1366478337}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &847219911
@@ -12128,6 +13465,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 851471316}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &853504204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100082, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 853504205}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger3_Tip_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &853504205
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400082, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 853504204}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.04426575, y: 0.26109028, z: -0.3966439}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1201042338}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &855091980 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000633282165752, guid: 15dd6d8a812cea04fabe4fc701594747,
@@ -12922,6 +14287,35 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: 00000000
+--- !u!1 &879319484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100094, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 879319485}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Heel_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &879319485
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400094, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 879319484}
+  m_LocalRotation: {x: 0.013140514, y: 0.05582171, z: -0.43424362, w: 0.8989682}
+  m_LocalPosition: {x: 0.40261313, y: 0.0000061113096, z: -0.00000010786682}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 170519192}
+  m_Father: {fileID: 1777709707}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &879955788 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1673764560094618, guid: 15dd6d8a812cea04fabe4fc701594747,
@@ -13197,6 +14591,35 @@ Transform:
   m_Father: {fileID: 1700182704}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &918372870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100124, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 918372871}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Tail_Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &918372871
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400124, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918372870}
+  m_LocalRotation: {x: -0.3575614, y: 0.9338896, z: 7.104068e-17, w: 1.4296326e-17}
+  m_LocalPosition: {x: 0.976465, y: -0.073291145, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1214889410}
+  m_Father: {fileID: 1366478337}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &924875342
 GameObject:
   m_ObjectHideFlags: 0
@@ -13238,7 +14661,7 @@ Transform:
   - {fileID: 987337906}
   - {fileID: 575986220}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &927366750 stripped
 GameObject:
@@ -13258,6 +14681,36 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300006, guid: d99ea4bb42c7b3841a0ba9751ee43c8c, type: 3}
+--- !u!1 &928623019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100072, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 928623020}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger2_Knuckle_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &928623020
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400072, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 928623019}
+  m_LocalRotation: {x: 0.0000000103794955, y: 0.17210235, z: -0.0000000018133929,
+    w: 0.9850791}
+  m_LocalPosition: {x: 0.38242698, y: -0.028794657, z: -0.19346237}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1308187294}
+  m_Father: {fileID: 1897480436}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &929805482 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 138fd2e11b04ce146a1edbc9453ad041, type: 3}
@@ -13347,6 +14800,154 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 953031134}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &964645054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100190, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 964645055}
+  - component: {fileID: 964645056}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Sk_DemonCrocodile_01_Physics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &964645055
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400190, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964645054}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &964645056
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13700000, guid: 59dad5e689c19964dac86de5b6ad510f,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964645054}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300000, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_Bones:
+  - {fileID: 1366478337}
+  - {fileID: 1961259945}
+  - {fileID: 471567318}
+  - {fileID: 1823179040}
+  - {fileID: 563836986}
+  - {fileID: 971040869}
+  - {fileID: 579296406}
+  - {fileID: 2107111488}
+  - {fileID: 654666418}
+  - {fileID: 2079633702}
+  - {fileID: 71475238}
+  - {fileID: 1063743971}
+  - {fileID: 1463042320}
+  - {fileID: 200784779}
+  - {fileID: 1897480436}
+  - {fileID: 928623020}
+  - {fileID: 1308187294}
+  - {fileID: 1935945566}
+  - {fileID: 768069210}
+  - {fileID: 1983103259}
+  - {fileID: 620698656}
+  - {fileID: 1691270371}
+  - {fileID: 1742859921}
+  - {fileID: 821565193}
+  - {fileID: 1745620009}
+  - {fileID: 2067731069}
+  - {fileID: 1378361603}
+  - {fileID: 1140519633}
+  - {fileID: 1866924343}
+  - {fileID: 465068700}
+  - {fileID: 1201042338}
+  - {fileID: 853504205}
+  - {fileID: 918372871}
+  - {fileID: 1214889410}
+  - {fileID: 1064047725}
+  - {fileID: 231265572}
+  - {fileID: 759852055}
+  - {fileID: 1720855565}
+  - {fileID: 1629365216}
+  - {fileID: 1770903205}
+  - {fileID: 634994843}
+  - {fileID: 636659154}
+  - {fileID: 1028041642}
+  - {fileID: 193524240}
+  - {fileID: 1371157056}
+  - {fileID: 12787174}
+  - {fileID: 1254070520}
+  - {fileID: 372873782}
+  - {fileID: 1691795414}
+  - {fileID: 1688584832}
+  - {fileID: 1036788448}
+  - {fileID: 213898335}
+  - {fileID: 333607469}
+  - {fileID: 143271759}
+  - {fileID: 1278193060}
+  - {fileID: 846571241}
+  - {fileID: 2001573829}
+  - {fileID: 1777709707}
+  - {fileID: 879319485}
+  - {fileID: 170519192}
+  - {fileID: 836107903}
+  - {fileID: 1365345288}
+  - {fileID: 1142905891}
+  - {fileID: 1156572423}
+  - {fileID: 1505180770}
+  - {fileID: 729273246}
+  - {fileID: 2097119737}
+  - {fileID: 1081845703}
+  - {fileID: 1391724747}
+  - {fileID: 365449961}
+  - {fileID: 1431125688}
+  - {fileID: 1700722811}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1366478337}
+  m_AABB:
+    m_Center: {x: 0.19170856, y: -0.06072378, z: 0.029916286}
+    m_Extent: {x: 3.9944797, y: 5.4835362, z: 2.8207607}
+  m_DirtyAABB: 0
 --- !u!1 &967832758
 GameObject:
   m_ObjectHideFlags: 0
@@ -13431,6 +15032,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 967832758}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &971040868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100090, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 971040869}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &971040869
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400090, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971040868}
+  m_LocalRotation: {x: 0.3856934, y: 0.92262703, z: 8.011152e-17, w: -3.28777e-17}
+  m_LocalPosition: {x: 0.5459476, y: -0.21257837, z: 7.7184887e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2079633702}
+  - {fileID: 654666418}
+  - {fileID: 579296406}
+  m_Father: {fileID: 563836986}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986737503
 GameObject:
   m_ObjectHideFlags: 0
@@ -14065,6 +15697,37 @@ MonoBehaviour:
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &1028041641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100086, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1028041642}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Foot_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1028041642
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400086, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1028041641}
+  m_LocalRotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -6.123234e-17}
+  m_LocalPosition: {x: -0.330111, y: -3.0198067e-16, z: -2.842171e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 193524240}
+  - {fileID: 372873782}
+  - {fileID: 213898335}
+  m_Father: {fileID: 636659154}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1029660213
 GameObject:
   m_ObjectHideFlags: 0
@@ -14152,7 +15815,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 1
   m_VoxelSize: 0.05
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 171d0dc14109f49468d1b953ee3e1021, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 9009add738b04bd4d872fd1169fe9c58, type: 2}
 --- !u!4 &1029722045
 Transform:
   m_ObjectHideFlags: 0
@@ -14294,6 +15957,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1035674496}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1036788447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100154, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1036788448}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe2_Tip_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1036788448
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400154, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036788447}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.17318347, y: 5.684342e-16, z: -1.1368684e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1688584832}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1037138410
 GameObject:
   m_ObjectHideFlags: 0
@@ -14379,6 +16070,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1037138410}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1044416804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100192, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1044416805}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:transform1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044416805
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400192, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1044416804}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.049829416, y: 0, z: 0.13502945}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
+  m_Children:
+  - {fileID: 1366478337}
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045834051
 GameObject:
   m_ObjectHideFlags: 0
@@ -14697,7 +16417,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4434733141180368, guid: cc11b6dca6ff1b744bf2584790d01213, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -28.55
+      value: -28.798
       objectReference: {fileID: 0}
     - target: {fileID: 4434733141180368, guid: cc11b6dca6ff1b744bf2584790d01213, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14709,7 +16429,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4434733141180368, guid: cc11b6dca6ff1b744bf2584790d01213, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.99890333
       objectReference: {fileID: 0}
     - target: {fileID: 4434733141180368, guid: cc11b6dca6ff1b744bf2584790d01213, type: 2}
       propertyPath: m_LocalRotation.z
@@ -14717,15 +16437,77 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4434733141180368, guid: cc11b6dca6ff1b744bf2584790d01213, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.046820793
       objectReference: {fileID: 0}
     - target: {fileID: 4434733141180368, guid: cc11b6dca6ff1b744bf2584790d01213, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4434733141180368, guid: cc11b6dca6ff1b744bf2584790d01213, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -174.63301
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc11b6dca6ff1b744bf2584790d01213, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1063743970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100116, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1063743971}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Shoulder_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1063743971
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400116, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063743970}
+  m_LocalRotation: {x: 0.77175295, y: -0.5434818, z: -0.33009952, w: 0.0077026123}
+  m_LocalPosition: {x: -0.026370684, y: -0.08832493, z: -0.43234}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1463042320}
+  m_Father: {fileID: 71475238}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1064047724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100186, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1064047725}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:joint9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1064047725
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400186, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1064047724}
+  m_LocalRotation: {x: -0.005889861, y: 0.0869565, z: 0.06732142, w: 0.99391735}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 231265572}
+  m_Father: {fileID: 1214889410}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071073177
 GameObject:
   m_ObjectHideFlags: 0
@@ -14965,6 +16747,63 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: 00000000
+--- !u!1 &1076469414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100022, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1076469415}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Pelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1076469415
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400022, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1076469414}
+  m_LocalRotation: {x: -0.053204846, y: 0.7051023, z: -0.053204846, w: 0.7051023}
+  m_LocalPosition: {x: -0.000018557152, y: 0.38537148, z: 0.13502945}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
+  m_Children:
+  - {fileID: 553369196}
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1081845702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100156, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1081845703}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe2_Tip_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1081845703
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400156, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1081845702}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.17318302, y: -0.00000021695355, z: -0.0000046819223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2097119737}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1092305309
 GameObject:
   m_ObjectHideFlags: 0
@@ -15508,6 +17347,79 @@ Transform:
   m_Father: {fileID: 1248170812}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1123943910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100034, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1123943911}
+  - component: {fileID: 1123943913}
+  - component: {fileID: 1123943912}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:DoorFrame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1123943911
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400034, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123943910}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.038448025, y: 1.0472444, z: 0.08898392}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1123943912
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 59dad5e689c19964dac86de5b6ad510f,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123943910}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100002, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1123943913
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 59dad5e689c19964dac86de5b6ad510f,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123943910}
+  m_Mesh: {fileID: 4300002, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
 --- !u!1 &1124462371
 GameObject:
   m_ObjectHideFlags: 0
@@ -15637,10 +17549,35 @@ MonoBehaviour:
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 1
   m_AffectedAgents: ffffffff
---- !u!1 &1130652699 stripped
+--- !u!1 &1130652699
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 68ae5b23616732d48846320984bf0451, type: 3}
   m_PrefabInternal: {fileID: 348466394}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1130652700}
+  - component: {fileID: 1130652703}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1130652700
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 348466394}
+  m_GameObject: {fileID: 1130652699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1800367547}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1130652703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15965,6 +17902,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1135045272}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1140519632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100074, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1140519633}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger2_Tip_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1140519633
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400074, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1140519632}
+  m_LocalRotation: {x: -0.03408714, y: -0.5296555, z: 0.052294567, w: 0.8459128}
+  m_LocalPosition: {x: -0.4593122, y: 0.0396884, z: 0.2328014}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1378361603}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140893413 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100012, guid: f6996d6494e86fe4599b31acd87141bc, type: 3}
@@ -15983,6 +17948,35 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300006, guid: f6996d6494e86fe4599b31acd87141bc, type: 3}
+--- !u!1 &1142905890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100136, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1142905891}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe1_Knuckle_03_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1142905891
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400136, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142905890}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.12865624, y: -0.0000000373224, z: -0.00000011211846}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1156572423}
+  m_Father: {fileID: 1365345288}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1150016509
 GameObject:
   m_ObjectHideFlags: 0
@@ -16135,6 +18129,34 @@ Transform:
   m_Father: {fileID: 1897110602}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1150680171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1150680172}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Foot_L 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1150680172
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1150680171}
+  m_LocalRotation: {x: -0.018904066, y: 0.25196722, z: -0.0120712, w: 0.96747583}
+  m_LocalPosition: {x: -0.39114165, y: 0.28025353, z: 1.2130634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 435801751}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156410310
 GameObject:
   m_ObjectHideFlags: 0
@@ -16235,6 +18257,34 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: 00000000
+--- !u!1 &1156572422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100140, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1156572423}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe1_Tip_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1156572423
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400140, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1156572422}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.13050447, y: -0.00000051027433, z: -0.000004863254}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1142905891}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1157175005
 GameObject:
   m_ObjectHideFlags: 0
@@ -16320,6 +18370,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1157175005}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1158976858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100026, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1158976859}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Spine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1158976859
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400026, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1158976858}
+  m_LocalRotation: {x: 0.5345558, y: -0.46287158, z: 0.5345558, w: -0.46287158}
+  m_LocalPosition: {x: -0.000018557152, y: 0.41163188, z: 0.30804792}
+  m_LocalScale: {x: 0.02528966, y: 0.02528966, z: 0.02528966}
+  m_Children:
+  - {fileID: 2004316008}
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1162495041
 GameObject:
   m_ObjectHideFlags: 0
@@ -16441,11 +18520,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1162495041}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!224 &1162617624 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1547937642}
 --- !u!1 &1173424796
 GameObject:
   m_ObjectHideFlags: 0
@@ -16509,7 +18583,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1181518544
 GameObject:
@@ -16555,6 +18629,50 @@ MonoBehaviour:
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &1196105166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 348466394}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1498118985}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1201042337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100078, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1201042338}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger3_Knuckle_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1201042338
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400078, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1201042337}
+  m_LocalRotation: {x: -0.2030935, y: 0.93021554, z: -0.06520717, w: 0.29866403}
+  m_LocalPosition: {x: -0.3564795, y: 0.30256072, z: 0.14505997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 853504205}
+  m_Father: {fileID: 2067731069}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1202308888
 GameObject:
   m_ObjectHideFlags: 0
@@ -16631,7 +18749,7 @@ Transform:
   - {fileID: 79991144}
   - {fileID: 1092809378}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1203946962
 GameObject:
@@ -16817,6 +18935,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1211543126}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1214889409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100184, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1214889410}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:joint8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1214889410
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400184, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1214889409}
+  m_LocalRotation: {x: 0.037681714, y: 0.07858888, z: -0.43070397, w: 0.898275}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1064047725}
+  m_Father: {fileID: 918372871}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1221488674
 GameObject:
   m_ObjectHideFlags: 0
@@ -17412,11 +19559,39 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1251082607}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.57, y: -18.122, z: 18.92}
+  m_LocalPosition: {x: 51.39, y: -18.122, z: 19.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1700182704}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1254070519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100138, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1254070520}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe1_Tip_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1254070520
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400138, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254070519}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.13050207, y: 4.973799e-16, z: -1.4210854e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 12787174}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1261009561
 GameObject:
@@ -17688,6 +19863,39 @@ Transform:
   m_Father: {fileID: 1654351795}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1275428300 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1653796119238808, guid: 2ddaf11d3080750469c141f3787f4a06,
+    type: 2}
+  m_PrefabInternal: {fileID: 555654783}
+--- !u!1 &1278193059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100170, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1278193060}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe3_Tip_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1278193060
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400170, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1278193059}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.13050207, y: 4.2632563e-16, z: -8.5265126e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 143271759}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1279607343
 Prefab:
   m_ObjectHideFlags: 0
@@ -17872,6 +20080,39 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1288727731}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!224 &1297714963 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224867797447074524, guid: e5c413e32513ba847b59d9447823696f,
+    type: 2}
+  m_PrefabInternal: {fileID: 134381047}
+--- !u!1 &1308187293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100076, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1308187294}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger2_Tip_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1308187294
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400076, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1308187293}
+  m_LocalRotation: {x: -0.03408715, y: -0.5296555, z: 0.05229457, w: 0.8459128}
+  m_LocalPosition: {x: 0.45930937, y: -0.039683696, z: -0.23280233}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 928623020}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1308505092
 GameObject:
   m_ObjectHideFlags: 0
@@ -18625,6 +20866,154 @@ Transform:
   m_Father: {fileID: 1700182704}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1365345287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100132, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1365345288}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe1_Knuckle_02_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1365345288
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400132, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365345287}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.18512756, y: 0.0000006653253, z: 0.0000055012506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1142905891}
+  m_Father: {fileID: 836107903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1366478336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100188, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1366478337}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Pelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1366478337
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400188, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1366478336}
+  m_LocalRotation: {x: -0.5346014, y: 0.5826474, z: -0.40065205, w: 0.46281898}
+  m_LocalPosition: {x: -0.28484556, y: 2.3867455, z: -2.052104}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1629365216}
+  - {fileID: 846571241}
+  - {fileID: 1961259945}
+  - {fileID: 918372871}
+  m_Father: {fileID: 1044416805}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1371157055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100130, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1371157056}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe1_Knuckle_02_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1371157056
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400130, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371157055}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.18512793, y: 2.842171e-16, z: 2.842171e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 12787174}
+  m_Father: {fileID: 193524240}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1378361602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100070, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1378361603}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger2_Knuckle_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378361603
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400070, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378361602}
+  m_LocalRotation: {x: 0, y: 0.17210235, z: -0, w: 0.9850791}
+  m_LocalPosition: {x: -0.3824298, y: 0.028788194, z: 0.19346455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1140519633}
+  m_Father: {fileID: 2067731069}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1391724746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100160, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1391724747}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe3_Knuckle_01_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1391724747
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400160, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1391724746}
+  m_LocalRotation: {x: -0.035664298, y: 0.9952855, z: 0.074917726, w: 0.050221067}
+  m_LocalPosition: {x: -0.34534004, y: 0.082553804, z: -0.26821738}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 365449961}
+  m_Father: {fileID: 170519192}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1395433138
 GameObject:
   m_ObjectHideFlags: 0
@@ -19071,6 +21460,34 @@ MonoBehaviour:
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &1410983982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100040, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1410983983}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:ikHandle2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1410983983
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400040, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1410983982}
+  m_LocalRotation: {x: 0.8958816, y: -0.13860923, z: 0.06029673, w: 0.41778937}
+  m_LocalPosition: {x: -0.23523135, y: 0.26303786, z: -0.17155111}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
+  m_Children: []
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1411475255
 GameObject:
   m_ObjectHideFlags: 0
@@ -19326,6 +21743,35 @@ Transform:
   m_Father: {fileID: 1991717317}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1431125687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100168, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1431125688}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe3_Knuckle_03_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1431125688
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400168, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431125687}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.1286557, y: 0.00000070735484, z: -0.000003496989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1700722811}
+  m_Father: {fileID: 365449961}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1431837142
 GameObject:
   m_ObjectHideFlags: 0
@@ -19579,6 +22025,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1443201509}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1463042319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100056, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1463042320}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Elbow_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1463042320
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400056, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1463042319}
+  m_LocalRotation: {x: -0.1926139, y: 0.3360614, z: 0.47340956, w: 0.7911043}
+  m_LocalPosition: {x: 1.6863475, y: -0.066716485, z: -0.33910075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 200784779}
+  m_Father: {fileID: 1063743971}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1471460419
 GameObject:
   m_ObjectHideFlags: 0
@@ -19967,10 +22442,19 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07e617d64dbb2794f9d5ae9577b5a4fc, type: 3}
   m_IsPrefabParent: 0
---- !u!4 &1498118985 stripped
+--- !u!4 &1498118985
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 68ae5b23616732d48846320984bf0451, type: 3}
   m_PrefabInternal: {fileID: 348466394}
+  m_GameObject: {fileID: 1196105166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1800367547}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499199098
 GameObject:
   m_ObjectHideFlags: 0
@@ -20320,6 +22804,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1503376326}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1505180769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100144, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1505180770}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe2_Knuckle_01_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1505180770
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400144, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1505180769}
+  m_LocalRotation: {x: 0.062296193, y: 0.995258, z: 0.07347413, w: 0.013504853}
+  m_LocalPosition: {x: -0.4044564, y: 0.033704784, z: 0.01544484}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 729273246}
+  m_Father: {fileID: 170519192}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1509147321 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100014, guid: 6f0866f75fc9f6147bef8ec1939127c7, type: 3}
@@ -20504,121 +23017,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5747998, y: 0.9000001, z: 0.62607056}
   m_Center: {x: 0.00000062584877, y: 0, z: -0.00000029802322}
---- !u!1001 &1547937642
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1567526918}
-    m_Modifications:
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224867797447074524, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114873403225752008, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: EndgameScreen
-      value: 
-      objectReference: {fileID: 1549710963}
-    - target: {fileID: 114873403225752008, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: WinScreen
-      value: 
-      objectReference: {fileID: 364183492}
-    - target: {fileID: 114873403225752008, guid: 90cd0f3e6dd04a043b2e1fc138541acc,
-        type: 2}
-      propertyPath: YouDied
-      value: 
-      objectReference: {fileID: 731521040}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 90cd0f3e6dd04a043b2e1fc138541acc, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1549261502
 GameObject:
   m_ObjectHideFlags: 0
@@ -20629,9 +23027,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1549261503}
   - component: {fileID: 1549261507}
-  - component: {fileID: 1549261506}
   - component: {fileID: 1549261505}
+  - component: {fileID: 1549261506}
   - component: {fileID: 1549261504}
+  - component: {fileID: 1549261508}
   m_Layer: 0
   m_Name: PlayerWalky
   m_TagString: Walky
@@ -20646,13 +23045,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1549261502}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.193, y: -0.074, z: 0.278}
+  m_LocalRotation: {x: -0, y: -0.9738508, z: -0, w: 0.22718862}
+  m_LocalPosition: {x: 0.193, y: -0.114, z: 0.278}
   m_LocalScale: {x: 0.074733384, y: 0.101750135, z: 0.074733384}
   m_Children: []
   m_Father: {fileID: 220837597}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -153.73701, z: 0}
 --- !u!82 &1549261504
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20749,7 +23148,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42722845a4623854bab0587d8a6da97d, type: 2}
+  - {fileID: 2100000, guid: 56b600df0257dec4aa5d4d582ec8fd04, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20780,8 +23179,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.8, z: 1}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!33 &1549261507
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20789,7 +23188,25 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1549261502}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300006, guid: 94c095368cb05364196dc198fccafd1a, type: 3}
+--- !u!114 &1549261508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549261502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b751bc1efe6b2c479dd0375c15afc2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_recievers: []
+  currentReciever: {fileID: 0}
+  currentChannel: 1
+  isChannelSet: 0
+  cooldownTime: 0
+  cooldownTimeMax: 0
+  isOnCooldown: 0
 --- !u!1 &1549710963
 GameObject:
   m_ObjectHideFlags: 0
@@ -21571,7 +23988,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1162617624}
+  - {fileID: 1297714963}
   - {fileID: 1549710965}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -22041,6 +24458,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1578895948}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1582622590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100012, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1582622591}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Hand_L 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1582622591
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400012, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1582622590}
+  m_LocalRotation: {x: 3.005005e-17, y: 0.90854394, z: -3.005005e-17, w: -0.41778937}
+  m_LocalPosition: {x: 6.107888, y: -1.0267458, z: -0.06312871}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 42360203}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1584162104
 GameObject:
   m_ObjectHideFlags: 0
@@ -22125,163 +24570,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1584162104}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1591219813
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4933764147397738, guid: 503480c39e326f24683a24b6e78e07b9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -4.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 4933764147397738, guid: 503480c39e326f24683a24b6e78e07b9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -19.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 4933764147397738, guid: 503480c39e326f24683a24b6e78e07b9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 6.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 4933764147397738, guid: 503480c39e326f24683a24b6e78e07b9, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4933764147397738, guid: 503480c39e326f24683a24b6e78e07b9, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4933764147397738, guid: 503480c39e326f24683a24b6e78e07b9, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4933764147397738, guid: 503480c39e326f24683a24b6e78e07b9, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4933764147397738, guid: 503480c39e326f24683a24b6e78e07b9, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 262303707}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 365450922}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 1316964063}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 705172172}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[4]
-      value: 
-      objectReference: {fileID: 2020361090}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[5]
-      value: 
-      objectReference: {fileID: 1325567454}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[6]
-      value: 
-      objectReference: {fileID: 1594323607}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[7]
-      value: 
-      objectReference: {fileID: 1790382128}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[8]
-      value: 
-      objectReference: {fileID: 1395433139}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[9]
-      value: 
-      objectReference: {fileID: 1763647835}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[10]
-      value: 
-      objectReference: {fileID: 521490966}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[11]
-      value: 
-      objectReference: {fileID: 462702287}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[12]
-      value: 
-      objectReference: {fileID: 793946977}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[13]
-      value: 
-      objectReference: {fileID: 987337906}
-    - target: {fileID: 114110102368622582, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[14]
-      value: 
-      objectReference: {fileID: 575986220}
-    - target: {fileID: 114220578596090172, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 1106860402}
-    - target: {fileID: 114220578596090172, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 1251082608}
-    - target: {fileID: 114220578596090172, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 448873307}
-    - target: {fileID: 114220578596090172, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 100737280}
-    - target: {fileID: 114220578596090172, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[4]
-      value: 
-      objectReference: {fileID: 1361791342}
-    - target: {fileID: 114220578596090172, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[5]
-      value: 
-      objectReference: {fileID: 912907408}
-    - target: {fileID: 114220578596090172, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: patrolPoints.Array.data[6]
-      value: 
-      objectReference: {fileID: 1947487527}
-    - target: {fileID: 137816079952149842, guid: 503480c39e326f24683a24b6e78e07b9,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 629824052c51a7d4e8cfa6f4f23247af, type: 2}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 503480c39e326f24683a24b6e78e07b9, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1592052273
 GameObject:
   m_ObjectHideFlags: 0
@@ -22510,7 +24798,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4435787679917014, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -18.77
+      value: -19.49
       objectReference: {fileID: 0}
     - target: {fileID: 4435787679917014, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -22522,7 +24810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4435787679917014, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.69113976
       objectReference: {fileID: 0}
     - target: {fileID: 4435787679917014, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
       propertyPath: m_LocalRotation.z
@@ -22530,12 +24818,33 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4435787679917014, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.72272116
       objectReference: {fileID: 0}
     - target: {fileID: 4435787679917014, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4435787679917014, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435787679917014, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435787679917014, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435787679917014, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -87.441
+      objectReference: {fileID: 0}
+    - target: {fileID: 23201244513537668, guid: 02076ec7c33ee054da70093cabafbab0,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 597c0a11ee3f9c84f83d386020017649, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02076ec7c33ee054da70093cabafbab0, type: 2}
   m_IsPrefabParent: 0
@@ -22783,10 +25092,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1618987741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a8fd5b72866e7e439a0b83fd4a470e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 314ff910d268c144cb16d2c876758d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkyNumber: 0
+  walkyNumber: 2
+  emittingSound: 0
   soundDuration: 0
   soundDurationMax: 0
 --- !u!23 &1618987743
@@ -23096,6 +25406,35 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: 00000000
+--- !u!1 &1629365215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100096, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1629365216}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Hip_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1629365216
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400096, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629365215}
+  m_LocalRotation: {x: 0.07023773, y: -0.26579815, z: 0.7473138, w: 0.6049298}
+  m_LocalPosition: {x: 0.17018263, y: -0.6955494, z: -0.8914695}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1770903205}
+  m_Father: {fileID: 1366478337}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1635038040
 GameObject:
   m_ObjectHideFlags: 0
@@ -23776,6 +26115,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1676791908}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1688584831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100150, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1688584832}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe2_Knuckle_03_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1688584832
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400150, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688584831}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.1364428, y: 8.5265126e-16, z: -1.4210854e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1036788448}
+  m_Father: {fileID: 1691795414}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1690355282
 GameObject:
   m_ObjectHideFlags: 0
@@ -24006,6 +26374,93 @@ MonoBehaviour:
   m_Center: {x: 0, y: -10.7, z: 0}
   m_Area: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &1691270370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100050, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1691270371}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Clavical_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1691270371
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400050, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1691270370}
+  m_LocalRotation: {x: 0.17986274, y: 0.98369175, z: 7.124717e-17, w: -4.9220333e-17}
+  m_LocalPosition: {x: 0.041024294, y: -0.21753918, z: -0.6776843}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1742859921}
+  m_Father: {fileID: 1823179040}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1691795413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100146, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1691795414}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe2_Knuckle_02_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1691795414
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400146, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1691795413}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.20740722, y: 1.4210854e-16, z: 8.5265126e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1688584832}
+  m_Father: {fileID: 372873782}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1694545476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100030, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1694545477}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Tail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1694545477
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400030, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1694545476}
+  m_LocalRotation: {x: -0.03695858, y: -0.7061403, z: 0.03695858, w: 0.7061403}
+  m_LocalPosition: {x: -0.000018557152, y: 0.3470484, z: -0.031992372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2118351163}
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698480453
 GameObject:
   m_ObjectHideFlags: 0
@@ -24124,7 +26579,35 @@ Transform:
   - {fileID: 912907408}
   - {fileID: 1947487527}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1700722810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100172, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1700722811}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe3_Tip_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700722811
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400172, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1700722810}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.13050252, y: -0.00000018063133, z: 0.0000032933085}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1431125688}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1707849065
 GameObject:
@@ -24275,6 +26758,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1720855564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100182, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1720855565}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:joint12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1720855565
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400182, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1720855564}
+  m_LocalRotation: {x: -5.5662585e-17, y: 0.9961947, z: 5.5662585e-17, w: -0.087155744}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 759852055}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1724643689
 GameObject:
   m_ObjectHideFlags: 0
@@ -24550,6 +27061,64 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: 00000000
+--- !u!1 &1742859920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100114, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1742859921}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Shoulder_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1742859921
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400114, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742859920}
+  m_LocalRotation: {x: 0.6176291, y: 0.20998275, z: 0.1618423, w: 0.74043816}
+  m_LocalPosition: {x: -0.02637046, y: -0.08832289, z: 0.43265674}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 821565193}
+  m_Father: {fileID: 1691270371}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1745620008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100174, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1745620009}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Wrist_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1745620009
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400174, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1745620008}
+  m_LocalRotation: {x: 0.0751174, y: -0.11618336, z: -0.11974386, w: 0.9831176}
+  m_LocalPosition: {x: -1.7132105, y: 0.011836241, z: 0.86911047}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2067731069}
+  m_Father: {fileID: 821565193}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763647834
 GameObject:
   m_ObjectHideFlags: 0
@@ -24577,6 +27146,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 924875343}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1770903204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100104, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1770903205}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Knee_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1770903205
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400104, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1770903204}
+  m_LocalRotation: {x: 0.16742224, y: -0.05540146, z: 0.5527607, w: 0.8144668}
+  m_LocalPosition: {x: -0.9161757, y: -1.4566126e-15, z: 5.684342e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 634994843}
+  m_Father: {fileID: 1629365216}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775752890
 GameObject:
@@ -24699,6 +27297,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1775752890}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1777709706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100048, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1777709707}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Ankle_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1777709707
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400048, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1777709706}
+  m_LocalRotation: {x: 0.0000011586847, y: 0.0000014055395, z: -0.6558091, w: 0.75492674}
+  m_LocalPosition: {x: 1.2994322, y: -0.00000067049467, z: -0.0000003575758}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 879319485}
+  m_Father: {fileID: 2001573829}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1778862193
 GameObject:
   m_ObjectHideFlags: 0
@@ -24731,7 +27358,7 @@ Transform:
   - {fileID: 1575751428}
   - {fileID: 1133108539}
   - {fileID: 1033312760}
-  - {fileID: 1498118985}
+  - {fileID: 1800367547}
   - {fileID: 873437546}
   - {fileID: 818486471}
   m_Father: {fileID: 835133915}
@@ -24963,6 +27590,36 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 924875343}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1800367546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 348466394}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1800367547}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1800367547
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 348466394}
+  m_GameObject: {fileID: 1800367546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1130652700}
+  - {fileID: 1498118985}
+  m_Father: {fileID: 1778862194}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1804105979
@@ -28543,6 +31200,37 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1823179039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100122, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1823179040}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Spine_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1823179040
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400122, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1823179039}
+  m_LocalRotation: {x: -0.055569734, y: 0.037975024, z: 0.46378422, w: 0.88338786}
+  m_LocalPosition: {x: -1, y: 6.252776e-15, z: -1.3349115e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1691270371}
+  - {fileID: 71475238}
+  - {fileID: 563836986}
+  m_Father: {fileID: 471567318}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1825406316
 GameObject:
   m_ObjectHideFlags: 0
@@ -28619,6 +31307,35 @@ Transform:
   - {fileID: 188166902}
   m_Father: {fileID: 1248170812}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1832269569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100018, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1832269570}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Jaw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1832269570
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400018, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1832269569}
+  m_LocalRotation: {x: 0.024134748, y: 0.7066948, z: 0.024134748, w: 0.7066948}
+  m_LocalPosition: {x: -0.000018557152, y: 0.29511955, z: 0.95983297}
+  m_LocalScale: {x: 0.020275218, y: 0.020275218, z: 0.020275218}
+  m_Children:
+  - {fileID: 208260500}
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843293178
 GameObject:
@@ -28945,6 +31662,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1854054687}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1856652662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100042, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1856652663}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:ikHandle3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1856652663
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400042, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1856652662}
+  m_LocalRotation: {x: 0.2294119, y: -0.25017652, z: -0.12834853, w: 0.93183076}
+  m_LocalPosition: {x: 0.20661253, y: 0.12495986, z: -0.40939093}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
+  m_Children: []
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1860618485
 GameObject:
   m_ObjectHideFlags: 0
@@ -29195,6 +31940,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1866086878}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1866924342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100062, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1866924343}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger1_Knuckle_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1866924343
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400062, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1866924342}
+  m_LocalRotation: {x: -0.2347714, y: 0.9498674, z: 0.049543407, w: -0.2004489}
+  m_LocalPosition: {x: -0.3321234, y: -0.27891308, z: 0.22742192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 465068700}
+  m_Father: {fileID: 2067731069}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1867827138
 GameObject:
   m_ObjectHideFlags: 0
@@ -29705,7 +32479,7 @@ Transform:
   - {fileID: 1991717317}
   - {fileID: 28743695}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1897110601
 GameObject:
@@ -29737,6 +32511,37 @@ Transform:
   m_Father: {fileID: 1886289897}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1897480435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100112, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1897480436}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Palm_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1897480436
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400112, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1897480435}
+  m_LocalRotation: {x: 0, y: -0.053586554, z: -0, w: 0.99856323}
+  m_LocalPosition: {x: 0.3542764, y: -0.028253576, z: -0.17930323}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1983103259}
+  - {fileID: 928623020}
+  - {fileID: 1935945566}
+  m_Father: {fileID: 200784779}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1899678583
 GameObject:
   m_ObjectHideFlags: 0
@@ -29750,6 +32555,7 @@ GameObject:
   - component: {fileID: 1899678586}
   - component: {fileID: 1899678585}
   - component: {fileID: 1899678588}
+  - component: {fileID: 1899678589}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -29842,6 +32648,26 @@ MonoBehaviour:
   WalkyAcquired: 0
   Spray: {fileID: 1807418627}
   currentItem: 0
+--- !u!114 &1899678589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1899678583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b751bc1efe6b2c479dd0375c15afc2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_recievers:
+  - {fileID: 1275428300}
+  - {fileID: 2088922720}
+  currentReciever: {fileID: 0}
+  currentChannel: 0
+  isChannelSet: 0
+  cooldownTime: 0
+  cooldownTimeMax: 0
+  isOnCooldown: 0
 --- !u!1001 &1901269834
 Prefab:
   m_ObjectHideFlags: 0
@@ -30822,6 +33648,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1927821223}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1935945565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100080, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1935945566}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger3_Knuckle_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1935945566
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400080, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935945565}
+  m_LocalRotation: {x: -0.2030935, y: 0.93021554, z: -0.06520717, w: 0.29866403}
+  m_LocalPosition: {x: 0.35647896, y: -0.30256543, z: -0.14505881}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 768069210}
+  m_Father: {fileID: 1897480436}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1937728847
 GameObject:
   m_ObjectHideFlags: 0
@@ -31090,7 +33945,36 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1959761269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1959761270}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Foot_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1959761270
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1959761269}
+  m_LocalRotation: {x: 0.8749382, y: -0.035803612, z: 0.47245488, w: -0.09993848}
+  m_LocalPosition: {x: 0.31892073, y: 0.06563142, z: -0.032128826}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
+  m_Children:
+  - {fileID: 224001208}
+  m_Father: {fileID: 819076631}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1960799644
 GameObject:
@@ -31213,6 +34097,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1960799644}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1961259944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100118, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1961259945}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Spine_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1961259945
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400118, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1961259944}
+  m_LocalRotation: {x: -0.045225903, y: 0.049846925, z: 0.24584569, w: 0.96696943}
+  m_LocalPosition: {x: -1, y: -2.842171e-16, z: -1.3322676e-15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 471567318}
+  m_Father: {fileID: 1366478337}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1967670395
 GameObject:
   m_ObjectHideFlags: 0
@@ -31418,6 +34331,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1970663075}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1983103258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100064, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1983103259}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Finger1_Knuckle_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1983103259
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400064, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1983103258}
+  m_LocalRotation: {x: -0.2347714, y: 0.9498674, z: 0.049543407, w: -0.2004489}
+  m_LocalPosition: {x: 0.33212274, y: 0.27891046, z: -0.22742109}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 620698656}
+  m_Father: {fileID: 1897480436}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1985575888
 GameObject:
   m_ObjectHideFlags: 0
@@ -31616,7 +34558,64 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2001573828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100106, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2001573829}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Knee_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2001573829
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400106, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2001573828}
+  m_LocalRotation: {x: 0.16589922, y: -0.05794859, z: 0.5760967, w: 0.79826814}
+  m_LocalPosition: {x: 0.9161756, y: -0.00000062311244, z: 0.0000029392208}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1777709707}
+  m_Father: {fileID: 846571241}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2004316007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100028, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2004316008}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Spine 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2004316008
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400028, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004316007}
+  m_LocalRotation: {x: -0.045047738, y: 0.050007988, z: 0.24239357, w: 0.9678405}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1158976859}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2020361089
 GameObject:
@@ -32216,6 +35215,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2049717090}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2058253117
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 37.915016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -30.84442
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 21.917753
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451204957960568, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653796119238808, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+      propertyPath: m_Name
+      value: WalkyReciever (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2ddaf11d3080750469c141f3787f4a06, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2064559108
 GameObject:
   m_ObjectHideFlags: 0
@@ -32485,6 +35530,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &2067731068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100110, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2067731069}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Palm_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067731069
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400110, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2067731068}
+  m_LocalRotation: {x: 0, y: -0.053586554, z: -0, w: 0.99856323}
+  m_LocalPosition: {x: -0.35427126, y: 0.028258406, z: 0.17930084}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1866924343}
+  - {fileID: 1378361603}
+  - {fileID: 1201042338}
+  m_Father: {fileID: 1745620009}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2070786619
 GameObject:
   m_ObjectHideFlags: 0
@@ -32805,6 +35881,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2077358392}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2079633701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100058, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2079633702}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Eye_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2079633702
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400058, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2079633701}
+  m_LocalRotation: {x: 0.3856934, y: 0.92262703, z: 8.011152e-17, w: -3.28777e-17}
+  m_LocalPosition: {x: -0.64689666, y: 0.9886359, z: -0.365222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 971040869}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2080046163
 GameObject:
   m_ObjectHideFlags: 0
@@ -33138,6 +36242,373 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2086291685}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2088922720 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1653796119238808, guid: 2ddaf11d3080750469c141f3787f4a06,
+    type: 2}
+  m_PrefabInternal: {fileID: 2058253117}
+--- !u!1001 &2090664039
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220578596090172, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933764147397738, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933764147397738, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -19.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933764147397738, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933764147397738, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933764147397738, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933764147397738, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933764147397738, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933764147397738, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 33222268338159110, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: ea344b17c5653d94191e146536a61ed3, type: 3}
+    - target: {fileID: 23424806860275350, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad759aedb8addd2418eb1540f50ebbdb, type: 2}
+    - target: {fileID: 33224234283983502, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 2909bf3d68b35c149913300b2affc3c8, type: 3}
+    - target: {fileID: 23965669940175074, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: efe40d1a26d6a4946bd96c218b7752bd, type: 2}
+    - target: {fileID: 137169632092179316, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: fea9b61acbef6084c9c868102f4dfcee, type: 3}
+    - target: {fileID: 137169632092179316, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 61c2f853dc0e2f441b5e54f175f438cf, type: 2}
+    - target: {fileID: 33988654718080592, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 1b115f63f9f3f4c4994b8c5d1e7267c5, type: 3}
+    - target: {fileID: 23615289857204736, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f4d332e18537d7e4a8070bf2de911927, type: 3}
+    - target: {fileID: 33281338467158904, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 87d41cb16870d164286d27ace9f25599, type: 3}
+    - target: {fileID: 23413877393637820, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c186f61d5aedfc418432c17314919ac, type: 2}
+    - target: {fileID: 33846133351354688, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: abfd5d6d6a7076840bc32ce7fd7edeb0, type: 3}
+    - target: {fileID: 4652828051607572, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 591
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652828051607572, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -669
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652828051607572, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652828051607572, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652828051607572, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652828051607572, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 23744726776720578, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 515e38ebfd117d24dac147f178caf2e2, type: 2}
+    - target: {fileID: 114220578596090172, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1106860402}
+    - target: {fileID: 114220578596090172, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1251082608}
+    - target: {fileID: 114220578596090172, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 448873307}
+    - target: {fileID: 114220578596090172, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 100737280}
+    - target: {fileID: 114220578596090172, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1361791342}
+    - target: {fileID: 114220578596090172, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 912907408}
+    - target: {fileID: 114220578596090172, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 1947487527}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 262303707}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 365450922}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1316964063}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 705172172}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 2020361090}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 1325567454}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 1594323607}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 1790382128}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[8]
+      value: 
+      objectReference: {fileID: 1395433139}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[9]
+      value: 
+      objectReference: {fileID: 1763647835}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[10]
+      value: 
+      objectReference: {fileID: 521490966}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[11]
+      value: 
+      objectReference: {fileID: 462702287}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[12]
+      value: 
+      objectReference: {fileID: 793946977}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[13]
+      value: 
+      objectReference: {fileID: 987337906}
+    - target: {fileID: 114110102368622582, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[14]
+      value: 
+      objectReference: {fileID: 575986220}
+    - target: {fileID: 4141747690608584, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141747690608584, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141747690608584, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988840009707316, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: scale
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652828051607572, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740045619546164, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136205478556500922, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988840009707316, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: inTorch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95326872064973688, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95326872064973688, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+    - target: {fileID: 95326872064973688, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5eb86f91decb56045bac5fbdb97e0ffe, type: 2}
+    - target: {fileID: 114220578596090172, guid: 5f3beee042d31fe4db368d020d8489c2,
+        type: 2}
+      propertyPath: scale
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948291132251590, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5f3beee042d31fe4db368d020d8489c2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &2097119736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100152, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2097119737}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Toe2_Knuckle_03_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2097119737
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400152, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097119736}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.1364438, y: 0.00000051755194, z: 0.0000018298724}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1081845703}
+  m_Father: {fileID: 729273246}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2107111487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100102, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2107111488}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Jnt_Jaw_Tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2107111488
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400102, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2107111487}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.0924163, y: 0, z: 0.63842744}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 579296406}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2118290181
 GameObject:
   m_ObjectHideFlags: 0
@@ -33240,6 +36711,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2118290181}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2118351162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100032, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2118351163}
+  m_Layer: 0
+  m_Name: DemonCroc_Rig:Ctrl_Tail 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2118351163
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400032, guid: 59dad5e689c19964dac86de5b6ad510f, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2118351162}
+  m_LocalRotation: {x: 0.029281504, y: 0.08208969, z: -0.33468914, w: 0.93828946}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1694545477}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2119212287
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,6 +29,7 @@ public class Crocodile : NPC
     private int PatrolIterator = 0;
 
     private GameObject toyCroc;
+    private Animator animat;
 
     void Start()
     {
@@ -40,12 +41,13 @@ public class Crocodile : NPC
         //render = this.GetComponentInChildren<MeshRenderer>();
 
         game = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerScript>();
+        animat = GetComponent<Animator>();
 
         transform.GetChild(0).gameObject.SetActive(false);
         coll = GetComponent<Collider>();
         coll.enabled = !coll.enabled;
 
-        timeToTransformMax = 30;
+        timeToTransformMax = 0;
         timeToRevertMax = 30;
         SphereRadius = 2.0f;
         MoveSpeed = 10f;
@@ -104,6 +106,7 @@ public class Crocodile : NPC
         }
         if(isSearching && !isHunting)
         {
+            animat.SetBool("isWalking", true);
             Patrol();
         }
     }
@@ -160,7 +163,7 @@ public class Crocodile : NPC
     public void Patrol()
     {
         // DO PATROL STUFF
-
+        
         if (ReachedTarget)
         {
 
