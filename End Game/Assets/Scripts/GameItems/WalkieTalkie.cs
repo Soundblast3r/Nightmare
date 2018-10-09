@@ -111,7 +111,7 @@ public class WalkieTalkie : MonoBehaviour {
 
     public void MakeNoise() {
         currentReciever.GetComponent<WalkieReciever>().PlaySound();
-        
+        cooldownTime = cooldownTimeMax;
 
     }
     

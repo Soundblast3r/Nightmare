@@ -14,6 +14,7 @@ public class Items : MonoBehaviour
     private Camera cam;
     private Crocodile Croc;
     private WalkieTalkie wt;
+    private InfoDisplay infoDisplay;
 
     // Gameobject references
     private GameObject m_SprayBottle;
@@ -43,6 +44,7 @@ public class Items : MonoBehaviour
         cam = GetComponent<Camera>();
         interactions = GetComponent<Interactions>();
         wt = GetComponent<WalkieTalkie>();
+        infoDisplay = GameObject.Find("GameUI").GetComponent<InfoDisplay>();
 
         // Toy/Demon references
 
@@ -116,6 +118,7 @@ public class Items : MonoBehaviour
             m_WalkyTalky.SetActive(false);
             if (m_SprayBottle != null) {
                 m_SprayBottle.SetActive(true);
+                infoDisplay.DisplayMessage("Left-Click to spray", 1);
             }
         }
 
@@ -124,6 +127,7 @@ public class Items : MonoBehaviour
             m_SprayBottle.SetActive(false);
             if (m_WalkyTalky != null) {
                 m_WalkyTalky.SetActive(true);
+                infoDisplay.DisplayMessage("Mouse-Scroll to set channel, Left-Click to use", 1);
             }
         }
     }

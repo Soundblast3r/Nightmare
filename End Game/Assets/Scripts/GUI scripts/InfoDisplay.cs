@@ -156,7 +156,7 @@ public class InfoDisplay : MonoBehaviour {
             MsgBox.text = string.Empty;
         }
 
-        MsgTimer = time;
         MsgBox.text = msg;
+        MsgTimer = time;
     }
 }
