@@ -7,9 +7,10 @@ using UnityEngine.UI;
 public class TeddyBear : NPC
 {
     //private GameObject VisRange;
-    private float VisDist = 10;
-    private float SphereRadius;
+    private float VisDist = 30;
     private Vector3 origen;
+    [SerializeField]
+    private float yOffSet;
 
     private GameObject player;
     private Rigidbody RB;
@@ -36,9 +37,8 @@ public class TeddyBear : NPC
         coll = GetComponent<Collider>();
         coll.enabled = !coll.enabled;
 
-        timeToTransformMax = 30;
+        timeToTransformMax = 0;
         //timeToRevertMax = 30;
-        SphereRadius = 2.0f;
 
         timeToTransform = timeToTransformMax;
         //timeToRevert = timeToRevertMax;
@@ -72,16 +72,11 @@ public class TeddyBear : NPC
         //=================================================================================
 
         // when in TOY form, and not 'taken care of' and countdown reaches 0, transform to demon
-        if (timeToTransform <= 0)
+        if (timeToTransform <= 0 && !isSearching)
         {
             DemonForm();
             //VisRange.SetActive(true);
         }
-
-        // when in DEMON form, and conditions met, turns back to toy form
-        //if (timeToRevert <= 0 && !inToyForm) {
-        //    ToyForm();
-        //}
 
         ReachedTarget = NMA.remainingDistance < 0.2f;
         VisualRange();
@@ -166,22 +161,52 @@ public class TeddyBear : NPC
     public void VisualRange()
     {
         RaycastHit hit;
-        origen = transform.position;
-        //Debug.DrawRay(transform.position, transform.forward * VisDist, Color.green);
-        //Debug.DrawRay(transform.position, (transform.forward + transform.right).normalized * VisDist, Color.green);
-        //Debug.DrawRay(transform.position, (transform.forward - transform.right).normalized * VisDist, Color.green);
+        origen = new Vector3(transform.position.x, transform.position.y - yOffSet, transform.position.z);
 
-        if (Physics.SphereCast(origen, SphereRadius, transform.forward, out hit))
+        Debug.DrawRay(origen, transform.forward * VisDist, Color.red);
+        Debug.DrawRay(origen, (transform.forward + transform.right) * VisDist, Color.red);
+        Debug.DrawRay(origen, (transform.forward - transform.right) * VisDist, Color.red);
+        Debug.DrawRay(origen, (transform.forward + transform.up) * VisDist, Color.red);
+        Debug.DrawRay(origen, (transform.forward - transform.up) * VisDist, Color.red);
+
+        if(Physics.Raycast(origen, transform.forward, out hit, VisDist))
         {
-           if (hit.collider.tag == "Player" && isSearching)
+            if(hit.collider.tag == "Player" && isSearching)
             {
                 isSearching = false;
                 isHunting = true;
             }
-           else if (isHunting)
+        }
+        if(Physics.Raycast(origen, transform.forward + transform.right, out hit, VisDist))
+        {
+            if(hit.collider.tag == "Player" && isSearching)
             {
-                isHunting = false;
-                isSearching = true;
+                isSearching = false;
+                isHunting = true;
+            }
+        }
+        if(Physics.Raycast(origen, transform.forward - transform.right, out hit, VisDist))
+        {
+            if(hit.collider.tag == "Player" && isSearching)
+            {
+                isSearching = false;
+                isHunting = true;
+            }
+        }
+        if(Physics.Raycast(origen, transform.forward + transform.up, out hit, VisDist))
+        {
+            if(hit.collider.tag == "Player" && isSearching)
+            {
+                isSearching = false;
+                isHunting = true;
+            }
+        }
+        if(Physics.Raycast(origen, transform.forward - transform.up, out hit, VisDist))
+        {
+            if(hit.collider.tag == "Player" && isSearching)
+            {
+                isSearching = false;
+                isHunting = true;
             }
         }
     }
@@ -193,12 +218,5 @@ public class TeddyBear : NPC
             StopSearching();
             KillPlayer();
         }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Debug.DrawLine(origen, origen + transform.forward * VisDist);
-        Gizmos.DrawWireSphere(origen + transform.forward * VisDist, SphereRadius);
     }
 }

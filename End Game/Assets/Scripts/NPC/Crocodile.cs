@@ -7,12 +7,11 @@ using UnityEngine.UI;
 public class Crocodile : NPC
 {
     private float VisDist = 30;
+    //private float HalfVis = 10;
     //private float SphereRadius;
 
     [SerializeField]
     private float yOffSet;
-    [SerializeField]
-    private float zOffSet;
 
 
     private Vector3 origen;
@@ -103,11 +102,6 @@ public class Crocodile : NPC
             DemonForm();
         }
 
-        //// when in DEMON form, and conditions met, turns back to toy form
-        //if (timeToRevert <= 0 && !inToyForm) {
-        //    ToyForm();
-        //}
-
         ReachedTarget = NMA.remainingDistance < 0.2f;
         VisualRange();
         if(isHunting)
@@ -195,28 +189,78 @@ public class Crocodile : NPC
     public void VisualRange()
     {
         RaycastHit hit;
-        origen = new Vector3(transform.position.x, transform.position.y + yOffSet, transform.position.z - zOffSet);
+        origen = new Vector3(transform.position.x, transform.position.y + yOffSet, transform.position.z);
 
+        //forward
         Debug.DrawRay(origen, transform.forward * VisDist, Color.red);
+        Debug.DrawRay(origen, (transform.forward + transform.right) * VisDist, Color.red);
+        Debug.DrawRay(origen, (transform.forward - transform.right) * VisDist, Color.red);
+        Debug.DrawRay(origen, (transform.forward + transform.up) * VisDist, Color.red);
+        Debug.DrawRay(origen, (transform.forward - transform.up) * VisDist, Color.red);
 
-        //if (Physics.SphereCast(origen, SphereRadius, transform.forward, out hit, VisDist))
-        //{
-        //}
-
-        if(Physics.Raycast(origen, transform.forward, out hit, VisDist))
+        if (Physics.Raycast(origen, transform.forward, out hit, VisDist))
         {
-            //target = hit.collider.gameObject;
-            //Debug.Log(target);
+            if(hit.collider.tag == "Player" && isSearching)
+            {
+                isSearching = false;
+                isHunting = true;
+            }
+            else if(hit.collider.tag == "Player" && isHunting)
+            {
+                isHunting = false;
+                isSearching = true;
+            }
+        }
+        if (Physics.Raycast(origen, transform.forward + transform.right, out hit, VisDist))
+        {
+            if(hit.collider.tag == "Player" && isSearching)
+            {
+                isSearching = false;
+                isHunting = true;
+            }
+            else if(hit.collider.tag == "Player" && isHunting)
+            {
+                isHunting = false;
+                isSearching = true;
+            }
+        }
+        if(Physics.Raycast(origen, transform.forward - transform.right, out hit, VisDist))
+        {
+            if(hit.collider.tag == "Player" && isSearching)
+            {
+                isSearching = false;
+                isHunting = true;
+            }
+            else if(hit.collider.tag == "Player" && isHunting)
+            {
+                isHunting = false;
+                isSearching = true;
+            }
+        }
+        if(Physics.Raycast(origen, transform.forward + transform.up, out hit, VisDist))
+        {
+            if(hit.collider.tag == "Player" && isSearching)
+            {
+                isSearching = false;
+                isHunting = true;
+            }
+            else if(hit.collider.tag == "Player" && isHunting)
+            {
+                isHunting = false;
+                isSearching = true;
+            }
+        }
+        if (Physics.Raycast(origen, (transform.forward - transform.up), out hit, VisDist))
+        {
             if (hit.collider.tag == "Player" && isSearching)
             {
                 isSearching = false;
                 isHunting = true;
             }
-            else if (hit.collider.tag != "Player" && isHunting)
+            else if(hit.collider.tag == "Player" && isHunting)
             {
                 isHunting = false;
                 isSearching = true;
-                NMA.speed = 5f;
             }
         }
     }
