@@ -104,6 +104,11 @@ public class Interactions : MonoBehaviour
                     items.WalkyAcquired = true;
                     //Debug.Log("picked up Walky Talky");
                 }
+
+                if (hit.collider.name == "Teapot") {
+                    target.SetActive(false);
+                    items.TeapotAcquired = true;
+                }
             }
 
             //if(hit.collider.tag == "Climbable")
@@ -158,6 +163,7 @@ public class Interactions : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit, rayDistance))
         {
+            // TURN OFF LATER
             if(hit.collider.tag == "PlushieBear")
             {
                 if(Bear.timeToTransform < Bear.timeToTransformMax)
@@ -228,7 +234,8 @@ public class Interactions : MonoBehaviour
         // CHECKS IF NOT LOOKING AT OBJECT, CLEARS TOOLTIP
         // ADD ITEMS THAT CAN BE DISPLAYED ON TOOLTIP HERE
        if (Physics.Raycast(ray, out hit, 50)) {
-           if (hit.collider.tag != "Pickup" && hit.collider.tag != "Plushie" && hit.collider.tag != "Reciever" &&
+           if (hit.collider.tag != "Pickup" && hit.collider.tag != "PlushieCroc" && hit.collider.tag != "PlushieBear" && 
+               hit.collider.tag != "PlushieOwl" && hit.collider.tag != "Reciever" &&
               (hit.collider.tag != "Crocodile" || hit.collider.tag != "Owl" || hit.collider.tag != "Bear" ))  {
                infoDisplay.ClearTooltip();
            }

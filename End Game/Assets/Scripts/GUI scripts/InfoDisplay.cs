@@ -73,14 +73,14 @@ public class InfoDisplay : MonoBehaviour {
             }
 
             if (items.BottleAcquired) {
-                if (!items.WalkyAcquired && !tutorialMsg2Played) {
+                if (!items.TeapotAcquired && !tutorialMsg2Played) {
                     DisplayMessage(tutorialMsg2, 3);
-                    CountdownTimer.text = "Find walky talky!";
+                    CountdownTimer.text = "Find teapot!";
                     tutorialMsg2Played = true;
                 }               
             }
 
-            if (items.WalkyAcquired) {
+            if (items.TeapotAcquired) {
                 if (!items.BottleAcquired && !tutorialMsg3Played) {
                     DisplayMessage(tutorialMsg1, 3);
                     CountdownTimer.text = "Find spray bottle!";
@@ -88,7 +88,7 @@ public class InfoDisplay : MonoBehaviour {
                 }
             }
 
-            if (items.WalkyAcquired && items.BottleAcquired) {
+            if (items.TeapotAcquired && items.BottleAcquired) {
                 DisplayMessage(tutorialMsg3, 3);
                 game.isTutorialFinished = true;
             }
