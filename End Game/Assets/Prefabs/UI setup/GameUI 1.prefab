@@ -39,11 +39,11 @@ GameObject:
   - component: {fileID: 223963298984602352}
   - component: {fileID: 114924964100278120}
   - component: {fileID: 114124748514848812}
-  - component: {fileID: 114087270197998430}
-  - component: {fileID: 114543807968627448}
+  - component: {fileID: 114432520165473660}
+  - component: {fileID: 114745720222616090}
   m_Layer: 5
   m_Name: GameUI 1
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,26 +182,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114087270197998430
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1344791827350450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dacf74634864504fa89f7f3de8d3227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EndgameScreen: {fileID: 0}
-  WinScreen: {fileID: 0}
-  YouDied: {fileID: 0}
-  tutorialTimer: 0
-  isTutorialFinished: 0
-  GameTimer: 0
-  isNightmareStarted: 0
-  CurrentScene: 1
-  isGameOver: 0
 --- !u!114 &114124748514848812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -288,7 +268,7 @@ MonoBehaviour:
   m_Text: 'msgBox
 
 '
---- !u!114 &114543807968627448
+--- !u!114 &114432520165473660
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -296,13 +276,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1344791827350450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3432ab326e4c82498ed45e4e30dfdb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c90a50526d59354e8b276c943e0ec3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MsgTimer: 0
-  tutorialMsg1: 1
-  tutorialMsg2: 2
-  tutorialMsg3: 3
+  tutorialMsg1: 
+  tutorialMsg2: 
+  tutorialMsg3: 
   CrocTimer: {fileID: 114843211090864944}
   BearTimer: {fileID: 114616940468642508}
   OwlTimer: {fileID: 114596441062103836}
@@ -436,6 +416,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114745720222616090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344791827350450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d45ff0d8c3e4f64b981c6ce20d2d81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinScreen: {fileID: 0}
+  DeathScreen: {fileID: 0}
+  tutorialTimer: 0
+  isTutorialFinished: 0
+  GameTimer: 0
+  isNightmareStarted: 0
+  CurrentScene: 1
+  isGameOver: 0
 --- !u!114 &114843211090864944
 MonoBehaviour:
   m_ObjectHideFlags: 1
