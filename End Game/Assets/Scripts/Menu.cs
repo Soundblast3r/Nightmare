@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 //using UnityEditor;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class Menu : MonoBehaviour
 {
+    private AudioSource BGM;
+    public AudioClip menuBGM;
 
     //Panels
     public GameObject mainMenuPanel;
@@ -17,6 +21,13 @@ public class Menu : MonoBehaviour
     
     void Start()
     {
+        BGM = GetComponent<AudioSource>();
+        BGM.clip = menuBGM;
+        BGM.playOnAwake = true;
+        BGM.loop = true;
+        BGM.volume = 0.75f;
+        BGM.Play();
+
         mainMenuPanel.SetActive(true);
         controlsPanel.SetActive(false);
     }
